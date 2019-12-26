@@ -26,7 +26,7 @@ namespace Wifi.Auto.Data
 		public string Wartungsintervall { get; set; }
 		public double Gesamtkosten { get; set; }
         public double Monatskosten { get; set; }
-        public List<KfzData> ImagePath { get; set; }
+		public List<string> ImagePath { get; set; } = null;
 
         public List<KfzData> Fahrzeugkosten { get; set; } = null;// new List<KfzDetails>();
 

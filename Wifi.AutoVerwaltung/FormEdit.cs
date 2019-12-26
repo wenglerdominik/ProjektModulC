@@ -40,22 +40,26 @@ namespace Wifi.AutoVerwaltung
             this.textBoxKennz.Text = kfzData.Kennzeichen;
             if (this.KfzData.ImagePath != null)
             {
-                try
+                foreach (string item in kfzData.ImagePath)
                 {
-                    string val = kfzData.ImagePath;
-                    byte[] bytes = Convert.FromBase64String(val);
-                    MemoryStream mem = new MemoryStream(bytes);
-                    Bitmap bmp2 = new Bitmap(mem);
+                    try
+                    {
+                        string val = item;
+                        byte[] bytes = Convert.FromBase64String(val);
+                        MemoryStream mem = new MemoryStream(bytes);
+                        Bitmap bmp2 = new Bitmap(mem);
 
-                    this.pictureBoxCar.Image = bmp2;
-                    this.pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                catch (Exception ex)
-                {
+                        this.pictureBoxCar.Image = bmp2;
+                        this.pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    catch (Exception ex)
+                    {
 
-                    MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
-                    kfzData.ImagePath = null;
+                        MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
+                        kfzData.ImagePath = null;
+                    }
                 }
+               
             }
 
 
@@ -381,15 +385,15 @@ namespace Wifi.AutoVerwaltung
 
         private void pictureBoxCar_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Image files(*.jpg, *.jpeg, *.jpe, *.jfif, *.png, *.bmp) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png; *.bmp";
-            fileDialog.InitialDirectory = "c:\\temp\\";
-            if (fileDialog.ShowDialog() == DialogResult.OK)
-            {
-                this.pictureBoxCar.Image = Image.FromFile(fileDialog.FileName);
-                this.KfzData.ImagePath = fileDialog.FileName;
-                this.pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
+            //OpenFileDialog fileDialog = new OpenFileDialog();
+            //fileDialog.Filter = "Image files(*.jpg, *.jpeg, *.jpe, *.jfif, *.png, *.bmp) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png; *.bmp";
+            //fileDialog.InitialDirectory = "c:\\temp\\";
+            //if (fileDialog.ShowDialog() == DialogResult.OK)
+            //{
+            //    this.pictureBoxCar.Image = Image.FromFile(fileDialog.FileName);
+            //    this.KfzData.ImagePath = fileDialog.FileName;
+            //    this.pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
+            //}
         }
 
         private void pictureBoxCar_DragDrop(object sender, DragEventArgs e)
@@ -399,7 +403,8 @@ namespace Wifi.AutoVerwaltung
             {
                 Image img = Image.FromFile(pic);
                 pictureBoxCar.Image = img;
-               // this.KfzData.ImagePath = Convert.ToBase64String(File.ReadAllBytes(pic));
+                if (this.KfzData.ImagePath == null) this.KfzData.ImagePath = new List<string>();
+                this.KfzData.ImagePath.Add(Convert.ToBase64String(File.ReadAllBytes(pic)));
             }
         }
 

@@ -235,28 +235,16 @@ namespace Wifi.AutoVerwaltung
             Graphics g = Graphics.FromHwnd(this.Handle);
             try
             {
-                foreach (KfzData item in kfzData.ImagePath)
+                foreach (string item in kfzData.ImagePath)
                 {
-                    string val = item.ImagePath.ToString();
+                    string val = item;
                     byte[] bytes = Convert.FromBase64String(val);
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
 
                     this.pictureBoxMain.Image = bmp2;
                     this.pictureBoxMain.SizeMode = PictureBoxSizeMode.StretchImage;
-                    this.imageList1.Images.Add(bmp2);
-
-                    imageList1.TransparentColor = Color.Blue;
-                    imageList1.ColorDepth = ColorDepth.Depth32Bit;
-                    imageList1.ImageSize = new Size(300, 200);
-
-                    for (int i = 0; i < imageList1.Images.Count; i++)
-                    {
-                        imageList1.Draw(g, new Point(1000, 500), i);
-                        Application.DoEvents();
-                        System.Threading.Thread.Sleep(100);
-                        
-                    }
+                   
                 }
             }
             catch (Exception ex)
