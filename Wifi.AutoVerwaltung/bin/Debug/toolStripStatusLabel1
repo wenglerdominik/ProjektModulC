@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SecuredAutoFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Owner>cNGKChhV2bhq3fbYYH/EHQ==uGXAP+ledxb+ZW+EEOwwgQ==</Owner>
+  <LastUpdate>2019-12-01T15:02:44.1214738+01:00</LastUpdate>
+  <CreationDate>2019-12-01T15:02:08.6716946+01:00</CreationDate>
+  <FahrzeugInfos>
+    <FahrzeugInfo>
+      <Marke>Audi</Marke>
+      <Modell>A4</Modell>
+      <Zulassung>2009</Zulassung>
+      <Farbe>schwarz</Farbe>
+      <Kennzeichen>BR-111HS</Kennzeichen>
+      <Leistung>90</Leistung>
+      <Wartungsintervall>4000</Wartungsintervall>
+    </FahrzeugInfo>
+    <FahrzeugInfo>
+      <Marke>Audi</Marke>
+      <Modell>A4</Modell>
+      <Zulassung>2009</Zulassung>
+      <Farbe>schwarz</Farbe>
+      <Kennzeichen>BR-111HS</Kennzeichen>
+      <Leistung>90</Leistung>
+      <Wartungsintervall>4000</Wartungsintervall>
+    </FahrzeugInfo>
+  </FahrzeugInfos>
+</SecuredAutoFile>
