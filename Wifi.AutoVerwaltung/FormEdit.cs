@@ -17,19 +17,19 @@ namespace Wifi.AutoVerwaltung
     public partial class FormEdit : Form
     {
         public KfzData KfzData { get; set; } = new KfzData();
-
+        private UserControlPhoto userControl = null;
+        
         public FormEdit()
         {
             InitializeComponent();
             CenterToScreen();
-            this.pictureBoxCar.AllowDrop = true;
+            
         }
 
         public FormEdit(KfzData kfzData)
         {
             InitializeComponent();
             CenterToScreen();
-            this.pictureBoxCar.AllowDrop = true;
             this.KfzData = kfzData;
             this.textBoxMarke.Text = kfzData.Marke;
             this.textBoxModell.Text = kfzData.Modell;
@@ -42,21 +42,22 @@ namespace Wifi.AutoVerwaltung
             {
                 foreach (string item in kfzData.ImagePath)
                 {
+                    
                     try
                     {
                         string val = item;
                         byte[] bytes = Convert.FromBase64String(val);
                         MemoryStream mem = new MemoryStream(bytes);
                         Bitmap bmp2 = new Bitmap(mem);
+                        this.userControl = new UserControlPhoto(bmp2, true);
+                        
+                        this.flowLayoutPanel1.Controls.Add(this.userControl);
 
-                        this.pictureBoxCar.Image = bmp2;
-                        this.pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     catch (Exception ex)
                     {
 
                         MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
-                        kfzData.ImagePath = null;
                     }
                 }
                
@@ -70,7 +71,6 @@ namespace Wifi.AutoVerwaltung
                     if (itemKfzData is KfzKostenTank) addListViewItemKostenTank((KfzKostenTank)itemKfzData);
                 }
         }
-
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
@@ -185,8 +185,6 @@ namespace Wifi.AutoVerwaltung
             KfzData.Gesamtkosten = sumAllgAll + sumTank;
             KfzData.Monatskosten = sumAllgMonth + sumTank;
         }
-
-
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -394,23 +392,49 @@ namespace Wifi.AutoVerwaltung
             //    this.KfzData.ImagePath = fileDialog.FileName;
             //    this.pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
             //}
+           
+        }
+
+        private void getImageData()
+        {
+            foreach (UserControlPhoto userControl in this.flowLayoutPanel1.Controls)
+            {
+                if (this.KfzData.ImagePath == null) this.KfzData.ImagePath = new List<string>();
+                this.KfzData.ImagePath.Add(userControl.imageString);
+            }
         }
 
         private void pictureBoxCar_DragDrop(object sender, DragEventArgs e)
         {
-            
+
+           
             foreach (string pic in ((string[])e.Data.GetData(DataFormats.FileDrop)))
             {
                 Image img = Image.FromFile(pic);
+               
                 pictureBoxCar.Image = img;
+               
                 if (this.KfzData.ImagePath == null) this.KfzData.ImagePath = new List<string>();
                 this.KfzData.ImagePath.Add(Convert.ToBase64String(File.ReadAllBytes(pic)));
+                pictureBoxCar.Tag = this.KfzData.ImagePath.Count - 1;
             }
         }
 
         private void pictureBoxCar_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Copy;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserControlPhoto userControl = new UserControlPhoto();
+            userControl.pictureDrop = true;
+            this.flowLayoutPanel1.Controls.Add(userControl);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            getImageData();
         }
     }
 }

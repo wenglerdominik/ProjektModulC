@@ -78,6 +78,12 @@
     <Compile Include="FormTanken.Designer.cs">
       <DependentUpon>FormTanken.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlPhoto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPhoto.Designer.cs">
+      <DependentUpon>UserControlPhoto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormEdit.resx">
       <DependentUpon>FormEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="FormTanken.resx">
       <DependentUpon>FormTanken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPhoto.resx">
+      <DependentUpon>UserControlPhoto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

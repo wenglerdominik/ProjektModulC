@@ -49,11 +49,9 @@ namespace Wifi.AutoVerwaltung
                 fillListView(kfzData);
                 buttonKfzÜbersicht.PerformClick();
                 panelKeinFahrzeug.Visible = false;
-                this.pictureBoxMain.Visible = true;
                 this.listViewMain.Items[this.listViewMain.Items.Count - 1].Selected = true;
             }
             else buttonKfzÜbersicht_Click(this, EventArgs.Empty);
-
 
         }
 
@@ -68,7 +66,7 @@ namespace Wifi.AutoVerwaltung
             item.SubItems.Add(Convert.ToString(kfzData.Gesamtkosten));
 
             this.listViewMain.Items.Add(item);
-            this.listViewMain.Items[0].Selected = true;
+           // this.listViewMain.Items[0].Selected = true;
 
         }
 
@@ -95,6 +93,7 @@ namespace Wifi.AutoVerwaltung
                             {
                                 fillListView(kfzData);
                             }
+                            this.listViewMain.Items[0].Selected = true;
                         }
                         else
                         {
@@ -159,7 +158,7 @@ namespace Wifi.AutoVerwaltung
                 item.SubItems[2].Text = formEdit.KfzData.Farbe;
                 item.SubItems[3].Text = Convert.ToString(formEdit.KfzData.Zulassung);
                 item.SubItems[4].Text = Convert.ToString(formEdit.KfzData.Gesamtkosten);
-                showImage(formEdit.KfzData);
+                //showImage(formEdit.KfzData);
             }
         }
 
@@ -221,13 +220,18 @@ namespace Wifi.AutoVerwaltung
 
         private void listViewMain_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-
-            ListViewItem item = e.Item;
-            KfzData kfzData = item.Tag as KfzData;
-            if (kfzData.ImagePath != null)
+            if(e.IsSelected)
             {
-                showImage(kfzData);
+                this.flowLayoutPanelMain.Controls.Clear();
+                ListViewItem item = e.Item;
+                KfzData kfzData = item.Tag as KfzData;
+
+                if (kfzData.ImagePath != null)
+                {
+                    showImage(kfzData);
+                }
             }
+            
         }
 
         private void showImage(KfzData kfzData)
@@ -241,18 +245,19 @@ namespace Wifi.AutoVerwaltung
                     byte[] bytes = Convert.FromBase64String(val);
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
+                    UserControlPhoto userControl = new UserControlPhoto(bmp2, false);
+                    userControl.pictureDrop = false;
+                    this.flowLayoutPanelMain.Controls.Add(userControl);
 
-                    this.pictureBoxMain.Image = bmp2;
-                    this.pictureBoxMain.SizeMode = PictureBoxSizeMode.StretchImage;
-                   
+                                       
                 }
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
-                this.pictureBoxMain.Image = null;
-                kfzData.ImagePath = null;
+                //MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
+                //this.pictureBoxMain.Image = null;
+                //kfzData.ImagePath = null;
             }
 
            

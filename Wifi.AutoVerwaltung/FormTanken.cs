@@ -27,7 +27,7 @@ namespace Wifi.AutoVerwaltung
             CenterToScreen();
             this.KfzKostenTank = kfzKostenTank;
             this.numericBetrag.Value = Convert.ToDecimal(kfzKostenTank.Tankbetrag);
-            this.dateTankDatum.Value = kfzKostenTank.TankDatum;
+            this.dateTankDatum.Value =Convert.ToDateTime(kfzKostenTank.TankDatum);
             this.numericMenge.Value = Convert.ToDecimal(kfzKostenTank.TankMenge);
             this.numericKilometer.Value = Convert.ToDecimal(kfzKostenTank.TankKilometer);
 
@@ -37,7 +37,7 @@ namespace Wifi.AutoVerwaltung
         {
             if (KfzKostenTank == null) this.KfzKostenTank = new KfzKostenTank();
 
-            KfzKostenTank.TankDatum = this.dateTankDatum.Value;
+            KfzKostenTank.TankDatum = this.dateTankDatum.Value.ToString("dd.MM.yyyy");
 
             string errorlog = "Bitte folgende Angaben ergänzen:\n\n";
                        

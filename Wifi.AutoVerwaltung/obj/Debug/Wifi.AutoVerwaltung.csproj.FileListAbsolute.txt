@@ -78,3 +78,4 @@ C:\Kurs\ProjektModulC#\Wifi.AutoVerwaltung\bin\Debug\Wifi.AutoVerwaltung.pdb
 C:\Kurs\ProjektModulC#\Wifi.AutoVerwaltung\bin\Debug\Wifi.Auto.Data.dll
 C:\Kurs\ProjektModulC#\Wifi.AutoVerwaltung\bin\Debug\Wifi.Auto.Data.pdb
 C:\Kurs\ProjektModulC#\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.csproj.CopyComplete
+C:\Kurs\ProjektModulC#\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.UserControlPhoto.resources

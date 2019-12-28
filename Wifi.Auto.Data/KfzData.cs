@@ -28,7 +28,7 @@ namespace Wifi.Auto.Data
         public double Monatskosten { get; set; }
 		public List<string> ImagePath { get; set; } = null;
 
-        public List<KfzData> Fahrzeugkosten { get; set; } = null;// new List<KfzDetails>();
+        public List<KfzData> Fahrzeugkosten { get; set; } = null;
 
 
 		#endregion
