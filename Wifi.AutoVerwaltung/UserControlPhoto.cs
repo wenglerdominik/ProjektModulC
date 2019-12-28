@@ -14,25 +14,25 @@ namespace Wifi.AutoVerwaltung
 {
     public partial class UserControlPhoto : UserControl
     {
-        public string imageString = null;
-        public bool pictureDrop = false;
+        public string imageString { get; set; } = null;
+        static string nameFocusedControl = null;
+       
+
         public UserControlPhoto()
         {
             InitializeComponent();
-            pictureBoxCar.AllowDrop = pictureDrop;
+            pictureBoxCar.AllowDrop = true;
         }
         public UserControlPhoto(Image image, bool drop)
         {
             InitializeComponent();
             pictureBoxCar.AllowDrop = drop;
 
-
             pictureBoxCar.Image = image;
-            //this.imageString = Convert.ToBase64String(File.ReadAllBytes(image));
-
 
         }
 
+       
         private void pictureBoxCar_DragDrop(object sender, DragEventArgs e)
         {
 
@@ -42,15 +42,25 @@ namespace Wifi.AutoVerwaltung
 
                 pictureBoxCar.Image = img;
                 this.imageString = Convert.ToBase64String(File.ReadAllBytes(pic));
-                //if (this.KfzData.ImagePath == null) this.KfzData.ImagePath = new List<string>();
-                //this.KfzData.ImagePath.Add(Convert.ToBase64String(File.ReadAllBytes(pic)));
-                //pictureBoxCar.Tag = this.KfzData.ImagePath.Count - 1;
+                this.Name = imageString;              
+                
             }
         }
 
         private void pictureBoxCar_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Copy;
+        }
+
+        
+        public static string GetFocusedUserControl()
+        {            
+            return nameFocusedControl;
+        }
+                
+        private void pictureBoxCar_MouseDown(object sender, MouseEventArgs e)
+        {
+            nameFocusedControl = this.Name;
         }
     }
 }

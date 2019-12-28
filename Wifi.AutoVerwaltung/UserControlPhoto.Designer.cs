@@ -46,6 +46,7 @@
             this.pictureBoxCar.TabStop = false;
             this.pictureBoxCar.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragDrop);
             this.pictureBoxCar.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragEnter);
+            this.pictureBoxCar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxCar_MouseDown);
             // 
             // UserControlPhoto
             // 

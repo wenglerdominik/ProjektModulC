@@ -32,9 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdit));
             this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
             this.tabPageAllgemein = new System.Windows.Forms.TabPage();
-            this.pictureBoxCar = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.contextMenuStripFlowPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bildLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownLeistung = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.columnKilometerAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnZahlweise = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnBemerkung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripTabPage = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStripNeueRechnung = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,15 +77,13 @@
             this.neueTankrechnungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControlAutoInfo.SuspendLayout();
             this.tabPageAllgemein.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
+            this.contextMenuStripFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeistung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWartung)).BeginInit();
             this.tabPageKosten.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStripTabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabPageTank.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -108,8 +107,6 @@
             // tabPageAllgemein
             // 
             this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.tabPageAllgemein.Controls.Add(this.button2);
-            this.tabPageAllgemein.Controls.Add(this.pictureBoxCar);
             this.tabPageAllgemein.Controls.Add(this.button1);
             this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
             this.tabPageAllgemein.Controls.Add(this.label1);
@@ -137,21 +134,6 @@
             this.tabPageAllgemein.TabIndex = 0;
             this.tabPageAllgemein.Text = "Allgemeine Daten";
             // 
-            // pictureBoxCar
-            // 
-            this.pictureBoxCar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxCar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCar.Image")));
-            this.pictureBoxCar.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCar.InitialImage")));
-            this.pictureBoxCar.Location = new System.Drawing.Point(105, 401);
-            this.pictureBoxCar.Name = "pictureBoxCar";
-            this.pictureBoxCar.Size = new System.Drawing.Size(258, 153);
-            this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxCar.TabIndex = 21;
-            this.pictureBoxCar.TabStop = false;
-            this.pictureBoxCar.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragDrop);
-            this.pictureBoxCar.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragEnter);
-            this.pictureBoxCar.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxCar_MouseDoubleClick);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(785, 23);
@@ -168,10 +150,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.ContextMenuStrip = this.contextMenuStripFlowPanel;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(639, 76);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(859, 522);
             this.flowLayoutPanel1.TabIndex = 23;
+            // 
+            // contextMenuStripFlowPanel
+            // 
+            this.contextMenuStripFlowPanel.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.contextMenuStripFlowPanel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bildLöschenToolStripMenuItem});
+            this.contextMenuStripFlowPanel.Name = "contextMenuStripFlowPanel";
+            this.contextMenuStripFlowPanel.Size = new System.Drawing.Size(198, 40);
+            // 
+            // bildLöschenToolStripMenuItem
+            // 
+            this.bildLöschenToolStripMenuItem.Name = "bildLöschenToolStripMenuItem";
+            this.bildLöschenToolStripMenuItem.Size = new System.Drawing.Size(197, 36);
+            this.bildLöschenToolStripMenuItem.Text = "Bild löschen";
+            this.bildLöschenToolStripMenuItem.Click += new System.EventHandler(this.bildLöschenToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -368,7 +366,7 @@
             this.columnKilometerAllg,
             this.columnZahlweise,
             this.columnBemerkung});
-            this.listViewAllgKosten.ContextMenuStrip = this.contextMenuStrip1;
+            this.listViewAllgKosten.ContextMenuStrip = this.contextMenuStripTabPage;
             this.listViewAllgKosten.FullRowSelect = true;
             this.listViewAllgKosten.HideSelection = false;
             this.listViewAllgKosten.Location = new System.Drawing.Point(0, 56);
@@ -410,13 +408,13 @@
             this.columnBemerkung.Text = "Bemerkung";
             this.columnBemerkung.Width = 150;
             // 
-            // contextMenuStrip1
+            // contextMenuStripTabPage
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStripTabPage.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStripTabPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.löschenToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(163, 40);
+            this.contextMenuStripTabPage.Name = "contextMenuStrip1";
+            this.contextMenuStripTabPage.Size = new System.Drawing.Size(163, 40);
             // 
             // löschenToolStripMenuItem
             // 
@@ -469,7 +467,7 @@
             this.columnKilometer,
             this.columnStreckeGefahren,
             this.columnVerbrauch});
-            this.listViewTankKosten.ContextMenuStrip = this.contextMenuStrip1;
+            this.listViewTankKosten.ContextMenuStrip = this.contextMenuStripTabPage;
             this.listViewTankKosten.FullRowSelect = true;
             this.listViewTankKosten.HideSelection = false;
             this.listViewTankKosten.Location = new System.Drawing.Point(0, 50);
@@ -556,16 +554,6 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(953, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 47);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // FormEdit
             // 
             this.AcceptButton = this.buttonOk;
@@ -586,12 +574,12 @@
             this.tabControlAutoInfo.ResumeLayout(false);
             this.tabPageAllgemein.ResumeLayout(false);
             this.tabPageAllgemein.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).EndInit();
+            this.contextMenuStripFlowPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeistung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWartung)).EndInit();
             this.tabPageKosten.ResumeLayout(false);
             this.tabPageKosten.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStripTabPage.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPageTank.ResumeLayout(false);
@@ -643,13 +631,12 @@
         private System.Windows.Forms.ColumnHeader columnStreckeGefahren;
         private System.Windows.Forms.ColumnHeader columnVerbrauch;
         private System.Windows.Forms.NumericUpDown numericUpDownLeistung;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripTabPage;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBoxCar;
         private System.Windows.Forms.Label label1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripFlowPanel;
+        private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
     }
 }

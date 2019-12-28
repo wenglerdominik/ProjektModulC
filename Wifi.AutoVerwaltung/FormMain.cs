@@ -246,7 +246,6 @@ namespace Wifi.AutoVerwaltung
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
                     UserControlPhoto userControl = new UserControlPhoto(bmp2, false);
-                    userControl.pictureDrop = false;
                     this.flowLayoutPanelMain.Controls.Add(userControl);
 
                                        
