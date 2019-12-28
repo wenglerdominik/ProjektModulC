@@ -158,7 +158,7 @@ namespace Wifi.AutoVerwaltung
                 item.SubItems[2].Text = formEdit.KfzData.Farbe;
                 item.SubItems[3].Text = Convert.ToString(formEdit.KfzData.Zulassung);
                 item.SubItems[4].Text = Convert.ToString(formEdit.KfzData.Gesamtkosten);
-                //showImage(formEdit.KfzData);
+                showImage(formEdit.KfzData);
             }
         }
 
@@ -222,7 +222,6 @@ namespace Wifi.AutoVerwaltung
         {
             if(e.IsSelected)
             {
-                this.flowLayoutPanelMain.Controls.Clear();
                 ListViewItem item = e.Item;
                 KfzData kfzData = item.Tag as KfzData;
 
@@ -236,6 +235,8 @@ namespace Wifi.AutoVerwaltung
 
         private void showImage(KfzData kfzData)
         {
+            this.flowLayoutPanelMain.Controls.Clear();
+
             Graphics g = Graphics.FromHwnd(this.Handle);
             try
             {
@@ -246,6 +247,7 @@ namespace Wifi.AutoVerwaltung
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
                     UserControlPhoto userControl = new UserControlPhoto(bmp2, false);
+                   // userControl.Name = item;
                     this.flowLayoutPanelMain.Controls.Add(userControl);
 
                                        

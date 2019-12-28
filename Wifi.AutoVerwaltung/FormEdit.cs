@@ -50,6 +50,7 @@ namespace Wifi.AutoVerwaltung
                         Bitmap bmp2 = new Bitmap(mem);
                         UserControlPhoto userControl = new UserControlPhoto(bmp2, true);
                         userControl.imageString = item;
+                        userControl.Name = item;
                         this.flowLayoutPanel1.Controls.Add(userControl);
 
                     }
@@ -400,7 +401,7 @@ namespace Wifi.AutoVerwaltung
 
         private void bildLöschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.flowLayoutPanel1.Controls.RemoveByKey(UserControlPhoto.testMethode());
+            this.flowLayoutPanel1.Controls.RemoveByKey(UserControlPhoto.GetFocusedUserControl());
         }
     }
 }

@@ -41,6 +41,7 @@ namespace Wifi.AutoVerwaltung
                 Image img = Image.FromFile(pic);
 
                 pictureBoxCar.Image = img;
+                pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
                 this.imageString = Convert.ToBase64String(File.ReadAllBytes(pic));
                 this.Name = imageString;              
                 

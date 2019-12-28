@@ -41,7 +41,7 @@
             this.pictureBoxCar.Location = new System.Drawing.Point(13, 13);
             this.pictureBoxCar.Name = "pictureBoxCar";
             this.pictureBoxCar.Size = new System.Drawing.Size(420, 364);
-            this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCar.TabIndex = 22;
             this.pictureBoxCar.TabStop = false;
             this.pictureBoxCar.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragDrop);
