@@ -394,6 +394,8 @@
             this.MinimumSize = new System.Drawing.Size(1835, 996);
             this.Name = "FormMain";
             this.Text = "Autoverwaltung";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_Closing);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

@@ -270,5 +270,45 @@ namespace Wifi.AutoVerwaltung
 
         }
 
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            // Upgrade?
+            if (Properties.Settings.Default.FormMainSize.Width == 0) Properties.Settings.Default.Upgrade();
+            if (Properties.Settings.Default.FormMainSize.Width == 0 || Properties.Settings.Default.FormMainSize.Height == 0)
+            {
+                // first start
+                // optional: add default values
+            }
+            else
+            {
+                this.WindowState = Properties.Settings.Default.FormMainState;
+
+                // we don't want a minimized window at startup
+                if (this.WindowState == FormWindowState.Minimized) this.WindowState = FormWindowState.Normal;
+
+                this.Location = Properties.Settings.Default.FormMainLocation;
+                this.Size = Properties.Settings.Default.FormMainSize;
+            }
+        }
+
+        private void FormMain_Closing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.FormMainState = this.WindowState;
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                // save location and size if the state is normal
+                Properties.Settings.Default.FormMainLocation = this.Location;
+                Properties.Settings.Default.FormMainSize = this.Size;
+            }
+            else
+            {
+                // save the RestoreBounds if the form is minimized or maximized!
+                Properties.Settings.Default.FormMainLocation = this.RestoreBounds.Location;
+                Properties.Settings.Default.FormMainSize = this.RestoreBounds.Size;
+            }
+
+            // don't forget to save the settings
+            Properties.Settings.Default.Save();
+        }
     }
 }

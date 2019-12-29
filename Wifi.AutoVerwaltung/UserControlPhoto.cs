@@ -35,17 +35,27 @@ namespace Wifi.AutoVerwaltung
        
         private void pictureBoxCar_DragDrop(object sender, DragEventArgs e)
         {
-
-            foreach (string pic in ((string[])e.Data.GetData(DataFormats.FileDrop)))
+            try
             {
-                Image img = Image.FromFile(pic);
+                foreach (string pic in ((string[])e.Data.GetData(DataFormats.FileDrop)))
+                {
+                    Image img = Image.FromFile(pic);
 
-                pictureBoxCar.Image = img;
-                pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
-                this.imageString = Convert.ToBase64String(File.ReadAllBytes(pic));
-                this.Name = imageString;              
-                
+                    pictureBoxCar.Image = img;
+                    pictureBoxCar.SizeMode = PictureBoxSizeMode.StretchImage;
+                    this.imageString = Convert.ToBase64String(File.ReadAllBytes(pic));
+                    this.Name = imageString;
+
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Es können nur Bilddateien hinzugefügt werden. " +
+                    "Bitte andere Datei wählen","Bild konnte nicht eingefügt werden", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+
         }
 
         private void pictureBoxCar_DragEnter(object sender, DragEventArgs e)
