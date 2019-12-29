@@ -105,7 +105,7 @@
             // 
             // tabPageAllgemein
             // 
-            this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.tabPageAllgemein.Controls.Add(this.btn_AddPicture);
             this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
             this.tabPageAllgemein.Controls.Add(this.numericUpDownLeistung);
@@ -136,7 +136,7 @@
             // 
             this.btn_AddPicture.Location = new System.Drawing.Point(639, 23);
             this.btn_AddPicture.Name = "btn_AddPicture";
-            this.btn_AddPicture.Size = new System.Drawing.Size(156, 40);
+            this.btn_AddPicture.Size = new System.Drawing.Size(188, 40);
             this.btn_AddPicture.TabIndex = 24;
             this.btn_AddPicture.Text = "Bild hinzufügen";
             this.btn_AddPicture.UseVisualStyleBackColor = true;
@@ -148,10 +148,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.ContextMenuStrip = this.contextMenuStripFlowPanel;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(639, 76);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(859, 522);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(859, 546);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // contextMenuStripFlowPanel
@@ -350,7 +351,7 @@
             this.listViewAllgKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewAllgKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.listViewAllgKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.listViewAllgKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnKategorie,
             this.columnDatumAllg,
@@ -454,7 +455,7 @@
             this.listViewTankKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewTankKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.listViewTankKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.listViewTankKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnBetrag,
             this.columnDatum,
@@ -465,10 +466,10 @@
             this.listViewTankKosten.ContextMenuStrip = this.contextMenuStripTabPage;
             this.listViewTankKosten.FullRowSelect = true;
             this.listViewTankKosten.HideSelection = false;
-            this.listViewTankKosten.Location = new System.Drawing.Point(0, 50);
+            this.listViewTankKosten.Location = new System.Drawing.Point(0, 56);
             this.listViewTankKosten.Margin = new System.Windows.Forms.Padding(6);
             this.listViewTankKosten.Name = "listViewTankKosten";
-            this.listViewTankKosten.Size = new System.Drawing.Size(1491, 584);
+            this.listViewTankKosten.Size = new System.Drawing.Size(1491, 586);
             this.listViewTankKosten.TabIndex = 1;
             this.listViewTankKosten.UseCompatibleStateImageBehavior = false;
             this.listViewTankKosten.View = System.Windows.Forms.View.Details;
@@ -512,7 +513,8 @@
             this.neueTankrechnungToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1501, 38);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(7, 4, 0, 4);
+            this.menuStrip2.Size = new System.Drawing.Size(1501, 42);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -554,7 +556,7 @@
             this.AcceptButton = this.buttonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(1549, 780);
             this.Controls.Add(this.buttonCancel);

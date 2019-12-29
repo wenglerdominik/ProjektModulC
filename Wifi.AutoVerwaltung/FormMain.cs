@@ -77,6 +77,13 @@ namespace Wifi.AutoVerwaltung
             fileDialog.InitialDirectory = "c:\\temp\\";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
+                if (!fileDialog.FileName.EndsWith("sml"))
+                {
+                    MessageBox.Show("Es können nur SecuredXML Dateien geöffnet werden (.sml)",
+                        "Falsches Dateiformat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+               
                 FormLogin formLogin = new FormLogin();
                 if (formLogin.ShowDialog() == DialogResult.OK)
                 {

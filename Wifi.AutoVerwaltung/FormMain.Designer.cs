@@ -41,6 +41,11 @@
             this.toolStripLoggedUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripOpenFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.listViewMain = new System.Windows.Forms.ListView();
+            this.columnMarke = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnModell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnFarbe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnErstzulassung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnGesamtkosten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonNeuesFahrzeug = new System.Windows.Forms.Button();
@@ -53,11 +58,6 @@
             this.panelShowButton = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
-            this.columnMarke = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnModell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnFarbe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnErstzulassung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnGesamtkosten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -142,6 +142,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLoggedUser,
@@ -155,12 +156,16 @@
             // 
             // toolStripLoggedUser
             // 
+            this.toolStripLoggedUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
+            this.toolStripLoggedUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.toolStripLoggedUser.Name = "toolStripLoggedUser";
             this.toolStripLoggedUser.Size = new System.Drawing.Size(100, 30);
             this.toolStripLoggedUser.Text = "Benutzer:";
             // 
             // toolStripOpenFile
             // 
+            this.toolStripOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
+            this.toolStripOpenFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.toolStripOpenFile.Name = "toolStripOpenFile";
             this.toolStripOpenFile.Size = new System.Drawing.Size(67, 30);
             this.toolStripOpenFile.Text = "Datei:";
@@ -170,7 +175,7 @@
             this.listViewMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.listViewMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.listViewMain.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnMarke,
             this.columnModell,
@@ -191,6 +196,31 @@
             this.listViewMain.View = System.Windows.Forms.View.Details;
             this.listViewMain.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewMain_ItemSelectionChanged);
             this.listViewMain.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewMain_MouseDoubleClick);
+            // 
+            // columnMarke
+            // 
+            this.columnMarke.Text = "Marke";
+            this.columnMarke.Width = 120;
+            // 
+            // columnModell
+            // 
+            this.columnModell.Text = "Modell";
+            this.columnModell.Width = 120;
+            // 
+            // columnFarbe
+            // 
+            this.columnFarbe.Text = "Farbe";
+            this.columnFarbe.Width = 120;
+            // 
+            // columnErstzulassung
+            // 
+            this.columnErstzulassung.Text = "Erstzulassung";
+            this.columnErstzulassung.Width = 120;
+            // 
+            // columnGesamtkosten
+            // 
+            this.columnGesamtkosten.Text = "Fahrzeugkosten [€]";
+            this.columnGesamtkosten.Width = 187;
             // 
             // contextMenuStrip1
             // 
@@ -350,31 +380,6 @@
             this.flowLayoutPanelMain.Padding = new System.Windows.Forms.Padding(3, 3, 400, 3);
             this.flowLayoutPanelMain.Size = new System.Drawing.Size(549, 883);
             this.flowLayoutPanelMain.TabIndex = 10;
-            // 
-            // columnMarke
-            // 
-            this.columnMarke.Text = "Marke";
-            this.columnMarke.Width = 120;
-            // 
-            // columnModell
-            // 
-            this.columnModell.Text = "Modell";
-            this.columnModell.Width = 120;
-            // 
-            // columnFarbe
-            // 
-            this.columnFarbe.Text = "Farbe";
-            this.columnFarbe.Width = 120;
-            // 
-            // columnErstzulassung
-            // 
-            this.columnErstzulassung.Text = "Erstzulassung";
-            this.columnErstzulassung.Width = 120;
-            // 
-            // columnGesamtkosten
-            // 
-            this.columnGesamtkosten.Text = "Fahrzeugkosten [€]";
-            this.columnGesamtkosten.Width = 187;
             // 
             // FormMain
             // 

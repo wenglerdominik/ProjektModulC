@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlPhoto));
             this.pictureBoxCar = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxCar
             // 
             this.pictureBoxCar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxCar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxCar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCar.Image")));
             this.pictureBoxCar.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCar.InitialImage")));
-            this.pictureBoxCar.Location = new System.Drawing.Point(13, 13);
+            this.pictureBoxCar.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCar.Name = "pictureBoxCar";
-            this.pictureBoxCar.Size = new System.Drawing.Size(420, 364);
+            this.pictureBoxCar.Size = new System.Drawing.Size(446, 385);
             this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCar.TabIndex = 22;
             this.pictureBoxCar.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBoxCar, "Bilder per Drag/Drop hinzufügen");
             this.pictureBoxCar.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragDrop);
             this.pictureBoxCar.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBoxCar_DragEnter);
             this.pictureBoxCar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxCar_MouseDown);
@@ -64,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxCar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
