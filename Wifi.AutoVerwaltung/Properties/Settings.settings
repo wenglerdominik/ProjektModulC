@@ -11,5 +11,32 @@
     <Setting Name="FormMainState" Type="System.Windows.Forms.FormWindowState" Scope="User">
       <Value Profile="(Default)">Normal</Value>
     </Setting>
+    <Setting Name="ListViewMainColumnMarke" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="ListViewMainColumnModell" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="ListViewMainColumnFarbe" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="ListViewMainColumnErstzulassung" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="ListViewMainColumnGesamtkosten" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">187</Value>
+    </Setting>
+    <Setting Name="splitContainer1SplitterDistance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">800</Value>
+    </Setting>
+    <Setting Name="FormEditLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="FormEditSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">1600, 850</Value>
+    </Setting>
+    <Setting Name="FormEditState" Type="System.Windows.Forms.FormWindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

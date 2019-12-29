@@ -392,16 +392,59 @@ namespace Wifi.AutoVerwaltung
                 if (!string.IsNullOrEmpty(userControl.imageString)) this.KfzData.ImagePath.Add(userControl.imageString);
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UserControlPhoto userControl = new UserControlPhoto();
-            this.flowLayoutPanel1.Controls.Add(userControl);
-        }
-
+      
         private void bildLöschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.flowLayoutPanel1.Controls.RemoveByKey(UserControlPhoto.GetFocusedUserControl());
+        }
+
+        private void FormEdit_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.FormEditSize.Width == 0) Properties.Settings.Default.Upgrade();
+            if (Properties.Settings.Default.FormEditSize.Width == 0 || Properties.Settings.Default.FormEditSize.Height == 0)
+            {
+                // first start
+                // optional: add default values
+            }
+            else
+            {
+                this.WindowState = Properties.Settings.Default.FormEditState;
+
+                // we don't want a minimized window at startup
+                if (this.WindowState == FormWindowState.Minimized) this.WindowState = FormWindowState.Normal;
+
+                this.Location = Properties.Settings.Default.FormEditLocation;
+                this.Size = Properties.Settings.Default.FormEditSize;
+                
+
+            }
+        }
+
+        private void FormEdit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.FormEditState = this.WindowState;
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                // save location and size if the state is normal
+                Properties.Settings.Default.FormEditLocation = this.Location;
+                Properties.Settings.Default.FormEditSize = this.Size;
+               
+            }
+            else
+            {
+                // save the RestoreBounds if the form is minimized or maximized!
+                Properties.Settings.Default.FormEditLocation = this.RestoreBounds.Location;
+                Properties.Settings.Default.FormEditSize = this.RestoreBounds.Size;
+            }
+
+            // don't forget to save the settings
+            Properties.Settings.Default.Save();
+        }
+
+        private void btnAddPicture_Click(object sender, EventArgs e)
+        {
+            UserControlPhoto userControl = new UserControlPhoto();
+            this.flowLayoutPanel1.Controls.Add(userControl);
         }
     }
 }

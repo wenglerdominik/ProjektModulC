@@ -58,5 +58,113 @@ namespace Wifi.AutoVerwaltung.Properties {
                 this["FormMainState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewMainColumnMarke {
+            get {
+                return ((int)(this["ListViewMainColumnMarke"]));
+            }
+            set {
+                this["ListViewMainColumnMarke"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewMainColumnModell {
+            get {
+                return ((int)(this["ListViewMainColumnModell"]));
+            }
+            set {
+                this["ListViewMainColumnModell"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewMainColumnFarbe {
+            get {
+                return ((int)(this["ListViewMainColumnFarbe"]));
+            }
+            set {
+                this["ListViewMainColumnFarbe"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewMainColumnErstzulassung {
+            get {
+                return ((int)(this["ListViewMainColumnErstzulassung"]));
+            }
+            set {
+                this["ListViewMainColumnErstzulassung"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("187")]
+        public int ListViewMainColumnGesamtkosten {
+            get {
+                return ((int)(this["ListViewMainColumnGesamtkosten"]));
+            }
+            set {
+                this["ListViewMainColumnGesamtkosten"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("800")]
+        public int splitContainer1SplitterDistance {
+            get {
+                return ((int)(this["splitContainer1SplitterDistance"]));
+            }
+            set {
+                this["splitContainer1SplitterDistance"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point FormEditLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["FormEditLocation"]));
+            }
+            set {
+                this["FormEditLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1600, 850")]
+        public global::System.Drawing.Size FormEditSize {
+            get {
+                return ((global::System.Drawing.Size)(this["FormEditSize"]));
+            }
+            set {
+                this["FormEditSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.Forms.FormWindowState FormEditState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["FormEditState"]));
+            }
+            set {
+                this["FormEditState"] = value;
+            }
+        }
     }
 }

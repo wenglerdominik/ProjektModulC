@@ -66,7 +66,7 @@ namespace Wifi.AutoVerwaltung
             item.SubItems.Add(Convert.ToString(kfzData.Gesamtkosten));
 
             this.listViewMain.Items.Add(item);
-           // this.listViewMain.Items[0].Selected = true;
+            // this.listViewMain.Items[0].Selected = true;
 
         }
 
@@ -220,7 +220,7 @@ namespace Wifi.AutoVerwaltung
 
         private void listViewMain_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            if(e.IsSelected)
+            if (e.IsSelected)
             {
                 ListViewItem item = e.Item;
                 KfzData kfzData = item.Tag as KfzData;
@@ -230,7 +230,7 @@ namespace Wifi.AutoVerwaltung
                     showImage(kfzData);
                 }
             }
-            
+
         }
 
         private void showImage(KfzData kfzData)
@@ -247,10 +247,10 @@ namespace Wifi.AutoVerwaltung
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
                     UserControlPhoto userControl = new UserControlPhoto(bmp2, false);
-                   // userControl.Name = item;
+                    // userControl.Name = item;
                     this.flowLayoutPanelMain.Controls.Add(userControl);
 
-                                       
+
                 }
             }
             catch (Exception ex)
@@ -261,7 +261,7 @@ namespace Wifi.AutoVerwaltung
                 //kfzData.ImagePath = null;
             }
 
-           
+
         }
 
         private void buttonCloseApp_Click(object sender, EventArgs e)
@@ -288,6 +288,13 @@ namespace Wifi.AutoVerwaltung
 
                 this.Location = Properties.Settings.Default.FormMainLocation;
                 this.Size = Properties.Settings.Default.FormMainSize;
+                this.listViewMain.Columns[0].Width = Properties.Settings.Default.ListViewMainColumnMarke;
+                this.listViewMain.Columns[1].Width = Properties.Settings.Default.ListViewMainColumnModell;
+                this.listViewMain.Columns[2].Width = Properties.Settings.Default.ListViewMainColumnFarbe;
+                this.listViewMain.Columns[3].Width = Properties.Settings.Default.ListViewMainColumnErstzulassung;
+                this.listViewMain.Columns[4].Width = Properties.Settings.Default.ListViewMainColumnGesamtkosten;
+                this.splitContainer1.SplitterDistance = Properties.Settings.Default.splitContainer1SplitterDistance;
+
             }
         }
 
@@ -299,6 +306,13 @@ namespace Wifi.AutoVerwaltung
                 // save location and size if the state is normal
                 Properties.Settings.Default.FormMainLocation = this.Location;
                 Properties.Settings.Default.FormMainSize = this.Size;
+                Properties.Settings.Default.ListViewMainColumnMarke = this.listViewMain.Columns[0].Width;
+                Properties.Settings.Default.ListViewMainColumnModell = this.listViewMain.Columns[1].Width;
+                Properties.Settings.Default.ListViewMainColumnFarbe = this.listViewMain.Columns[2].Width;
+                Properties.Settings.Default.ListViewMainColumnErstzulassung = this.listViewMain.Columns[3].Width;
+                Properties.Settings.Default.ListViewMainColumnGesamtkosten = this.listViewMain.Columns[4].Width;
+                Properties.Settings.Default.splitContainer1SplitterDistance = this.splitContainer1.SplitterDistance;
+
             }
             else
             {
@@ -310,5 +324,8 @@ namespace Wifi.AutoVerwaltung
             // don't forget to save the settings
             Properties.Settings.Default.Save();
         }
+
+
+
     }
 }

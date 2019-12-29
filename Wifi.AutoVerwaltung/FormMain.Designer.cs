@@ -41,11 +41,6 @@
             this.toolStripLoggedUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripOpenFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.listViewMain = new System.Windows.Forms.ListView();
-            this.columnMarke = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnModell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnFarbe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnErstzulassung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnGesamtkosten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonNeuesFahrzeug = new System.Windows.Forms.Button();
@@ -58,6 +53,11 @@
             this.panelShowButton = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.columnMarke = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnModell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnFarbe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnErstzulassung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnGesamtkosten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -185,37 +185,12 @@
             this.listViewMain.MultiSelect = false;
             this.listViewMain.Name = "listViewMain";
             this.listViewMain.ShowItemToolTips = true;
-            this.listViewMain.Size = new System.Drawing.Size(1187, 885);
+            this.listViewMain.Size = new System.Drawing.Size(1146, 883);
             this.listViewMain.TabIndex = 4;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
             this.listViewMain.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewMain_ItemSelectionChanged);
             this.listViewMain.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewMain_MouseDoubleClick);
-            // 
-            // columnMarke
-            // 
-            this.columnMarke.Text = "Marke";
-            this.columnMarke.Width = 120;
-            // 
-            // columnModell
-            // 
-            this.columnModell.Text = "Modell";
-            this.columnModell.Width = 120;
-            // 
-            // columnFarbe
-            // 
-            this.columnFarbe.Text = "Farbe";
-            this.columnFarbe.Width = 120;
-            // 
-            // columnErstzulassung
-            // 
-            this.columnErstzulassung.Text = "Erstzulassung";
-            this.columnErstzulassung.Width = 120;
-            // 
-            // columnGesamtkosten
-            // 
-            this.columnGesamtkosten.Text = "Fahrzeugkosten [€]";
-            this.columnGesamtkosten.Width = 124;
             // 
             // contextMenuStrip1
             // 
@@ -307,7 +282,7 @@
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Margin = new System.Windows.Forms.Padding(6);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1187, 885);
+            this.panelMain.Size = new System.Drawing.Size(1146, 883);
             this.panelMain.TabIndex = 12;
             // 
             // panelKeinFahrzeug
@@ -348,6 +323,7 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(276, 60);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -360,20 +336,45 @@
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanelMain);
             this.splitContainer1.Size = new System.Drawing.Size(1706, 885);
-            this.splitContainer1.SplitterDistance = 1188;
+            this.splitContainer1.SplitterDistance = 1149;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 15;
             // 
             // flowLayoutPanelMain
             // 
-            this.flowLayoutPanelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelMain.AutoScroll = true;
             this.flowLayoutPanelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(514, 885);
-            this.flowLayoutPanelMain.TabIndex = 15;
+            this.flowLayoutPanelMain.Padding = new System.Windows.Forms.Padding(3, 3, 400, 3);
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(549, 883);
+            this.flowLayoutPanelMain.TabIndex = 10;
+            // 
+            // columnMarke
+            // 
+            this.columnMarke.Text = "Marke";
+            this.columnMarke.Width = 120;
+            // 
+            // columnModell
+            // 
+            this.columnModell.Text = "Modell";
+            this.columnModell.Width = 120;
+            // 
+            // columnFarbe
+            // 
+            this.columnFarbe.Text = "Farbe";
+            this.columnFarbe.Width = 120;
+            // 
+            // columnErstzulassung
+            // 
+            this.columnErstzulassung.Text = "Erstzulassung";
+            this.columnErstzulassung.Width = 120;
+            // 
+            // columnGesamtkosten
+            // 
+            this.columnGesamtkosten.Text = "Fahrzeugkosten [€]";
+            this.columnGesamtkosten.Width = 187;
             // 
             // FormMain
             // 

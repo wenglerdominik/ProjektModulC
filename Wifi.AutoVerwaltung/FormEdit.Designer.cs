@@ -32,11 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdit));
             this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
             this.tabPageAllgemein = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_AddPicture = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStripFlowPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bildLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownLeistung = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.numericUpDownWartung = new System.Windows.Forms.NumericUpDown();
@@ -107,9 +106,8 @@
             // tabPageAllgemein
             // 
             this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.tabPageAllgemein.Controls.Add(this.button1);
+            this.tabPageAllgemein.Controls.Add(this.btn_AddPicture);
             this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
-            this.tabPageAllgemein.Controls.Add(this.label1);
             this.tabPageAllgemein.Controls.Add(this.numericUpDownLeistung);
             this.tabPageAllgemein.Controls.Add(this.label14);
             this.tabPageAllgemein.Controls.Add(this.numericUpDownWartung);
@@ -134,15 +132,15 @@
             this.tabPageAllgemein.TabIndex = 0;
             this.tabPageAllgemein.Text = "Allgemeine Daten";
             // 
-            // button1
+            // btn_AddPicture
             // 
-            this.button1.Location = new System.Drawing.Point(785, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 40);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_AddPicture.Location = new System.Drawing.Point(639, 23);
+            this.btn_AddPicture.Name = "btn_AddPicture";
+            this.btn_AddPicture.Size = new System.Drawing.Size(156, 40);
+            this.btn_AddPicture.TabIndex = 24;
+            this.btn_AddPicture.Text = "Bild hinzufügen";
+            this.btn_AddPicture.UseVisualStyleBackColor = true;
+            this.btn_AddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -170,15 +168,6 @@
             this.bildLöschenToolStripMenuItem.Size = new System.Drawing.Size(197, 36);
             this.bildLöschenToolStripMenuItem.Text = "Bild löschen";
             this.bildLöschenToolStripMenuItem.Click += new System.EventHandler(this.bildLöschenToolStripMenuItem_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(634, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 25);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Bild hinzufügen";
             // 
             // numericUpDownLeistung
             // 
@@ -358,6 +347,9 @@
             // 
             // listViewAllgKosten
             // 
+            this.listViewAllgKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewAllgKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.listViewAllgKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnKategorie,
@@ -459,6 +451,9 @@
             // 
             // listViewTankKosten
             // 
+            this.listViewTankKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewTankKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.listViewTankKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnBetrag,
@@ -565,12 +560,13 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.tabControlAutoInfo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(1377, 675);
             this.Name = "FormEdit";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Erfassen und Ändern";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEdit_FormClosing);
+            this.Load += new System.EventHandler(this.FormEdit_Load);
             this.tabControlAutoInfo.ResumeLayout(false);
             this.tabPageAllgemein.ResumeLayout(false);
             this.tabPageAllgemein.PerformLayout();
@@ -633,9 +629,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDownLeistung;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripTabPage;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_AddPicture;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripFlowPanel;
         private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
     }
