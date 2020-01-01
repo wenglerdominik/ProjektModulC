@@ -18,6 +18,7 @@ namespace Wifi.AutoVerwaltung
         private string masterPassword = null;
         private KfzData kfzData = null;
 
+
         public FormMain()
         {
             InitializeComponent();
@@ -47,11 +48,11 @@ namespace Wifi.AutoVerwaltung
                 this.kfzData = formEdit.KfzData;
                 this.securedAutoFile.FahrzeugInfos.Add(this.kfzData);
                 fillListView(kfzData);
-                buttonKfzÜbersicht.PerformClick();
                 panelKeinFahrzeug.Visible = false;
                 this.listViewMain.Items[this.listViewMain.Items.Count - 1].Selected = true;
+                this.listViewMain.Visible = true;
             }
-            else buttonKfzÜbersicht_Click(this, EventArgs.Empty);
+            else panelKeinFahrzeug.Visible = true;
 
         }
 
@@ -108,6 +109,7 @@ namespace Wifi.AutoVerwaltung
                             this.securedAutoFile = null;
                         }
                         this.panelKeinFahrzeug.Visible = false;
+                        this.listViewMain.Visible = true;
                     }
                     catch (Exception ex)
                     {
@@ -116,7 +118,6 @@ namespace Wifi.AutoVerwaltung
                     }
 
                 }
-                buttonKfzÜbersicht_Click(this, EventArgs.Empty);
             }
         }
 
@@ -169,30 +170,11 @@ namespace Wifi.AutoVerwaltung
             }
         }
 
-        private void buttonKfzÜbersicht_Click(object sender, EventArgs e)
-        {
-            panelShowButton.Height = buttonKfzÜbersicht.Height;
-            panelShowButton.Top = buttonKfzÜbersicht.Top;
-
-            if (this.securedAutoFile != null)
-            {
-                this.listViewMain.Visible = true;
-            }
-            else
-            {
-                panelKeinFahrzeug.Visible = true;
-                panelKeinFahrzeug.Height = panelMain.Height;
-                panelKeinFahrzeug.Width = panelMain.Width;
-                panelKeinFahrzeug.Location = panelMain.Location;
-
-            }
-        }
-
+      
         private void buttonNeuesFahrzeug_Click(object sender, EventArgs e)
         {
             panelShowButton.Height = buttonNeuesFahrzeug.Height;
             panelShowButton.Top = buttonNeuesFahrzeug.Top;
-            this.panelKeinFahrzeug.Visible = false;
             newCar();
 
         }

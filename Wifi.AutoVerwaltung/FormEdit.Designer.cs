@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdit));
             this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
             this.tabPageAllgemein = new System.Windows.Forms.TabPage();
-            this.btn_AddPicture = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStripFlowPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bildLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +43,6 @@
             this.labelLeistungPS = new System.Windows.Forms.Label();
             this.textBoxKennz = new System.Windows.Forms.TextBox();
             this.textBoxModell = new System.Windows.Forms.TextBox();
-            this.textBoxMarke = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,7 +76,6 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.pictureBoxBrand = new System.Windows.Forms.PictureBox();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControlAutoInfo.SuspendLayout();
             this.tabPageAllgemein.SuspendLayout();
             this.contextMenuStripFlowPanel.SuspendLayout();
@@ -110,10 +107,8 @@
             // tabPageAllgemein
             // 
             this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.tabPageAllgemein.Controls.Add(this.comboBox1);
             this.tabPageAllgemein.Controls.Add(this.comboBoxBrand);
             this.tabPageAllgemein.Controls.Add(this.pictureBoxBrand);
-            this.tabPageAllgemein.Controls.Add(this.btn_AddPicture);
             this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
             this.tabPageAllgemein.Controls.Add(this.numericUpDownLeistung);
             this.tabPageAllgemein.Controls.Add(this.label14);
@@ -123,7 +118,6 @@
             this.tabPageAllgemein.Controls.Add(this.labelLeistungPS);
             this.tabPageAllgemein.Controls.Add(this.textBoxKennz);
             this.tabPageAllgemein.Controls.Add(this.textBoxModell);
-            this.tabPageAllgemein.Controls.Add(this.textBoxMarke);
             this.tabPageAllgemein.Controls.Add(this.label8);
             this.tabPageAllgemein.Controls.Add(this.label7);
             this.tabPageAllgemein.Controls.Add(this.label6);
@@ -139,16 +133,6 @@
             this.tabPageAllgemein.TabIndex = 0;
             this.tabPageAllgemein.Text = "Allgemeine Daten";
             // 
-            // btn_AddPicture
-            // 
-            this.btn_AddPicture.Location = new System.Drawing.Point(639, 23);
-            this.btn_AddPicture.Name = "btn_AddPicture";
-            this.btn_AddPicture.Size = new System.Drawing.Size(188, 40);
-            this.btn_AddPicture.TabIndex = 24;
-            this.btn_AddPicture.Text = "Bild hinzufügen";
-            this.btn_AddPicture.UseVisualStyleBackColor = true;
-            this.btn_AddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -157,9 +141,9 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.ContextMenuStrip = this.contextMenuStripFlowPanel;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(639, 76);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(44, 376);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(859, 546);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1454, 246);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // contextMenuStripFlowPanel
@@ -179,7 +163,7 @@
             // 
             // numericUpDownLeistung
             // 
-            this.numericUpDownLeistung.Location = new System.Drawing.Point(207, 156);
+            this.numericUpDownLeistung.Location = new System.Drawing.Point(207, 178);
             this.numericUpDownLeistung.Maximum = new decimal(new int[] {
             500,
             0,
@@ -193,7 +177,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(385, 252);
+            this.label14.Location = new System.Drawing.Point(385, 274);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(97, 25);
@@ -202,7 +186,7 @@
             // 
             // numericUpDownWartung
             // 
-            this.numericUpDownWartung.Location = new System.Drawing.Point(207, 246);
+            this.numericUpDownWartung.Location = new System.Drawing.Point(207, 268);
             this.numericUpDownWartung.Margin = new System.Windows.Forms.Padding(6);
             this.numericUpDownWartung.Name = "numericUpDownWartung";
             this.numericUpDownWartung.Size = new System.Drawing.Size(156, 29);
@@ -210,8 +194,6 @@
             // 
             // comboBoxFarbe
             // 
-            this.comboBoxFarbe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFarbe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxFarbe.FormattingEnabled = true;
             this.comboBoxFarbe.Items.AddRange(new object[] {
             "Blau",
@@ -221,7 +203,7 @@
             "Rot",
             "Schwarz",
             "Weiß"});
-            this.comboBoxFarbe.Location = new System.Drawing.Point(207, 200);
+            this.comboBoxFarbe.Location = new System.Drawing.Point(207, 222);
             this.comboBoxFarbe.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxFarbe.Name = "comboBoxFarbe";
             this.comboBoxFarbe.Size = new System.Drawing.Size(334, 32);
@@ -230,7 +212,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(207, 114);
+            this.dateTimePicker1.Location = new System.Drawing.Point(207, 136);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(156, 29);
@@ -239,7 +221,7 @@
             // labelLeistungPS
             // 
             this.labelLeistungPS.AutoSize = true;
-            this.labelLeistungPS.Location = new System.Drawing.Point(380, 162);
+            this.labelLeistungPS.Location = new System.Drawing.Point(380, 184);
             this.labelLeistungPS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLeistungPS.Name = "labelLeistungPS";
             this.labelLeistungPS.Size = new System.Drawing.Size(39, 25);
@@ -248,7 +230,7 @@
             // 
             // textBoxKennz
             // 
-            this.textBoxKennz.Location = new System.Drawing.Point(207, 292);
+            this.textBoxKennz.Location = new System.Drawing.Point(207, 314);
             this.textBoxKennz.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKennz.Name = "textBoxKennz";
             this.textBoxKennz.Size = new System.Drawing.Size(334, 29);
@@ -256,24 +238,16 @@
             // 
             // textBoxModell
             // 
-            this.textBoxModell.Location = new System.Drawing.Point(207, 70);
+            this.textBoxModell.Location = new System.Drawing.Point(207, 92);
             this.textBoxModell.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxModell.Name = "textBoxModell";
             this.textBoxModell.Size = new System.Drawing.Size(334, 29);
             this.textBoxModell.TabIndex = 1;
             // 
-            // textBoxMarke
-            // 
-            this.textBoxMarke.Location = new System.Drawing.Point(207, 28);
-            this.textBoxMarke.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMarke.Name = "textBoxMarke";
-            this.textBoxMarke.Size = new System.Drawing.Size(334, 29);
-            this.textBoxMarke.TabIndex = 0;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 250);
+            this.label8.Location = new System.Drawing.Point(7, 272);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 25);
@@ -283,7 +257,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(108, 204);
+            this.label7.Location = new System.Drawing.Point(108, 226);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 25);
@@ -293,7 +267,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 162);
+            this.label6.Location = new System.Drawing.Point(39, 184);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 25);
@@ -303,7 +277,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 118);
+            this.label5.Location = new System.Drawing.Point(37, 140);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 25);
@@ -313,7 +287,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 296);
+            this.label4.Location = new System.Drawing.Point(48, 318);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 25);
@@ -323,7 +297,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(103, 76);
+            this.label3.Location = new System.Drawing.Point(103, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 25);
@@ -333,7 +307,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 32);
+            this.label2.Location = new System.Drawing.Point(106, 54);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 25);
@@ -560,9 +534,10 @@
             // 
             // pictureBoxBrand
             // 
-            this.pictureBoxBrand.Location = new System.Drawing.Point(33, 453);
+            this.pictureBoxBrand.Location = new System.Drawing.Point(625, 47);
             this.pictureBoxBrand.Name = "pictureBoxBrand";
-            this.pictureBoxBrand.Size = new System.Drawing.Size(137, 133);
+            this.pictureBoxBrand.Size = new System.Drawing.Size(253, 207);
+            this.pictureBoxBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBrand.TabIndex = 25;
             this.pictureBoxBrand.TabStop = false;
             // 
@@ -621,19 +596,11 @@
             "Toyota",
             "Volvo",
             "VW"});
-            this.comboBoxBrand.Location = new System.Drawing.Point(207, 453);
+            this.comboBoxBrand.Location = new System.Drawing.Point(207, 47);
             this.comboBoxBrand.Name = "comboBoxBrand";
-            this.comboBoxBrand.Size = new System.Drawing.Size(348, 32);
+            this.comboBoxBrand.Size = new System.Drawing.Size(334, 32);
             this.comboBoxBrand.TabIndex = 26;
             this.comboBoxBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxBrand_SelectedIndexChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(207, 519);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 27;
             // 
             // FormEdit
             // 
@@ -681,7 +648,6 @@
 		private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox textBoxKennz;
         private System.Windows.Forms.TextBox textBoxModell;
-        private System.Windows.Forms.TextBox textBoxMarke;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -717,11 +683,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripTabPage;
         private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btn_AddPicture;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripFlowPanel;
         private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.PictureBox pictureBoxBrand;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

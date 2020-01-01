@@ -131,7 +131,6 @@
       <Name>Wifi.Auto.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Alfa-Romeo-Logo-brandtreeIndexSmall-353e502-935510.jpg" />
   </ItemGroup>

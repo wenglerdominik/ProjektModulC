@@ -22,7 +22,7 @@ namespace Wifi.AutoVerwaltung
         {
             InitializeComponent();
             CenterToScreen();
-
+            if (this.flowLayoutPanel1.Controls.Count == 0) neuesBildFunktion();
         }
 
         public FormEdit(KfzData kfzData)
@@ -30,7 +30,7 @@ namespace Wifi.AutoVerwaltung
             InitializeComponent();
             CenterToScreen();
             this.KfzData = kfzData;
-            this.textBoxMarke.Text = kfzData.Marke;
+            this.comboBoxBrand.Text = kfzData.Marke;
             this.textBoxModell.Text = kfzData.Modell;
             this.dateTimePicker1.Value = Convert.ToDateTime(kfzData.Zulassung);
             this.comboBoxFarbe.SelectedItem = kfzData.Farbe;
@@ -57,9 +57,10 @@ namespace Wifi.AutoVerwaltung
                     catch (Exception ex)
                     {
 
-                        MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
+                        MessageBox.Show("Bild konnte nicht geöffnet werden.");
                     }
                 }
+                neuesBildFunktion();
 
             }
 
@@ -91,7 +92,7 @@ namespace Wifi.AutoVerwaltung
                         }
                         if (control is NumericUpDown)
                         {
-                            if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) control.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) numericUpDownLeistung.BackColor = Color.LightYellow;
                             else numericUpDownLeistung.BackColor = Color.White;
                         }
                         if (control is MaskedTextBox)
@@ -108,14 +109,14 @@ namespace Wifi.AutoVerwaltung
 
                     }
 
-                    if (string.IsNullOrEmpty(this.textBoxMarke.Text)) errorlog += "\nMarke";
+                    if (string.IsNullOrEmpty(this.comboBoxBrand.Text)) errorlog += "\nMarke";
                     if (string.IsNullOrEmpty(this.textBoxModell.Text)) errorlog += "\nModell";
                     if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) errorlog += "\nLeistung";
                     if (comboBoxFarbe.SelectedItem == null) errorlog += "\nFarbe";
                     if (errorlog != "Bitte folgende Felder ausfüllen:\n") throw new Exception(errorlog);
 
                     #region readData
-                    this.KfzData.Marke = this.textBoxMarke.Text;
+                    this.KfzData.Marke = this.comboBoxBrand.Text;
                     this.KfzData.Modell = this.textBoxModell.Text;
                     this.KfzData.Zulassung = this.dateTimePicker1.Value.ToString("dd.MM.yyy");
                     this.KfzData.Farbe = this.comboBoxFarbe.SelectedItem.ToString();
@@ -395,7 +396,12 @@ namespace Wifi.AutoVerwaltung
       
         private void bildLöschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.flowLayoutPanel1.Controls.RemoveByKey(UserControlPhoto.GetFocusedUserControl());
+            if(UserControlPhoto.GetFocusedUserControl() == "UserControlPhoto")
+            {
+                MessageBox.Show("Es ist noch kein Bild hinterlegt", "Löschen nicht möglich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else this.flowLayoutPanel1.Controls.RemoveByKey(UserControlPhoto.GetFocusedUserControl());
+
         }
 
         private void FormEdit_Load(object sender, EventArgs e)
@@ -445,8 +451,17 @@ namespace Wifi.AutoVerwaltung
         {
             UserControlPhoto userControl = new UserControlPhoto();
             this.flowLayoutPanel1.Controls.Add(userControl);
+            
+            
         }
-
+        public void neuesBildFunktion()
+        {
+            UserControlPhoto userControl = new UserControlPhoto();
+            this.flowLayoutPanel1.Controls.Add(userControl);
+            userControl.newPictureAddedEvent += this.neuesBildFunktion;
+        }
+       
+      
         private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (this.comboBoxBrand.SelectedItem)

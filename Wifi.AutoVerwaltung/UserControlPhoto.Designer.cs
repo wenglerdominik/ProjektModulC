@@ -37,7 +37,6 @@
             // 
             // pictureBoxCar
             // 
-            this.pictureBoxCar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxCar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxCar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCar.Image")));
             this.pictureBoxCar.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCar.InitialImage")));

@@ -49,7 +49,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonNeuesFahrzeug = new System.Windows.Forms.Button();
-            this.buttonKfzÜbersicht = new System.Windows.Forms.Button();
             this.panelLine = new System.Windows.Forms.Panel();
             this.buttonCloseApp = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
@@ -77,6 +76,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
             this.bearbeitenToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 4, 0, 4);
@@ -99,7 +99,7 @@
             this.menuItemOpenFile.Image = ((System.Drawing.Image)(resources.GetObject("menuItemOpenFile.Image")));
             this.menuItemOpenFile.Name = "menuItemOpenFile";
             this.menuItemOpenFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuItemOpenFile.Size = new System.Drawing.Size(292, 40);
+            this.menuItemOpenFile.Size = new System.Drawing.Size(315, 40);
             this.menuItemOpenFile.Text = "Öffnen";
             this.menuItemOpenFile.Click += new System.EventHandler(this.menuItemOpenFile_Click);
             // 
@@ -247,31 +247,13 @@
             this.buttonNeuesFahrzeug.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.buttonNeuesFahrzeug.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonNeuesFahrzeug.Image = ((System.Drawing.Image)(resources.GetObject("buttonNeuesFahrzeug.Image")));
-            this.buttonNeuesFahrzeug.Location = new System.Drawing.Point(0, 236);
+            this.buttonNeuesFahrzeug.Location = new System.Drawing.Point(0, 49);
             this.buttonNeuesFahrzeug.Margin = new System.Windows.Forms.Padding(6);
             this.buttonNeuesFahrzeug.Name = "buttonNeuesFahrzeug";
             this.buttonNeuesFahrzeug.Size = new System.Drawing.Size(246, 160);
             this.buttonNeuesFahrzeug.TabIndex = 6;
             this.buttonNeuesFahrzeug.UseVisualStyleBackColor = false;
             this.buttonNeuesFahrzeug.Click += new System.EventHandler(this.buttonNeuesFahrzeug_Click);
-            // 
-            // buttonKfzÜbersicht
-            // 
-            this.buttonKfzÜbersicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.buttonKfzÜbersicht.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.buttonKfzÜbersicht.FlatAppearance.BorderSize = 0;
-            this.buttonKfzÜbersicht.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.buttonKfzÜbersicht.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonKfzÜbersicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKfzÜbersicht.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonKfzÜbersicht.Image = ((System.Drawing.Image)(resources.GetObject("buttonKfzÜbersicht.Image")));
-            this.buttonKfzÜbersicht.Location = new System.Drawing.Point(0, 60);
-            this.buttonKfzÜbersicht.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonKfzÜbersicht.Name = "buttonKfzÜbersicht";
-            this.buttonKfzÜbersicht.Size = new System.Drawing.Size(246, 160);
-            this.buttonKfzÜbersicht.TabIndex = 7;
-            this.buttonKfzÜbersicht.UseVisualStyleBackColor = false;
-            this.buttonKfzÜbersicht.Click += new System.EventHandler(this.buttonKfzÜbersicht_Click);
             // 
             // panelLine
             // 
@@ -390,7 +372,6 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panelShowButton);
             this.Controls.Add(this.buttonCloseApp);
-            this.Controls.Add(this.buttonKfzÜbersicht);
             this.Controls.Add(this.buttonNeuesFahrzeug);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -437,7 +418,6 @@
 		private System.Windows.Forms.ColumnHeader columnErstzulassung;
 		private System.Windows.Forms.ColumnHeader columnGesamtkosten;
         private System.Windows.Forms.Button buttonNeuesFahrzeug;
-        private System.Windows.Forms.Button buttonKfzÜbersicht;
         private System.Windows.Forms.Panel panelLine;
         private System.Windows.Forms.Button buttonCloseApp;
         private System.Windows.Forms.Panel panelMain;
