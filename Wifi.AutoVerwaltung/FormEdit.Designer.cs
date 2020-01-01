@@ -194,6 +194,8 @@
             // 
             // comboBoxFarbe
             // 
+            this.comboBoxFarbe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxFarbe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxFarbe.FormattingEnabled = true;
             this.comboBoxFarbe.Items.AddRange(new object[] {
             "Blau",

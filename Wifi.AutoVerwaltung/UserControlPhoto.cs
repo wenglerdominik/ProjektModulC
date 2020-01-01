@@ -75,7 +75,7 @@ namespace Wifi.AutoVerwaltung
         private void pictureBoxCar_MouseDown(object sender, MouseEventArgs e)
         {
             nameFocusedControl = this.Name;
-            this.pictureBoxCar.BorderStyle = BorderStyle.FixedSingle;
+            
         }
     }
 }

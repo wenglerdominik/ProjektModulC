@@ -33,7 +33,7 @@ namespace Wifi.AutoVerwaltung
             this.comboBoxBrand.Text = kfzData.Marke;
             this.textBoxModell.Text = kfzData.Modell;
             this.dateTimePicker1.Value = Convert.ToDateTime(kfzData.Zulassung);
-            this.comboBoxFarbe.SelectedItem = kfzData.Farbe;
+            this.comboBoxFarbe.Text = kfzData.Farbe;
             this.numericUpDownLeistung.Text = kfzData.Leistung;
             this.numericUpDownWartung.Text = kfzData.Wartungsintervall;
             this.textBoxKennz.Text = kfzData.Kennzeichen;
@@ -102,9 +102,10 @@ namespace Wifi.AutoVerwaltung
                         }
                         if (control is ComboBox)
                         {
-                            // DrawLinePoint();
-                            if (comboBoxFarbe.SelectedItem == null) control.BackColor = Color.LightYellow;
-                            else control.BackColor = Color.White;
+                            if (string.IsNullOrEmpty(comboBoxFarbe.Text)) comboBoxFarbe.BackColor = Color.LightYellow;
+                            else comboBoxFarbe.BackColor = Color.White;
+                            if (comboBoxBrand.SelectedItem == null || string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.LightYellow;
+                            else comboBoxBrand.BackColor = Color.White;
                         }
 
                     }
@@ -112,14 +113,14 @@ namespace Wifi.AutoVerwaltung
                     if (string.IsNullOrEmpty(this.comboBoxBrand.Text)) errorlog += "\nMarke";
                     if (string.IsNullOrEmpty(this.textBoxModell.Text)) errorlog += "\nModell";
                     if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) errorlog += "\nLeistung";
-                    if (comboBoxFarbe.SelectedItem == null) errorlog += "\nFarbe";
+                    if (string.IsNullOrEmpty(comboBoxFarbe.Text)) errorlog += "\nFarbe";
                     if (errorlog != "Bitte folgende Felder ausfüllen:\n") throw new Exception(errorlog);
 
                     #region readData
                     this.KfzData.Marke = this.comboBoxBrand.Text;
                     this.KfzData.Modell = this.textBoxModell.Text;
                     this.KfzData.Zulassung = this.dateTimePicker1.Value.ToString("dd.MM.yyy");
-                    this.KfzData.Farbe = this.comboBoxFarbe.SelectedItem.ToString();
+                    this.KfzData.Farbe = this.comboBoxFarbe.Text;
                     this.KfzData.Leistung = this.numericUpDownLeistung.Text;
                     this.KfzData.Wartungsintervall = this.numericUpDownWartung.Text;
                     this.KfzData.Kennzeichen = this.textBoxKennz.Text;
@@ -446,14 +447,7 @@ namespace Wifi.AutoVerwaltung
             // don't forget to save the settings
             Properties.Settings.Default.Save();
         }
-
-        private void btnAddPicture_Click(object sender, EventArgs e)
-        {
-            UserControlPhoto userControl = new UserControlPhoto();
-            this.flowLayoutPanel1.Controls.Add(userControl);
-            
-            
-        }
+              
         public void neuesBildFunktion()
         {
             UserControlPhoto userControl = new UserControlPhoto();

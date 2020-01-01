@@ -43,7 +43,7 @@
             this.pictureBoxCar.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCar.Name = "pictureBoxCar";
             this.pictureBoxCar.Size = new System.Drawing.Size(446, 385);
-            this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCar.TabIndex = 22;
             this.pictureBoxCar.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBoxCar, "Bilder per Drag/Drop hinzufügen");
