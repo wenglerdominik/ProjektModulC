@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Wifi.AutoVerwaltung.Properties
-{
-
-
+namespace Wifi.AutoVerwaltung.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,544 @@ namespace Wifi.AutoVerwaltung.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Wifi.AutoVerwaltung.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Alfa_Romeo_Logo_brandtreeIndexSmall_353e502_935510 {
+            get {
+                object obj = ResourceManager.GetObject("Alfa_Romeo_Logo_brandtreeIndexSmall_353e502_935510", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Alpina_Logo_brandtreeIndexSmall_db9af53_945684 {
+            get {
+                object obj = ResourceManager.GetObject("Alpina_Logo_brandtreeIndexSmall_db9af53_945684", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Aston_Martin_Logo_brandtreeIndexSmall_805186e1_945683 {
+            get {
+                object obj = ResourceManager.GetObject("Aston_Martin_Logo_brandtreeIndexSmall_805186e1_945683", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Audi_Logo_Neu_02_2019_brandtreeIndexSmall_44d434cb_1430808 {
+            get {
+                object obj = ResourceManager.GetObject("Audi_Logo_Neu_02_2019_brandtreeIndexSmall_44d434cb_1430808", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bentley_Logo_brandtreeIndexSmall_41a61902_702423 {
+            get {
+                object obj = ResourceManager.GetObject("Bentley_Logo_brandtreeIndexSmall_41a61902_702423", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BMW_Logo_brandtreeIndexSmall_88182575_702392 {
+            get {
+                object obj = ResourceManager.GetObject("BMW_Logo_brandtreeIndexSmall_88182575_702392", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bugatti_Logo_brandtreeIndexSmall_252888c_946200 {
+            get {
+                object obj = ResourceManager.GetObject("Bugatti_Logo_brandtreeIndexSmall_252888c_946200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cadillac_Logo_brandtreeIndexSmall_7ea8e883_945686 {
+            get {
+                object obj = ResourceManager.GetObject("Cadillac_Logo_brandtreeIndexSmall_7ea8e883_945686", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chevrolet_Logo_brandtreeIndexSmall_32f60c53_702439 {
+            get {
+                object obj = ResourceManager.GetObject("Chevrolet_Logo_brandtreeIndexSmall_32f60c53_702439", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Citroen_Logo_brandtreeIndexSmall_5d4a92f8_700257 {
+            get {
+                object obj = ResourceManager.GetObject("Citroen_Logo_brandtreeIndexSmall_5d4a92f8_700257", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dacia_Logo_brandtreeIndexSmall_538fec13_702394 {
+            get {
+                object obj = ResourceManager.GetObject("Dacia_Logo_brandtreeIndexSmall_538fec13_702394", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DS_Logo_brandtreeIndexSmall_8a8042ef_940849 {
+            get {
+                object obj = ResourceManager.GetObject("DS_Logo_brandtreeIndexSmall_8a8042ef_940849", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ferrari_Logo_brandtreeIndexSmall_3b47b704_702395 {
+            get {
+                object obj = ResourceManager.GetObject("Ferrari_Logo_brandtreeIndexSmall_3b47b704_702395", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fiat_Logo_brandtreeIndexSmall_b8ec2f4a_702396 {
+            get {
+                object obj = ResourceManager.GetObject("Fiat_Logo_brandtreeIndexSmall_b8ec2f4a_702396", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ford_Logo_brandtreeIndexSmall_e4d8a4ce_702397 {
+            get {
+                object obj = ResourceManager.GetObject("Ford_Logo_brandtreeIndexSmall_e4d8a4ce_702397", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Honda_Logo_brandtreeIndexSmall_e6d06e72_945693 {
+            get {
+                object obj = ResourceManager.GetObject("Honda_Logo_brandtreeIndexSmall_e6d06e72_945693", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hyundai_Logo_brandtreeIndexSmall_dba2d69d_941104 {
+            get {
+                object obj = ResourceManager.GetObject("Hyundai_Logo_brandtreeIndexSmall_dba2d69d_941104", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_brandtreeIndexSmall_2aaef28_1430682 {
+            get {
+                object obj = ResourceManager.GetObject("image_brandtreeIndexSmall_2aaef28_1430682", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Infiniti_Logo_brandtreeIndexSmall_ece52b3d_941119 {
+            get {
+                object obj = ResourceManager.GetObject("Infiniti_Logo_brandtreeIndexSmall_ece52b3d_941119", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Isuzu_Logo_brandtreeIndexSmall_71406f9e_945694 {
+            get {
+                object obj = ResourceManager.GetObject("Isuzu_Logo_brandtreeIndexSmall_71406f9e_945694", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jaguar_Logo_brandtreeIndexSmall_58c924ae_1554011 {
+            get {
+                object obj = ResourceManager.GetObject("Jaguar_Logo_brandtreeIndexSmall_58c924ae_1554011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jeep_Logo_brandtreeIndexSmall_2181a802_941106 {
+            get {
+                object obj = ResourceManager.GetObject("Jeep_Logo_brandtreeIndexSmall_2181a802_941106", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kia_Logo_brandtreeIndexSmall_97b9f0b3_941107 {
+            get {
+                object obj = ResourceManager.GetObject("Kia_Logo_brandtreeIndexSmall_97b9f0b3_941107", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lada_Logo_brandtreeIndexSmall_ef2db6ef_1128620 {
+            get {
+                object obj = ResourceManager.GetObject("Lada_Logo_brandtreeIndexSmall_ef2db6ef_1128620", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lamborghini_Logo_brandtreeIndexSmall_df88a8a3_945695 {
+            get {
+                object obj = ResourceManager.GetObject("Lamborghini_Logo_brandtreeIndexSmall_df88a8a3_945695", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Land_Rover_Logo_brandtreeIndexSmall_1e8d2f4f_702457 {
+            get {
+                object obj = ResourceManager.GetObject("Land_Rover_Logo_brandtreeIndexSmall_1e8d2f4f_702457", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lexus_Logo_brandtreeIndexSmall_8ef5b88c_942610 {
+            get {
+                object obj = ResourceManager.GetObject("Lexus_Logo_brandtreeIndexSmall_8ef5b88c_942610", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lotus_Logo_brandtreeIndexSmall_c2b345ee_945697 {
+            get {
+                object obj = ResourceManager.GetObject("Lotus_Logo_brandtreeIndexSmall_c2b345ee_945697", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maserati_Logo_brandtreeIndexSmall_3b5073c9_945700 {
+            get {
+                object obj = ResourceManager.GetObject("Maserati_Logo_brandtreeIndexSmall_3b5073c9_945700", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mazda_Logo_brandtreeIndexSmall_abd3161d_1128623 {
+            get {
+                object obj = ResourceManager.GetObject("Mazda_Logo_brandtreeIndexSmall_abd3161d_1128623", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap McLaren_Logo_brandtreeIndexSmall_c9f50d36_941804 {
+            get {
+                object obj = ResourceManager.GetObject("McLaren_Logo_brandtreeIndexSmall_c9f50d36_941804", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mercedes_Logo_brandtreeIndexSmall_c0d1786b_702402 {
+            get {
+                object obj = ResourceManager.GetObject("Mercedes_Logo_brandtreeIndexSmall_c0d1786b_702402", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mini_Logo_brandtreeIndexSmall_d9e7b91_941110 {
+            get {
+                object obj = ResourceManager.GetObject("Mini_Logo_brandtreeIndexSmall_d9e7b91_941110", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mitsubishi_Logo_brandtreeIndexSmall_e52939cf_1128624 {
+            get {
+                object obj = ResourceManager.GetObject("Mitsubishi_Logo_brandtreeIndexSmall_e52939cf_1128624", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nissan_Logo_brandtreeIndexSmall_44366170_941111 {
+            get {
+                object obj = ResourceManager.GetObject("Nissan_Logo_brandtreeIndexSmall_44366170_941111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Opel_Logo_brandtreeIndexSmall_3ddc24ff_702407 {
+            get {
+                object obj = ResourceManager.GetObject("Opel_Logo_brandtreeIndexSmall_3ddc24ff_702407", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Peugeot_Logo_brandtreeIndexSmall_b6a7040f_702414 {
+            get {
+                object obj = ResourceManager.GetObject("Peugeot_Logo_brandtreeIndexSmall_b6a7040f_702414", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Porsche_Logo_brandtreeIndexSmall_b8d7c99_702413 {
+            get {
+                object obj = ResourceManager.GetObject("Porsche_Logo_brandtreeIndexSmall_b8d7c99_702413", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Renault_Logo_brandtreeIndexSmall_e6878de7_702412 {
+            get {
+                object obj = ResourceManager.GetObject("Renault_Logo_brandtreeIndexSmall_e6878de7_702412", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rolls_Royce_Logo_brandtreeIndexSmall_d2e6b452_945703 {
+            get {
+                object obj = ResourceManager.GetObject("Rolls_Royce_Logo_brandtreeIndexSmall_d2e6b452_945703", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Seat_Logo_brandtreeIndexSmall_eb1ca1c8_941115 {
+            get {
+                object obj = ResourceManager.GetObject("Seat_Logo_brandtreeIndexSmall_eb1ca1c8_941115", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Skoda_Logo_brandtreeIndexSmall_e7930242_941116 {
+            get {
+                object obj = ResourceManager.GetObject("Skoda_Logo_brandtreeIndexSmall_e7930242_941116", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Smart_Logo_brandtreeIndexSmall_832b209c_945705 {
+            get {
+                object obj = ResourceManager.GetObject("Smart_Logo_brandtreeIndexSmall_832b209c_945705", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SsangYong_Logo_brandtreeIndexSmall_47b5a1ab_945085 {
+            get {
+                object obj = ResourceManager.GetObject("SsangYong_Logo_brandtreeIndexSmall_47b5a1ab_945085", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subaru_Logo_brandtreeIndexSmall_c7f4790a_941162 {
+            get {
+                object obj = ResourceManager.GetObject("Subaru_Logo_brandtreeIndexSmall_c7f4790a_941162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Suzuki_Logo_brandtreeIndexSmall_c9d26001_945253 {
+            get {
+                object obj = ResourceManager.GetObject("Suzuki_Logo_brandtreeIndexSmall_c9d26001_945253", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tesla_Logo_Neu_02_2019_brandtreeIndexSmall_3beaf0ab_1430807 {
+            get {
+                object obj = ResourceManager.GetObject("Tesla_Logo_Neu_02_2019_brandtreeIndexSmall_3beaf0ab_1430807", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Toyota_Logo_brandtreeIndexSmall_2d086b5b_702409 {
+            get {
+                object obj = ResourceManager.GetObject("Toyota_Logo_brandtreeIndexSmall_2d086b5b_702409", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Volvo_Logo_brandtreeIndexSmall_b2257f5e_423001 {
+            get {
+                object obj = ResourceManager.GetObject("Volvo_Logo_brandtreeIndexSmall_b2257f5e_423001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VW_Logo_2019_brandtreeIndexSmall_3696dd3c_1631727 {
+            get {
+                object obj = ResourceManager.GetObject("VW_Logo_2019_brandtreeIndexSmall_3696dd3c_1631727", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

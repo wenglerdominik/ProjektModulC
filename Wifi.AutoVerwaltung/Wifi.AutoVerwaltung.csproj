@@ -104,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="FormTanken.resx">
       <DependentUpon>FormTanken.cs</DependentUpon>
@@ -129,6 +130,157 @@
       <Project>{cd1da8c0-1099-49be-a902-47c4ad79424f}</Project>
       <Name>Wifi.Auto.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Alfa-Romeo-Logo-brandtreeIndexSmall-353e502-935510.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpina-Logo-brandtreeIndexSmall-db9af53-945684.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aston-Martin-Logo-brandtreeIndexSmall-805186e1-945683.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audi-Logo-Neu-02-2019-brandtreeIndexSmall-44d434cb-1430808.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bentley-Logo-brandtreeIndexSmall-41a61902-702423.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMW-Logo-brandtreeIndexSmall-88182575-702392.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bugatti-Logo-brandtreeIndexSmall-252888c-946200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadillac-Logo-brandtreeIndexSmall-7ea8e883-945686.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chevrolet-Logo-brandtreeIndexSmall-32f60c53-702439.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Citroen-Logo-brandtreeIndexSmall-5d4a92f8-700257.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dacia-Logo-brandtreeIndexSmall-538fec13-702394.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DS-Logo-brandtreeIndexSmall-8a8042ef-940849.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferrari-Logo-brandtreeIndexSmall-3b47b704-702395.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiat-Logo-brandtreeIndexSmall-b8ec2f4a-702396.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ford-Logo-brandtreeIndexSmall-e4d8a4ce-702397.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Honda-Logo-brandtreeIndexSmall-e6d06e72-945693.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hyundai-Logo-brandtreeIndexSmall-dba2d69d-941104.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-brandtreeIndexSmall-2aaef28-1430682.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infiniti-Logo-brandtreeIndexSmall-ece52b3d-941119.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Isuzu-Logo-brandtreeIndexSmall-71406f9e-945694.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jaguar-Logo-brandtreeIndexSmall-58c924ae-1554011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jeep-Logo-brandtreeIndexSmall-2181a802-941106.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kia-Logo-brandtreeIndexSmall-97b9f0b3-941107.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lada-Logo-brandtreeIndexSmall-ef2db6ef-1128620.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamborghini-Logo-brandtreeIndexSmall-df88a8a3-945695.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Land-Rover-Logo-brandtreeIndexSmall-1e8d2f4f-702457.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lexus-Logo-brandtreeIndexSmall-8ef5b88c-942610.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lotus-Logo-brandtreeIndexSmall-c2b345ee-945697.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maserati-Logo-brandtreeIndexSmall-3b5073c9-945700.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mazda-Logo-brandtreeIndexSmall-abd3161d-1128623.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\McLaren-Logo-brandtreeIndexSmall-c9f50d36-941804.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mercedes-Logo-brandtreeIndexSmall-c0d1786b-702402.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mini-Logo-brandtreeIndexSmall-d9e7b91-941110.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mitsubishi-Logo-brandtreeIndexSmall-e52939cf-1128624.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nissan-Logo-brandtreeIndexSmall-44366170-941111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opel-Logo-brandtreeIndexSmall-3ddc24ff-702407.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peugeot-Logo-brandtreeIndexSmall-b6a7040f-702414.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Porsche-Logo-brandtreeIndexSmall-b8d7c99-702413.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renault-Logo-brandtreeIndexSmall-e6878de7-702412.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rolls-Royce-Logo-brandtreeIndexSmall-d2e6b452-945703.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seat-Logo-brandtreeIndexSmall-eb1ca1c8-941115.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skoda-Logo-brandtreeIndexSmall-e7930242-941116.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smart-Logo-brandtreeIndexSmall-832b209c-945705.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SsangYong-Logo-brandtreeIndexSmall-47b5a1ab-945085.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subaru-Logo-brandtreeIndexSmall-c7f4790a-941162.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suzuki-Logo-brandtreeIndexSmall-c9d26001-945253.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tesla-Logo-Neu-02-2019-brandtreeIndexSmall-3beaf0ab-1430807.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toyota-Logo-brandtreeIndexSmall-2d086b5b-702409.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volvo-Logo-brandtreeIndexSmall-b2257f5e-423001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VW-Logo-2019-brandtreeIndexSmall-3696dd3c-1631727.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

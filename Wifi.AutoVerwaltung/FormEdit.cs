@@ -347,7 +347,7 @@ namespace Wifi.AutoVerwaltung
 
         private void numericLeistungChanged_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) this.labelLeistungPS.Text = "PS: ";
+            if (string.IsNullOrEmpty(Convert.ToString(numericUpDownLeistung.Value)) || numericUpDownLeistung.Value == 0) this.labelLeistungPS.Text = "PS: ";
             else labelLeistungPS.Text = "PS: " + (Convert.ToString(Convert.ToDouble(numericUpDownLeistung.Text) * 1.36));
         }
 
@@ -445,6 +445,163 @@ namespace Wifi.AutoVerwaltung
         {
             UserControlPhoto userControl = new UserControlPhoto();
             this.flowLayoutPanel1.Controls.Add(userControl);
+        }
+
+        private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (this.comboBoxBrand.SelectedItem)
+            {
+                case "Alfa Romeo":
+                    this.pictureBoxBrand.Image = Properties.Resources.Alfa_Romeo_Logo_brandtreeIndexSmall_353e502_935510;
+                    break;
+                case "Alpina":
+                    this.pictureBoxBrand.Image = Properties.Resources.Alpina_Logo_brandtreeIndexSmall_db9af53_945684;
+                    break;
+                case "Aston Martin":
+                    this.pictureBoxBrand.Image = Properties.Resources.Aston_Martin_Logo_brandtreeIndexSmall_805186e1_945683;
+                    break;
+                case "Audi":
+                    this.pictureBoxBrand.Image = Properties.Resources.Audi_Logo_Neu_02_2019_brandtreeIndexSmall_44d434cb_1430808;
+                    break;
+                case "Bentley":
+                    this.pictureBoxBrand.Image = Properties.Resources.Bentley_Logo_brandtreeIndexSmall_41a61902_702423;
+                    break;
+                case "BMW":
+                    this.pictureBoxBrand.Image = Properties.Resources.BMW_Logo_brandtreeIndexSmall_88182575_702392;
+                    break;
+                case "Bugatti":
+                    this.pictureBoxBrand.Image = Properties.Resources.Bugatti_Logo_brandtreeIndexSmall_252888c_946200;
+                    break;
+                case "Cadillac":
+                    this.pictureBoxBrand.Image = Properties.Resources.Cadillac_Logo_brandtreeIndexSmall_7ea8e883_945686;
+                    break;
+                case "Chevrolet":
+                    this.pictureBoxBrand.Image = Properties.Resources.Chevrolet_Logo_brandtreeIndexSmall_32f60c53_702439;
+                    break;
+                case "Citroen":
+                    this.pictureBoxBrand.Image = Properties.Resources.Citroen_Logo_brandtreeIndexSmall_5d4a92f8_700257;
+                    break;
+                case "Dacia":
+                    this.pictureBoxBrand.Image = Properties.Resources.Dacia_Logo_brandtreeIndexSmall_538fec13_702394;
+                    break;
+                case "DS":
+                    this.pictureBoxBrand.Image = Properties.Resources.DS_Logo_brandtreeIndexSmall_8a8042ef_940849;
+                    break;
+                case "Ferrari":
+                    this.pictureBoxBrand.Image = Properties.Resources.Ferrari_Logo_brandtreeIndexSmall_3b47b704_702395;
+                    break;
+                case "Fiat":
+                    this.pictureBoxBrand.Image = Properties.Resources.Fiat_Logo_brandtreeIndexSmall_b8ec2f4a_702396;
+                    break;
+                case "Ford":
+                    this.pictureBoxBrand.Image = Properties.Resources.Ford_Logo_brandtreeIndexSmall_e4d8a4ce_702397;
+                    break;
+                case "Honda":
+                    this.pictureBoxBrand.Image = Properties.Resources.Honda_Logo_brandtreeIndexSmall_e6d06e72_945693;
+                    break;
+                case "Hyundai":
+                    this.pictureBoxBrand.Image = Properties.Resources.Hyundai_Logo_brandtreeIndexSmall_dba2d69d_941104;
+                    break;
+                case "Infiniti":
+                    this.pictureBoxBrand.Image = Properties.Resources.Infiniti_Logo_brandtreeIndexSmall_ece52b3d_941119;
+                    break;
+                case "Isuzu":
+                    this.pictureBoxBrand.Image = Properties.Resources.Isuzu_Logo_brandtreeIndexSmall_71406f9e_945694;
+                    break;
+                case "Jaguar":
+                    this.pictureBoxBrand.Image = Properties.Resources.Jaguar_Logo_brandtreeIndexSmall_58c924ae_1554011;
+                    break;
+                case "Jeep":
+                    this.pictureBoxBrand.Image = Properties.Resources.Jeep_Logo_brandtreeIndexSmall_2181a802_941106;
+                    break;
+                case "Kia":
+                    this.pictureBoxBrand.Image = Properties.Resources.Kia_Logo_brandtreeIndexSmall_97b9f0b3_941107;
+                    break;
+                case "Lada":
+                    this.pictureBoxBrand.Image = Properties.Resources.Lada_Logo_brandtreeIndexSmall_ef2db6ef_1128620;
+                    break;
+                case "Lamborghini":
+                    this.pictureBoxBrand.Image = Properties.Resources.Lamborghini_Logo_brandtreeIndexSmall_df88a8a3_945695;
+                    break;
+                case "Land Rover":
+                    this.pictureBoxBrand.Image = Properties.Resources.Land_Rover_Logo_brandtreeIndexSmall_1e8d2f4f_702457;
+                    break;
+                case "Lexus":
+                    this.pictureBoxBrand.Image = Properties.Resources.Lexus_Logo_brandtreeIndexSmall_8ef5b88c_942610;
+                    break;
+                case "Lotus":
+                    this.pictureBoxBrand.Image = Properties.Resources.Lotus_Logo_brandtreeIndexSmall_c2b345ee_945697;
+                    break;
+                case "Maserati":
+                    this.pictureBoxBrand.Image = Properties.Resources.Maserati_Logo_brandtreeIndexSmall_3b5073c9_945700;
+                    break;
+                case "Mazda":
+                    this.pictureBoxBrand.Image = Properties.Resources.Mazda_Logo_brandtreeIndexSmall_abd3161d_1128623;
+                    break;
+                case "McLaren":
+                    this.pictureBoxBrand.Image = Properties.Resources.McLaren_Logo_brandtreeIndexSmall_c9f50d36_941804;
+                    break;
+                case "Mercedes":
+                    this.pictureBoxBrand.Image = Properties.Resources.Mercedes_Logo_brandtreeIndexSmall_c0d1786b_702402;
+                    break;
+                case "Mini":
+                    this.pictureBoxBrand.Image = Properties.Resources.Mini_Logo_brandtreeIndexSmall_d9e7b91_941110;
+                    break;
+                case "Mitsubishi":
+                    this.pictureBoxBrand.Image = Properties.Resources.Mitsubishi_Logo_brandtreeIndexSmall_e52939cf_1128624;
+                    break;
+                case "Nissan":
+                    this.pictureBoxBrand.Image = Properties.Resources.Nissan_Logo_brandtreeIndexSmall_44366170_941111;
+                    break;
+                case "Opel":
+                    this.pictureBoxBrand.Image = Properties.Resources.Opel_Logo_brandtreeIndexSmall_3ddc24ff_702407;
+                    break;
+                case "Peugeot":
+                    this.pictureBoxBrand.Image = Properties.Resources.Peugeot_Logo_brandtreeIndexSmall_b6a7040f_702414;
+                    break;
+                case "Porsche":
+                    this.pictureBoxBrand.Image = Properties.Resources.Porsche_Logo_brandtreeIndexSmall_b8d7c99_702413;
+                    break;
+                case "Renault":
+                    this.pictureBoxBrand.Image = Properties.Resources.Renault_Logo_brandtreeIndexSmall_e6878de7_702412;
+                    break;
+                case "Rolls-Royce":
+                    this.pictureBoxBrand.Image = Properties.Resources.Rolls_Royce_Logo_brandtreeIndexSmall_d2e6b452_945703;
+                    break;
+                case "Seat":
+                    this.pictureBoxBrand.Image = Properties.Resources.Seat_Logo_brandtreeIndexSmall_eb1ca1c8_941115;
+                    break;
+                case "Skoda":
+                    this.pictureBoxBrand.Image = Properties.Resources.Skoda_Logo_brandtreeIndexSmall_e7930242_941116;
+                    break;
+                case "Smart":
+                    this.pictureBoxBrand.Image = Properties.Resources.Smart_Logo_brandtreeIndexSmall_832b209c_945705;
+                    break;
+                case "SsangYong":
+                    this.pictureBoxBrand.Image = Properties.Resources.SsangYong_Logo_brandtreeIndexSmall_47b5a1ab_945085;
+                    break;
+                case "Subaru":
+                    this.pictureBoxBrand.Image = Properties.Resources.Subaru_Logo_brandtreeIndexSmall_c7f4790a_941162;
+                    break;
+                case "Suzuki":
+                    this.pictureBoxBrand.Image = Properties.Resources.Suzuki_Logo_brandtreeIndexSmall_c9d26001_945253;
+                    break;
+                case "Tesla":
+                    this.pictureBoxBrand.Image = Properties.Resources.Tesla_Logo_Neu_02_2019_brandtreeIndexSmall_3beaf0ab_1430807;
+                    break;
+                case "Toyota":
+                    this.pictureBoxBrand.Image = Properties.Resources.Toyota_Logo_brandtreeIndexSmall_2d086b5b_702409;
+                    break;
+                case "Volvo":
+                    this.pictureBoxBrand.Image = Properties.Resources.Volvo_Logo_brandtreeIndexSmall_b2257f5e_423001;
+                    break;
+                case "VW":
+                    this.pictureBoxBrand.Image = Properties.Resources.VW_Logo_2019_brandtreeIndexSmall_3696dd3c_1631727;
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }

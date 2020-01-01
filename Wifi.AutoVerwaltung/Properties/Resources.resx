@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,160 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Alfa_Romeo_Logo_brandtreeIndexSmall_353e502_935510" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alfa-Romeo-Logo-brandtreeIndexSmall-353e502-935510.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Alpina_Logo_brandtreeIndexSmall_db9af53_945684" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alpina-Logo-brandtreeIndexSmall-db9af53-945684.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Aston_Martin_Logo_brandtreeIndexSmall_805186e1_945683" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aston-Martin-Logo-brandtreeIndexSmall-805186e1-945683.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Audi_Logo_Neu_02_2019_brandtreeIndexSmall_44d434cb_1430808" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audi-Logo-Neu-02-2019-brandtreeIndexSmall-44d434cb-1430808.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bentley_Logo_brandtreeIndexSmall_41a61902_702423" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bentley-Logo-brandtreeIndexSmall-41a61902-702423.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BMW_Logo_brandtreeIndexSmall_88182575_702392" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BMW-Logo-brandtreeIndexSmall-88182575-702392.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bugatti_Logo_brandtreeIndexSmall_252888c_946200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bugatti-Logo-brandtreeIndexSmall-252888c-946200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cadillac_Logo_brandtreeIndexSmall_7ea8e883_945686" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cadillac-Logo-brandtreeIndexSmall-7ea8e883-945686.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chevrolet_Logo_brandtreeIndexSmall_32f60c53_702439" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chevrolet-Logo-brandtreeIndexSmall-32f60c53-702439.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Citroen_Logo_brandtreeIndexSmall_5d4a92f8_700257" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Citroen-Logo-brandtreeIndexSmall-5d4a92f8-700257.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dacia_Logo_brandtreeIndexSmall_538fec13_702394" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dacia-Logo-brandtreeIndexSmall-538fec13-702394.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DS_Logo_brandtreeIndexSmall_8a8042ef_940849" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DS-Logo-brandtreeIndexSmall-8a8042ef-940849.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ferrari_Logo_brandtreeIndexSmall_3b47b704_702395" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ferrari-Logo-brandtreeIndexSmall-3b47b704-702395.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fiat_Logo_brandtreeIndexSmall_b8ec2f4a_702396" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fiat-Logo-brandtreeIndexSmall-b8ec2f4a-702396.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ford_Logo_brandtreeIndexSmall_e4d8a4ce_702397" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ford-Logo-brandtreeIndexSmall-e4d8a4ce-702397.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Honda_Logo_brandtreeIndexSmall_e6d06e72_945693" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Honda-Logo-brandtreeIndexSmall-e6d06e72-945693.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hyundai_Logo_brandtreeIndexSmall_dba2d69d_941104" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyundai-Logo-brandtreeIndexSmall-dba2d69d-941104.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image_brandtreeIndexSmall_2aaef28_1430682" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-brandtreeIndexSmall-2aaef28-1430682.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Infiniti_Logo_brandtreeIndexSmall_ece52b3d_941119" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Infiniti-Logo-brandtreeIndexSmall-ece52b3d-941119.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Isuzu_Logo_brandtreeIndexSmall_71406f9e_945694" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Isuzu-Logo-brandtreeIndexSmall-71406f9e-945694.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jaguar_Logo_brandtreeIndexSmall_58c924ae_1554011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jaguar-Logo-brandtreeIndexSmall-58c924ae-1554011.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jeep_Logo_brandtreeIndexSmall_2181a802_941106" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jeep-Logo-brandtreeIndexSmall-2181a802-941106.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kia_Logo_brandtreeIndexSmall_97b9f0b3_941107" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kia-Logo-brandtreeIndexSmall-97b9f0b3-941107.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lada_Logo_brandtreeIndexSmall_ef2db6ef_1128620" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lada-Logo-brandtreeIndexSmall-ef2db6ef-1128620.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lamborghini_Logo_brandtreeIndexSmall_df88a8a3_945695" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lamborghini-Logo-brandtreeIndexSmall-df88a8a3-945695.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Land_Rover_Logo_brandtreeIndexSmall_1e8d2f4f_702457" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Land-Rover-Logo-brandtreeIndexSmall-1e8d2f4f-702457.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lexus_Logo_brandtreeIndexSmall_8ef5b88c_942610" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lexus-Logo-brandtreeIndexSmall-8ef5b88c-942610.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lotus_Logo_brandtreeIndexSmall_c2b345ee_945697" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lotus-Logo-brandtreeIndexSmall-c2b345ee-945697.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maserati_Logo_brandtreeIndexSmall_3b5073c9_945700" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maserati-Logo-brandtreeIndexSmall-3b5073c9-945700.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mazda_Logo_brandtreeIndexSmall_abd3161d_1128623" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mazda-Logo-brandtreeIndexSmall-abd3161d-1128623.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="McLaren_Logo_brandtreeIndexSmall_c9f50d36_941804" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\McLaren-Logo-brandtreeIndexSmall-c9f50d36-941804.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mercedes_Logo_brandtreeIndexSmall_c0d1786b_702402" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mercedes-Logo-brandtreeIndexSmall-c0d1786b-702402.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mini_Logo_brandtreeIndexSmall_d9e7b91_941110" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mini-Logo-brandtreeIndexSmall-d9e7b91-941110.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mitsubishi_Logo_brandtreeIndexSmall_e52939cf_1128624" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mitsubishi-Logo-brandtreeIndexSmall-e52939cf-1128624.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nissan_Logo_brandtreeIndexSmall_44366170_941111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nissan-Logo-brandtreeIndexSmall-44366170-941111.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Opel_Logo_brandtreeIndexSmall_3ddc24ff_702407" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Opel-Logo-brandtreeIndexSmall-3ddc24ff-702407.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Peugeot_Logo_brandtreeIndexSmall_b6a7040f_702414" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Peugeot-Logo-brandtreeIndexSmall-b6a7040f-702414.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Porsche_Logo_brandtreeIndexSmall_b8d7c99_702413" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Porsche-Logo-brandtreeIndexSmall-b8d7c99-702413.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Renault_Logo_brandtreeIndexSmall_e6878de7_702412" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Renault-Logo-brandtreeIndexSmall-e6878de7-702412.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rolls_Royce_Logo_brandtreeIndexSmall_d2e6b452_945703" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rolls-Royce-Logo-brandtreeIndexSmall-d2e6b452-945703.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Seat_Logo_brandtreeIndexSmall_eb1ca1c8_941115" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seat-Logo-brandtreeIndexSmall-eb1ca1c8-941115.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skoda_Logo_brandtreeIndexSmall_e7930242_941116" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skoda-Logo-brandtreeIndexSmall-e7930242-941116.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Smart_Logo_brandtreeIndexSmall_832b209c_945705" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Smart-Logo-brandtreeIndexSmall-832b209c-945705.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SsangYong_Logo_brandtreeIndexSmall_47b5a1ab_945085" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SsangYong-Logo-brandtreeIndexSmall-47b5a1ab-945085.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subaru_Logo_brandtreeIndexSmall_c7f4790a_941162" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subaru-Logo-brandtreeIndexSmall-c7f4790a-941162.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Suzuki_Logo_brandtreeIndexSmall_c9d26001_945253" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Suzuki-Logo-brandtreeIndexSmall-c9d26001-945253.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tesla_Logo_Neu_02_2019_brandtreeIndexSmall_3beaf0ab_1430807" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tesla-Logo-Neu-02-2019-brandtreeIndexSmall-3beaf0ab-1430807.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Toyota_Logo_brandtreeIndexSmall_2d086b5b_702409" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Toyota-Logo-brandtreeIndexSmall-2d086b5b-702409.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Volvo_Logo_brandtreeIndexSmall_b2257f5e_423001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Volvo-Logo-brandtreeIndexSmall-b2257f5e-423001.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VW_Logo_2019_brandtreeIndexSmall_3696dd3c_1631727" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VW-Logo-2019-brandtreeIndexSmall-3696dd3c-1631727.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

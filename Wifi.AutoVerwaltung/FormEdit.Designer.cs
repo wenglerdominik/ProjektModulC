@@ -76,6 +76,9 @@
             this.neueTankrechnungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.pictureBoxBrand = new System.Windows.Forms.PictureBox();
+            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControlAutoInfo.SuspendLayout();
             this.tabPageAllgemein.SuspendLayout();
             this.contextMenuStripFlowPanel.SuspendLayout();
@@ -86,6 +89,7 @@
             this.menuStrip1.SuspendLayout();
             this.tabPageTank.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAutoInfo
@@ -106,6 +110,9 @@
             // tabPageAllgemein
             // 
             this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.tabPageAllgemein.Controls.Add(this.comboBox1);
+            this.tabPageAllgemein.Controls.Add(this.comboBoxBrand);
+            this.tabPageAllgemein.Controls.Add(this.pictureBoxBrand);
             this.tabPageAllgemein.Controls.Add(this.btn_AddPicture);
             this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
             this.tabPageAllgemein.Controls.Add(this.numericUpDownLeistung);
@@ -180,7 +187,7 @@
             0});
             this.numericUpDownLeistung.Name = "numericUpDownLeistung";
             this.numericUpDownLeistung.Size = new System.Drawing.Size(156, 29);
-            this.numericUpDownLeistung.TabIndex = 20;
+            this.numericUpDownLeistung.TabIndex = 3;
             this.numericUpDownLeistung.ValueChanged += new System.EventHandler(this.numericLeistungChanged_TextChanged);
             // 
             // label14
@@ -199,7 +206,7 @@
             this.numericUpDownWartung.Margin = new System.Windows.Forms.Padding(6);
             this.numericUpDownWartung.Name = "numericUpDownWartung";
             this.numericUpDownWartung.Size = new System.Drawing.Size(156, 29);
-            this.numericUpDownWartung.TabIndex = 17;
+            this.numericUpDownWartung.TabIndex = 5;
             // 
             // comboBoxFarbe
             // 
@@ -218,7 +225,7 @@
             this.comboBoxFarbe.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxFarbe.Name = "comboBoxFarbe";
             this.comboBoxFarbe.Size = new System.Drawing.Size(334, 32);
-            this.comboBoxFarbe.TabIndex = 16;
+            this.comboBoxFarbe.TabIndex = 4;
             // 
             // dateTimePicker1
             // 
@@ -226,8 +233,8 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(207, 114);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(334, 29);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Size = new System.Drawing.Size(156, 29);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // labelLeistungPS
             // 
@@ -245,7 +252,7 @@
             this.textBoxKennz.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKennz.Name = "textBoxKennz";
             this.textBoxKennz.Size = new System.Drawing.Size(334, 29);
-            this.textBoxKennz.TabIndex = 13;
+            this.textBoxKennz.TabIndex = 6;
             // 
             // textBoxModell
             // 
@@ -253,7 +260,7 @@
             this.textBoxModell.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxModell.Name = "textBoxModell";
             this.textBoxModell.Size = new System.Drawing.Size(334, 29);
-            this.textBoxModell.TabIndex = 8;
+            this.textBoxModell.TabIndex = 1;
             // 
             // textBoxMarke
             // 
@@ -261,7 +268,7 @@
             this.textBoxMarke.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMarke.Name = "textBoxMarke";
             this.textBoxMarke.Size = new System.Drawing.Size(334, 29);
-            this.textBoxMarke.TabIndex = 7;
+            this.textBoxMarke.TabIndex = 0;
             // 
             // label8
             // 
@@ -551,6 +558,83 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // pictureBoxBrand
+            // 
+            this.pictureBoxBrand.Location = new System.Drawing.Point(33, 453);
+            this.pictureBoxBrand.Name = "pictureBoxBrand";
+            this.pictureBoxBrand.Size = new System.Drawing.Size(137, 133);
+            this.pictureBoxBrand.TabIndex = 25;
+            this.pictureBoxBrand.TabStop = false;
+            // 
+            // comboBoxBrand
+            // 
+            this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxBrand.FormattingEnabled = true;
+            this.comboBoxBrand.Items.AddRange(new object[] {
+            "Alfa Romeo",
+            "Alpina",
+            "Aston Martin",
+            "Audi",
+            "Bentley",
+            "BMW",
+            "Bugatti",
+            "Cadillac",
+            "Chevrolet",
+            "Citroen",
+            "Dacia",
+            "DS",
+            "Ferrari",
+            "Fiat",
+            "Ford",
+            "Honda",
+            "Hyuandai",
+            "Infiniti",
+            "Isuzu",
+            "Jaguar",
+            "Jeep",
+            "Kia",
+            "Lada",
+            "Lamborghini",
+            "Land Rover",
+            "Lexus",
+            "Lotus",
+            "Maserati",
+            "Mazda",
+            "McLaren",
+            "Mercedes",
+            "Mini",
+            "Mitsubishi",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Rolls-Royce",
+            "Seat",
+            "Skoda",
+            "Smart",
+            "SsangYong",
+            "Subaru",
+            "Suzuki",
+            "Tesla",
+            "Toyota",
+            "Volvo",
+            "VW"});
+            this.comboBoxBrand.Location = new System.Drawing.Point(207, 453);
+            this.comboBoxBrand.Name = "comboBoxBrand";
+            this.comboBoxBrand.Size = new System.Drawing.Size(348, 32);
+            this.comboBoxBrand.TabIndex = 26;
+            this.comboBoxBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxBrand_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(207, 519);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 32);
+            this.comboBox1.TabIndex = 27;
+            // 
             // FormEdit
             // 
             this.AcceptButton = this.buttonOk;
@@ -584,6 +668,7 @@
             this.tabPageTank.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -635,5 +720,8 @@
         private System.Windows.Forms.Button btn_AddPicture;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripFlowPanel;
         private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxBrand;
+        private System.Windows.Forms.PictureBox pictureBoxBrand;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
