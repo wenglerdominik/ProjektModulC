@@ -107,5 +107,48 @@ namespace Wifi.AutoVerwaltung
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void FormKostenstelle_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.FormKostenSize.Width == 0) Properties.Settings.Default.Upgrade();
+            if (Properties.Settings.Default.FormKostenSize.Width == 0 || Properties.Settings.Default.FormKostenSize.Height == 0)
+            {
+                // first start
+                // optional: add default values
+            }
+            else
+            {
+                this.WindowState = Properties.Settings.Default.FormKostenState;
+
+                // we don't want a minimized window at startup
+                if (this.WindowState == FormWindowState.Minimized) this.WindowState = FormWindowState.Normal;
+
+                this.Location = Properties.Settings.Default.FormKostenLocation;
+                this.Size = Properties.Settings.Default.FormKostenSize;
+
+
+            }
+        }
+
+        private void FormKostenstelle_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.FormKostenState = this.WindowState;
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                // save location and size if the state is normal
+                Properties.Settings.Default.FormKostenLocation = this.Location;
+                Properties.Settings.Default.FormKostenSize = this.Size;
+
+            }
+            else
+            {
+                // save the RestoreBounds if the form is minimized or maximized!
+                Properties.Settings.Default.FormKostenLocation = this.RestoreBounds.Location;
+                Properties.Settings.Default.FormKostenSize = this.RestoreBounds.Size;
+            }
+
+            // don't forget to save the settings
+            Properties.Settings.Default.Save();
+        }
     }
 }

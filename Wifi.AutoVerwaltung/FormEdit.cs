@@ -22,7 +22,7 @@ namespace Wifi.AutoVerwaltung
         {
             InitializeComponent();
             CenterToScreen();
-            if (this.flowLayoutPanel1.Controls.Count == 0) neuesBildFunktion();
+            if (this.flowLayoutPanel1.Controls.Count == 0) addUcPhoto();
         }
 
         public FormEdit(KfzData kfzData)
@@ -60,7 +60,7 @@ namespace Wifi.AutoVerwaltung
                         MessageBox.Show("Bild konnte nicht geöffnet werden.");
                     }
                 }
-                neuesBildFunktion();
+                addUcPhoto();
 
             }
 
@@ -422,7 +422,18 @@ namespace Wifi.AutoVerwaltung
 
                 this.Location = Properties.Settings.Default.FormEditLocation;
                 this.Size = Properties.Settings.Default.FormEditSize;
-                
+                this.listViewAllgKosten.Columns[0].Width = Properties.Settings.Default.ListViewKostenColumnKategorie;
+                this.listViewAllgKosten.Columns[1].Width = Properties.Settings.Default.ListViewKostenColumnDatum;
+                this.listViewAllgKosten.Columns[2].Width = Properties.Settings.Default.ListViewKostenColumnKosten;
+                this.listViewAllgKosten.Columns[3].Width = Properties.Settings.Default.ListViewKostenColumnKilometer;
+                this.listViewAllgKosten.Columns[4].Width = Properties.Settings.Default.ListViewKostenColumnZahlweise;
+                this.listViewAllgKosten.Columns[5].Width = Properties.Settings.Default.ListViewKostenColumnBemerkung;
+
+                this.listViewTankKosten.Columns[0].Width = Properties.Settings.Default.ListViewTankColumnBetrag;
+                this.listViewTankKosten.Columns[1].Width = Properties.Settings.Default.ListViewTankColumnDatum;
+                this.listViewTankKosten.Columns[2].Width = Properties.Settings.Default.ListViewTankColumnMenge;
+                this.listViewTankKosten.Columns[3].Width = Properties.Settings.Default.ListViewTankColumnStreckeGefahren;
+                this.listViewTankKosten.Columns[4].Width = Properties.Settings.Default.ListViewTankColumnVerbrauch;
 
             }
         }
@@ -435,7 +446,20 @@ namespace Wifi.AutoVerwaltung
                 // save location and size if the state is normal
                 Properties.Settings.Default.FormEditLocation = this.Location;
                 Properties.Settings.Default.FormEditSize = this.Size;
-               
+                Properties.Settings.Default.ListViewKostenColumnKategorie = this.listViewAllgKosten.Columns[0].Width;
+                Properties.Settings.Default.ListViewKostenColumnDatum = this.listViewAllgKosten.Columns[1].Width;
+                Properties.Settings.Default.ListViewKostenColumnKosten = this.listViewAllgKosten.Columns[2].Width;
+                Properties.Settings.Default.ListViewKostenColumnKilometer = this.listViewAllgKosten.Columns[3].Width;
+                Properties.Settings.Default.ListViewKostenColumnZahlweise = this.listViewAllgKosten.Columns[4].Width;
+                Properties.Settings.Default.ListViewKostenColumnBemerkung = this.listViewAllgKosten.Columns[5].Width;
+
+                Properties.Settings.Default.ListViewTankColumnBetrag = this.listViewTankKosten.Columns[0].Width;
+                Properties.Settings.Default.ListViewTankColumnDatum = this.listViewTankKosten.Columns[1].Width;
+                Properties.Settings.Default.ListViewTankColumnMenge = this.listViewTankKosten.Columns[2].Width;
+                Properties.Settings.Default.ListViewTankColumnStreckeGefahren = this.listViewTankKosten.Columns[3].Width;
+                Properties.Settings.Default.ListViewTankColumnVerbrauch = this.listViewTankKosten.Columns[4].Width;
+
+
             }
             else
             {
@@ -448,11 +472,11 @@ namespace Wifi.AutoVerwaltung
             Properties.Settings.Default.Save();
         }
               
-        public void neuesBildFunktion()
+        public void addUcPhoto()
         {
             UserControlPhoto userControl = new UserControlPhoto();
             this.flowLayoutPanel1.Controls.Add(userControl);
-            userControl.newPictureAddedEvent += this.neuesBildFunktion;
+            userControl.newPictureAddedEvent += this.addUcPhoto;
         }
        
       

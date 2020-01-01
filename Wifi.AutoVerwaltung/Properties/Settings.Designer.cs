@@ -166,5 +166,221 @@ namespace Wifi.AutoVerwaltung.Properties {
                 this["FormEditState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point FormTankLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["FormTankLocation"]));
+            }
+            set {
+                this["FormTankLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("760, 240")]
+        public global::System.Drawing.Size FormTankSize {
+            get {
+                return ((global::System.Drawing.Size)(this["FormTankSize"]));
+            }
+            set {
+                this["FormTankSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.Forms.FormWindowState FormTankState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["FormTankState"]));
+            }
+            set {
+                this["FormTankState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point FormKostenLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["FormKostenLocation"]));
+            }
+            set {
+                this["FormKostenLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1600, 240")]
+        public global::System.Drawing.Size FormKostenSize {
+            get {
+                return ((global::System.Drawing.Size)(this["FormKostenSize"]));
+            }
+            set {
+                this["FormKostenSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.Forms.FormWindowState FormKostenState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["FormKostenState"]));
+            }
+            set {
+                this["FormKostenState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewKostenColumnKategorie {
+            get {
+                return ((int)(this["ListViewKostenColumnKategorie"]));
+            }
+            set {
+                this["ListViewKostenColumnKategorie"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewKostenColumnDatum {
+            get {
+                return ((int)(this["ListViewKostenColumnDatum"]));
+            }
+            set {
+                this["ListViewKostenColumnDatum"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewKostenColumnKosten {
+            get {
+                return ((int)(this["ListViewKostenColumnKosten"]));
+            }
+            set {
+                this["ListViewKostenColumnKosten"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewKostenColumnKilometer {
+            get {
+                return ((int)(this["ListViewKostenColumnKilometer"]));
+            }
+            set {
+                this["ListViewKostenColumnKilometer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewKostenColumnZahlweise {
+            get {
+                return ((int)(this["ListViewKostenColumnZahlweise"]));
+            }
+            set {
+                this["ListViewKostenColumnZahlweise"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewKostenColumnBemerkung {
+            get {
+                return ((int)(this["ListViewKostenColumnBemerkung"]));
+            }
+            set {
+                this["ListViewKostenColumnBemerkung"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewTankColumnBetrag {
+            get {
+                return ((int)(this["ListViewTankColumnBetrag"]));
+            }
+            set {
+                this["ListViewTankColumnBetrag"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewTankColumnDatum {
+            get {
+                return ((int)(this["ListViewTankColumnDatum"]));
+            }
+            set {
+                this["ListViewTankColumnDatum"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewTankColumnMenge {
+            get {
+                return ((int)(this["ListViewTankColumnMenge"]));
+            }
+            set {
+                this["ListViewTankColumnMenge"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewTankColumnKilometer {
+            get {
+                return ((int)(this["ListViewTankColumnKilometer"]));
+            }
+            set {
+                this["ListViewTankColumnKilometer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewTankColumnStreckeGefahren {
+            get {
+                return ((int)(this["ListViewTankColumnStreckeGefahren"]));
+            }
+            set {
+                this["ListViewTankColumnStreckeGefahren"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int ListViewTankColumnVerbrauch {
+            get {
+                return ((int)(this["ListViewTankColumnVerbrauch"]));
+            }
+            set {
+                this["ListViewTankColumnVerbrauch"] = value;
+            }
+        }
     }
 }
