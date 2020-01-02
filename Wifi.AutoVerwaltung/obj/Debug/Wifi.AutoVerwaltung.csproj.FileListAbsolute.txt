@@ -96,3 +96,4 @@ C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.csproj.G
 C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.csproj.CopyComplete
 C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.exe
 C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.pdb
+C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Debug\Wifi.AutoVerwaltung.Splash.resources

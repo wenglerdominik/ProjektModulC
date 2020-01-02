@@ -22,12 +22,17 @@ namespace Wifi.AutoVerwaltung
         public FormMain()
         {
             InitializeComponent();
-
+            Splash();
             this.listViewMain.Visible = false;
             this.panelKeinFahrzeug.Visible = true;
             CenterToScreen();
-
+            
         }
+        public void Splash()
+        {
+            Application.Run(new Splash());
+        }
+
 
         private void menuItemNeu_Click(object sender, EventArgs e)
         {
@@ -84,41 +89,54 @@ namespace Wifi.AutoVerwaltung
                         "Falsches Dateiformat", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-               
-                FormLogin formLogin = new FormLogin();
-                if (formLogin.ShowDialog() == DialogResult.OK)
+                while (!Login(fileDialog.FileName)) ;
+
+            }
+        }
+
+
+        private bool Login(string filename)
+        {
+            FormLogin formLogin = new FormLogin();
+
+            if (formLogin.ShowDialog() == DialogResult.OK)
+            {
+                try
                 {
-                    try
+                    this.securedAutoFile = SecuredAutoFile.Read(filename, formLogin.Password);
+                    if (this.securedAutoFile.Owner == formLogin.Username)
                     {
-                        this.securedAutoFile = SecuredAutoFile.Read(fileDialog.FileName, formLogin.Password);
-                        if (this.securedAutoFile.Owner == formLogin.Username)
+                        this.toolStripOpenFile.Text = "Datei: " + filename;
+                        this.toolStripLoggedUser.Text = "Benutzer: " + formLogin.Username;
+                        this.listViewMain.Items.Clear();
+                        this.masterPassword = formLogin.Password;
+                        foreach (KfzData kfzData in this.securedAutoFile.FahrzeugInfos)
                         {
-                            this.toolStripOpenFile.Text = "Datei: " + fileDialog.FileName;
-                            this.toolStripLoggedUser.Text = "Benutzer: " + formLogin.Username;
-                            this.listViewMain.Items.Clear();
-                            this.masterPassword = formLogin.Password;
-                            foreach (KfzData kfzData in this.securedAutoFile.FahrzeugInfos)
-                            {
-                                fillListView(kfzData);
-                            }
-                            this.listViewMain.Items[0].Selected = true;
+                            fillListView(kfzData);
                         }
-                        else
-                        {
-                            MessageBox.Show("Keine Berechtigung");
-                            this.securedAutoFile = null;
-                        }
+                        this.listViewMain.Items[0].Selected = true;
                         this.panelKeinFahrzeug.Visible = false;
                         this.listViewMain.Visible = true;
+
+                        return true;
                     }
-                    catch (Exception ex)
+                    else
                     {
                         MessageBox.Show("Keine Berechtigung");
                         this.securedAutoFile = null;
+                        return false;
                     }
-
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Datei kann nicht geöffnet werden.\nBenutzer oder Kennwort falsch", "Fehler beim Öffnen"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.securedAutoFile = null;
+                    return false;
+                }
+
             }
+            return true;
         }
 
         private void menuItemSpeichern_Click(object sender, EventArgs e)
@@ -236,10 +254,7 @@ namespace Wifi.AutoVerwaltung
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
                     UserControlPhoto userControl = new UserControlPhoto(bmp2, false);
-                    // userControl.Name = item;
                     this.flowLayoutPanelMain.Controls.Add(userControl);
-
-
                 }
             }
             catch (Exception ex)
