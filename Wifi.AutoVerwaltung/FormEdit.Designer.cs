@@ -44,7 +44,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelLeistungPS = new System.Windows.Forms.Label();
             this.textBoxKennz = new System.Windows.Forms.TextBox();
-            this.textBoxModell = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,7 +75,7 @@
             this.neueTankrechnungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
             this.tabControlAutoInfo.SuspendLayout();
             this.tabPageAllgemein.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).BeginInit();
@@ -107,7 +106,7 @@
             // tabPageAllgemein
             // 
             this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.tabPageAllgemein.Controls.Add(this.button1);
+            this.tabPageAllgemein.Controls.Add(this.comboBoxCarModel);
             this.tabPageAllgemein.Controls.Add(this.comboBoxBrand);
             this.tabPageAllgemein.Controls.Add(this.pictureBoxBrand);
             this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
@@ -118,7 +117,6 @@
             this.tabPageAllgemein.Controls.Add(this.dateTimePicker1);
             this.tabPageAllgemein.Controls.Add(this.labelLeistungPS);
             this.tabPageAllgemein.Controls.Add(this.textBoxKennz);
-            this.tabPageAllgemein.Controls.Add(this.textBoxModell);
             this.tabPageAllgemein.Controls.Add(this.label8);
             this.tabPageAllgemein.Controls.Add(this.label7);
             this.tabPageAllgemein.Controls.Add(this.label6);
@@ -138,56 +136,6 @@
             this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Items.AddRange(new object[] {
-            "Alfa Romeo",
-            "Alpina",
-            "Aston Martin",
-            "Audi",
-            "Bentley",
-            "BMW",
-            "Bugatti",
-            "Cadillac",
-            "Chevrolet",
-            "Citroen",
-            "Dacia",
-            "DS",
-            "Ferrari",
-            "Fiat",
-            "Ford",
-            "Honda",
-            "Hyuandai",
-            "Infiniti",
-            "Isuzu",
-            "Jaguar",
-            "Jeep",
-            "Kia",
-            "Lada",
-            "Lamborghini",
-            "Land Rover",
-            "Lexus",
-            "Lotus",
-            "Maserati",
-            "Mazda",
-            "McLaren",
-            "Mercedes",
-            "Mini",
-            "Mitsubishi",
-            "Nissan",
-            "Opel",
-            "Peugeot",
-            "Porsche",
-            "Renault",
-            "Rolls-Royce",
-            "Seat",
-            "Skoda",
-            "Smart",
-            "SsangYong",
-            "Subaru",
-            "Suzuki",
-            "Tesla",
-            "Toyota",
-            "Volvo",
-            "VW"});
             this.comboBoxBrand.Location = new System.Drawing.Point(113, 25);
             this.comboBoxBrand.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBrand.Name = "comboBoxBrand";
@@ -308,14 +256,6 @@
             this.textBoxKennz.Name = "textBoxKennz";
             this.textBoxKennz.Size = new System.Drawing.Size(184, 20);
             this.textBoxKennz.TabIndex = 6;
-            // 
-            // textBoxModell
-            // 
-            this.textBoxModell.Location = new System.Drawing.Point(113, 50);
-            this.textBoxModell.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxModell.Name = "textBoxModell";
-            this.textBoxModell.Size = new System.Drawing.Size(184, 20);
-            this.textBoxModell.TabIndex = 1;
             // 
             // label8
             // 
@@ -597,15 +537,13 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // button1
+            // comboBoxCarModel
             // 
-            this.button1.Location = new System.Drawing.Point(528, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.comboBoxCarModel.FormattingEnabled = true;
+            this.comboBoxCarModel.Location = new System.Drawing.Point(113, 50);
+            this.comboBoxCarModel.Name = "comboBoxCarModel";
+            this.comboBoxCarModel.Size = new System.Drawing.Size(183, 21);
+            this.comboBoxCarModel.TabIndex = 28;
             // 
             // FormEdit
             // 
@@ -651,7 +589,6 @@
 		private System.Windows.Forms.Button buttonOk;
 		private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TextBox textBoxKennz;
-        private System.Windows.Forms.TextBox textBoxModell;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -691,6 +628,6 @@
         private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.PictureBox pictureBoxBrand;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxCarModel;
     }
 }

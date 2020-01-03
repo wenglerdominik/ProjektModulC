@@ -11,5 +11,7 @@ namespace Wifi.Auto.Data
     public class Cars
     {
         public List<CarBrand> CarCollection { get; set; } = new List<CarBrand>();
+
+        
     }
 }

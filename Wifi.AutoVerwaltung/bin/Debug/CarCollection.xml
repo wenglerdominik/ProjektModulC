@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CarCollection>
+    <CarBrand>
+      <Brand>Alfa Romeo</Brand>
+      <Models>
+        <string>Spider</string>
+      </Models>
+    </CarBrand>
+    <CarBrand>
+      <Brand>Alpina</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Aston Martin</Brand>
+      <Models>
+        <string>asdf</string>
+      </Models>
+    </CarBrand>
+    <CarBrand>
+      <Brand>Audi</Brand>
+      <Models>
+        <string>A4</string>
+        <string>A3</string>
+        <string>A6</string>
+        <string>R8</string>
+        <string>TT</string>
+        <string>afd</string>
+        <string>R9</string>
+      </Models>
+    </CarBrand>
+    <CarBrand>
+      <Brand>Bentley</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>BMW</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Bugatti</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Cadillac</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Chevrolet</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Citroen</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Dacia</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>DS</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Ferrari</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Fiat</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Ford</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Honda</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Hyuandai</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Infiniti</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Isuzu</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Jaguar</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Jeep</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Kia</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Lada</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Lamborghini</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Land Rover</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Lexus</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Lotus</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Maserati</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Mazda</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>McLaren</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Mercedes</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Mini</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Mitsubishi</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Nissan</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Opel</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Peugeot</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Porsche</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Renault</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Rolls-Royce</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Seat</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Skoda</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Smart</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>SsangYong</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Subaru</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Suzuki</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Tesla</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Toyota</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Volvo</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>VW</Brand>
+      <Models />
+    </CarBrand>
+    <CarBrand>
+      <Brand>Wengler Mobil</Brand>
+      <Models>
+        <string>23</string>
+      </Models>
+    </CarBrand>
+  </CarCollection>
+</Cars>

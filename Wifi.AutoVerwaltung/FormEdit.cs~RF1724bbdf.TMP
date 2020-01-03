@@ -631,14 +631,15 @@ namespace Wifi.AutoVerwaltung
                     this.pictureBoxBrand.Image = null;
                     break;
             }
-
+           
             if (comboBoxBrand.Items.Contains(comboBoxBrand.Text))
             {
-
-                var result = Cars.CarCollection.Where(y => y.Brand == comboBoxBrand.Text);
-               
-
-
+                var test = Cars.CarCollection.Select(x => x.Brand == comboBoxBrand.Text);
+               // List<string> result = Cars.CarCollection.Where(y => y.Brand == comboBoxBrand.Text, );
+                //foreach (string item in result.Models)
+                //{
+                //    this.comboBoxCarModel.Items.Add(item);
+                //}
             }
 
 

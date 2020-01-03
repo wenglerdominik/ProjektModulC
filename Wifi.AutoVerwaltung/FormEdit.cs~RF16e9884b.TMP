@@ -24,7 +24,8 @@ namespace Wifi.AutoVerwaltung
             InitializeComponent();
             CenterToScreen();
             if (this.flowLayoutPanel1.Controls.Count == 0) addUcPhoto();
-            loadCarCollection();
+            //Auto(); this.comboBoxBrand.Items.AddRange(cars)
+            //loadCarCollection();
         }
 
 
@@ -34,7 +35,7 @@ namespace Wifi.AutoVerwaltung
             CenterToScreen();
             this.KfzData = kfzData;
             this.comboBoxBrand.Text = kfzData.Marke;
-            this.comboBoxCarModel.Text = kfzData.Modell;
+            this.textBoxModell.Text = kfzData.Modell;
             this.dateTimePicker1.Value = Convert.ToDateTime(kfzData.Zulassung);
             this.comboBoxFarbe.Text = kfzData.Farbe;
             this.numericUpDownLeistung.Text = kfzData.Leistung;
@@ -114,14 +115,14 @@ namespace Wifi.AutoVerwaltung
                     }
 
                     if (string.IsNullOrEmpty(this.comboBoxBrand.Text)) errorlog += "\nMarke";
-                    if (string.IsNullOrEmpty(this.comboBoxCarModel.Text)) errorlog += "\nModell";
+                    if (string.IsNullOrEmpty(this.textBoxModell.Text)) errorlog += "\nModell";
                     if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) errorlog += "\nLeistung";
                     if (string.IsNullOrEmpty(comboBoxFarbe.Text)) errorlog += "\nFarbe";
                     if (errorlog != "Bitte folgende Felder ausfüllen:\n") throw new Exception(errorlog);
 
                     #region readData
                     this.KfzData.Marke = this.comboBoxBrand.Text;
-                    this.KfzData.Modell = this.comboBoxCarModel.Text;
+                    this.KfzData.Modell = this.textBoxModell.Text;
                     this.KfzData.Zulassung = this.dateTimePicker1.Value.ToString("dd.MM.yyy");
                     this.KfzData.Farbe = this.comboBoxFarbe.Text;
                     this.KfzData.Leistung = this.numericUpDownLeistung.Text;
@@ -475,8 +476,7 @@ namespace Wifi.AutoVerwaltung
 
         private void comboBoxBrand_TextChanged(object sender, EventArgs e)
         {
-            this.comboBoxCarModel.Text = null;
-
+            this.textBoxModell.Text = null;
             switch (this.comboBoxBrand.SelectedItem)
             {
                 case "Alfa Romeo":
@@ -631,18 +631,6 @@ namespace Wifi.AutoVerwaltung
                     this.pictureBoxBrand.Image = null;
                     break;
             }
-
-            if (comboBoxBrand.Items.Contains(comboBoxBrand.Text))
-            {
-
-                var result = Cars.CarCollection.Where(y => y.Brand == comboBoxBrand.Text);
-               
-
-
-            }
-
-
-
         }
 
         private void loadCarCollection()
@@ -656,7 +644,6 @@ namespace Wifi.AutoVerwaltung
             foreach (CarBrand item in Cars.CarCollection)
             {
                 this.comboBoxBrand.Items.Add(item.Brand);
-
             }
 
         }
@@ -667,22 +654,23 @@ namespace Wifi.AutoVerwaltung
 
             foreach (CarBrand brand in Cars.CarCollection)
             {
-
+                
                 if (comboBoxBrand.Text == brand.Brand)
                 {
                     existingBrand = true;
-
-                    if (!brand.Models.Contains(comboBoxCarModel.Text)) brand.Models.Add(comboBoxCarModel.Text);
-
-                    break;
+                    brand.Models.Add(textBoxModell.Text);
+                    
                 }
-
+                //else
+                //{
+                //    CarBrand carBrand = new CarBrand { Brand = comboBoxBrand.Text };
+                //    carBrand.Models.Add(textBoxModell.Text);
+                //}
             }
-            if (!existingBrand)
+            if(!existingBrand)
             {
                 CarBrand carBrand = new CarBrand { Brand = comboBoxBrand.Text };
-                carBrand.Models.Add(comboBoxCarModel.Text);
-                Cars.CarCollection.Add(carBrand);
+                carBrand.Models.Add(textBoxModell.Text);
             }
             writeCarCollectionFile();
         }
@@ -695,5 +683,9 @@ namespace Wifi.AutoVerwaltung
             writer.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loadCarCollection();
+        }
     }
 }
