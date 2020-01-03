@@ -32,6 +32,7 @@ namespace Wifi.AutoVerwaltung
         {
             InitializeComponent();
             CenterToScreen();
+            loadCarCollection();
             this.KfzData = kfzData;
             this.comboBoxBrand.Text = kfzData.Marke;
             this.comboBoxCarModel.Text = kfzData.Modell;
@@ -107,7 +108,7 @@ namespace Wifi.AutoVerwaltung
                         {
                             if (string.IsNullOrEmpty(comboBoxFarbe.Text)) comboBoxFarbe.BackColor = Color.LightYellow;
                             else comboBoxFarbe.BackColor = Color.White;
-                            if (comboBoxBrand.SelectedItem == null || string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.LightYellow;
                             else comboBoxBrand.BackColor = Color.White;
                         }
 
@@ -189,8 +190,11 @@ namespace Wifi.AutoVerwaltung
                 }
 
             }
+
+
             KfzData.Gesamtkosten = sumAllgAll + sumTank;
             KfzData.Monatskosten = sumAllgMonth + sumTank;
+
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -363,17 +367,29 @@ namespace Wifi.AutoVerwaltung
             switch (this.tabControlAutoInfo.SelectedTab.Name)
             {
                 case "tabPageKosten":
-                    if (this.listViewAllgKosten.SelectedItems.Count == 1 && MessageBox.Show("Wollen Sie diese Kostenstelle wirklich löschen?",
-               "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        this.listViewAllgKosten.Items.Remove(this.listViewAllgKosten.SelectedItems[0]);
 
+                    if (this.listViewAllgKosten.SelectedItems.Count == 1 && MessageBox.Show("Wollen Sie diese Kostenstelle wirklich löschen?",
+                    "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        ListViewItem item = this.listViewAllgKosten.SelectedItems[0];
+                        KfzKostenAllg kfzKostenAllg = item.Tag as KfzKostenAllg;
+                        this.KfzData.Fahrzeugkosten.Remove(kfzKostenAllg);
+                        this.listViewAllgKosten.Items.Remove(this.listViewAllgKosten.SelectedItems[0]);
+                    }
                     break;
+
                 case "tabPageTank":
                     if (this.listViewTankKosten.SelectedItems.Count == 1 && MessageBox.Show("Wollen Sie diese Tankrechnung wirklich löschen?",
-               "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        ListViewItem item1 = this.listViewTankKosten.SelectedItems[0];
+                        KfzKostenTank kfzKostenTank = item1.Tag as KfzKostenTank;
+                        this.KfzData.Fahrzeugkosten.Remove(kfzKostenTank);
                         this.listViewTankKosten.Items.Remove(this.listViewTankKosten.SelectedItems[0]);
-                    calcDistancVerbrauch();
+                        calcDistancVerbrauch();
+                    }
                     break;
+
                 default:
                     break;
             }
@@ -476,7 +492,7 @@ namespace Wifi.AutoVerwaltung
         private void comboBoxBrand_TextChanged(object sender, EventArgs e)
         {
             this.comboBoxCarModel.Text = null;
-
+            this.comboBoxCarModel.Items.Clear();
             switch (this.comboBoxBrand.SelectedItem)
             {
                 case "Alfa Romeo":
@@ -636,8 +652,12 @@ namespace Wifi.AutoVerwaltung
             {
 
                 var result = Cars.CarCollection.Where(y => y.Brand == comboBoxBrand.Text);
-               
+                foreach (CarBrand item in result)
+                {
+                    comboBoxCarModel.Items.AddRange(item.Models.ToArray());
 
+                }
+                if (this.comboBoxCarModel.Items.Count != 0) this.comboBoxCarModel.SelectedIndex = 0;
 
             }
 

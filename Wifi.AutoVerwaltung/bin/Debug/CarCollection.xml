@@ -9,7 +9,9 @@
     </CarBrand>
     <CarBrand>
       <Brand>Alpina</Brand>
-      <Models />
+      <Models>
+        <string>7405</string>
+      </Models>
     </CarBrand>
     <CarBrand>
       <Brand>Aston Martin</Brand>
@@ -35,7 +37,9 @@
     </CarBrand>
     <CarBrand>
       <Brand>BMW</Brand>
-      <Models />
+      <Models>
+        <string>X5</string>
+      </Models>
     </CarBrand>
     <CarBrand>
       <Brand>Bugatti</Brand>
@@ -75,7 +79,9 @@
     </CarBrand>
     <CarBrand>
       <Brand>Honda</Brand>
-      <Models />
+      <Models>
+        <string>CBR</string>
+      </Models>
     </CarBrand>
     <CarBrand>
       <Brand>Hyuandai</Brand>
@@ -207,7 +213,9 @@
     </CarBrand>
     <CarBrand>
       <Brand>VW</Brand>
-      <Models />
+      <Models>
+        <string>Corrad</string>
+      </Models>
     </CarBrand>
     <CarBrand>
       <Brand>Wengler Mobil</Brand>

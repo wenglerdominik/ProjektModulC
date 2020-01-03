@@ -539,6 +539,8 @@
             // 
             // comboBoxCarModel
             // 
+            this.comboBoxCarModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxCarModel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxCarModel.FormattingEnabled = true;
             this.comboBoxCarModel.Location = new System.Drawing.Point(113, 50);
             this.comboBoxCarModel.Name = "comboBoxCarModel";

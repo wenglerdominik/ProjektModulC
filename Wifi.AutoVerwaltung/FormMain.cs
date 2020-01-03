@@ -77,7 +77,7 @@ namespace Wifi.AutoVerwaltung
                 this.listViewMain.Items[this.listViewMain.Items.Count - 1].Selected = true;
                 this.listViewMain.Visible = true;
             }
-            else panelKeinFahrzeug.Visible = true;
+            if(this.listViewMain.Items.Count==0) panelKeinFahrzeug.Visible = true;
 
         }
 
@@ -225,12 +225,11 @@ namespace Wifi.AutoVerwaltung
             if (this.listViewMain.SelectedItems.Count == 1 && MessageBox.Show("Wollen Sie das Fahrzeug wirklich löschen?",
                 "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                ListViewItem item = listViewMain.SelectedItems[0];
+                KfzData kfzData = item.Tag as KfzData;
+                this.securedAutoFile.FahrzeugInfos.Remove(kfzData);
                 this.listViewMain.Items.Remove(this.listViewMain.SelectedItems[0]);
-                //for (int i = 0; i < this.listViewMain.Items.Count; i++)
-                //{
-                //    if (i % 2 == 0) this.listViewMain.Items[i].BackColor = Color.White;
-                //    else this.listViewMain.Items[i].BackColor = Color.LightSteelBlue;
-                //}
+               
 
             }
             if (this.listViewMain.Items.Count == 0)
