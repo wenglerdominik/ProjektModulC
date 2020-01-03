@@ -17,12 +17,13 @@ namespace Wifi.AutoVerwaltung
     public partial class FormEdit : Form
     {
         public KfzData KfzData { get; set; } = new KfzData();
-
+        private Cars Cars;
         public FormEdit()
         {
             InitializeComponent();
             CenterToScreen();
             if (this.flowLayoutPanel1.Controls.Count == 0) addUcPhoto();
+            Auto();
         }
 
 
@@ -374,31 +375,11 @@ namespace Wifi.AutoVerwaltung
                 default:
                     break;
             }
-
-
-            //for (int i = 0; i < this.listViewMain.Items.Count; i++)
-            //{
-            //    if (i % 2 == 0) this.listViewMain.Items[i].BackColor = Color.White;
-            //    else this.listViewMain.Items[i].BackColor = Color.LightSteelBlue;
-            //}
-
-
         }
 
-        private void getImageData()
-        {
-            if (this.KfzData.ImagePath == null) this.KfzData.ImagePath = new List<string>();
-            this.KfzData.ImagePath.Clear();
-
-            foreach (UserControlPhoto userControl in this.flowLayoutPanel1.Controls)
-            {
-                if (!string.IsNullOrEmpty(userControl.imageString)) this.KfzData.ImagePath.Add(userControl.imageString);
-            }
-        }
-      
         private void bildLöschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(UserControlPhoto.GetFocusedUserControl() == "UserControlPhoto")
+            if (UserControlPhoto.GetFocusedUserControl() == "UserControlPhoto")
             {
                 MessageBox.Show("Es ist noch kein Bild hinterlegt", "Löschen nicht möglich", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -472,16 +453,25 @@ namespace Wifi.AutoVerwaltung
             // don't forget to save the settings
             Properties.Settings.Default.Save();
         }
-              
+
         public void addUcPhoto()
         {
             UserControlPhoto userControl = new UserControlPhoto();
             this.flowLayoutPanel1.Controls.Add(userControl);
             userControl.newPictureAddedEvent += this.addUcPhoto;
         }
-       
-      
-        private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
+        private void getImageData()
+        {
+            if (this.KfzData.ImagePath == null) this.KfzData.ImagePath = new List<string>();
+            this.KfzData.ImagePath.Clear();
+
+            foreach (UserControlPhoto userControl in this.flowLayoutPanel1.Controls)
+            {
+                if (!string.IsNullOrEmpty(userControl.imageString)) this.KfzData.ImagePath.Add(userControl.imageString);
+            }
+        }
+
+        private void comboBoxBrand_TextChanged(object sender, EventArgs e)
         {
             switch (this.comboBoxBrand.SelectedItem)
             {
@@ -634,7 +624,30 @@ namespace Wifi.AutoVerwaltung
                     break;
 
                 default:
+                    this.pictureBoxBrand.Image = null;
                     break;
+            }
+        }
+
+        private void Auto()
+        {
+            if (Cars == null) Cars = new Cars();
+            foreach (string item in this.comboBoxBrand.Items)
+            {
+                CarBrand carBrand = new CarBrand();
+                carBrand.Brand = item;
+                Cars.CarCollection.Add(carBrand);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (CarBrand brand in Cars.CarCollection)
+            {
+                if (comboBoxBrand.Text == brand.Brand)
+                {
+                    brand.Models.Add(textBoxModell.Text);
+                }                                                
             }
         }
     }

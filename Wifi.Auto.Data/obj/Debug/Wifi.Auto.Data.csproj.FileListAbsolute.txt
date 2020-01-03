@@ -23,3 +23,8 @@ C:\Kurs\ProjektModulC#\Wifi.Auto.Data\bin\Debug\Wifi.Auto.Data.pdb
 C:\Kurs\ProjektModulC#\Wifi.Auto.Data\obj\Debug\Wifi.Auto.Data.csprojAssemblyReference.cache
 C:\Kurs\ProjektModulC#\Wifi.Auto.Data\obj\Debug\Wifi.Auto.Data.dll
 C:\Kurs\ProjektModulC#\Wifi.Auto.Data\obj\Debug\Wifi.Auto.Data.pdb
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\bin\Debug\Wifi.Auto.Data.dll
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\bin\Debug\Wifi.Auto.Data.pdb
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\obj\Debug\Wifi.Auto.Data.csprojAssemblyReference.cache
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\obj\Debug\Wifi.Auto.Data.dll
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\obj\Debug\Wifi.Auto.Data.pdb

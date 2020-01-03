@@ -22,11 +22,31 @@ namespace Wifi.AutoVerwaltung
         public FormMain()
         {
             InitializeComponent();
-            Splash();
+           // Splash();
             this.listViewMain.Visible = false;
             this.panelKeinFahrzeug.Visible = true;
             CenterToScreen();
-            
+            //menuStrip1.Renderer = new MyRenderer();
+            //this.menuItemOpenFile.BackColor = Color.FromArgb(48, 48, 48);
+            //this.menuItemOpenFile.ForeColor = Color.FromArgb(250, 250, 255);
+            //this.menuItemSpeichern.BackColor = Color.FromArgb(48, 48, 48);
+            //this.menuItemSpeichern.ForeColor = Color.FromArgb(250, 250, 255);
+            //this.menuItemNeu.BackColor = Color.FromArgb(48, 48, 48);
+            //this.menuItemNeu.ForeColor = Color.FromArgb(250, 250, 255);
+            //this.fahrzeugLöschenToolStripMenuItem.BackColor = Color.FromArgb(48, 48, 48);
+            //this.fahrzeugLöschenToolStripMenuItem.ForeColor = Color.FromArgb(250, 250, 255);
+
+
+        }
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
+            {
+                Rectangle rc = new Rectangle(Point.Empty, e.Item.Size);
+                Color c = e.Item.Selected ? Color.FromArgb(140,140,140) : Color.FromArgb(48,48,48);
+                using (SolidBrush brush = new SolidBrush(c))
+                    e.Graphics.FillRectangle(brush, rc);
+            }
         }
         public void Splash()
         {
@@ -117,7 +137,8 @@ namespace Wifi.AutoVerwaltung
                         this.listViewMain.Items[0].Selected = true;
                         this.panelKeinFahrzeug.Visible = false;
                         this.listViewMain.Visible = true;
-
+                        this.toolStripLoggedUser.Visible = true;
+                        this.toolStripOpenFile.Visible = true;
                         return true;
                     }
                     else
@@ -155,6 +176,8 @@ namespace Wifi.AutoVerwaltung
                         {
                             SaveFile(dialog.FileName, login.Username, login.Password);
                             this.masterPassword = login.Password;
+                            this.toolStripOpenFile.Text = "Datei: " + dialog.FileName;
+                            this.toolStripLoggedUser.Text = "Benutzer: " + login.Username;
                         }
                     }
                 }
@@ -324,12 +347,14 @@ namespace Wifi.AutoVerwaltung
                 Properties.Settings.Default.FormMainLocation = this.RestoreBounds.Location;
                 Properties.Settings.Default.FormMainSize = this.RestoreBounds.Size;
             }
-
             // don't forget to save the settings
             Properties.Settings.Default.Save();
         }
 
-
-
+        private void speichernUnterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.masterPassword = null;
+            menuItemSpeichern_Click(this, EventArgs.Empty);
+        }
     }
 }

@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarBrand.cs" />
+    <Compile Include="Cars.cs" />
     <Compile Include="KfzData.cs" />
     <Compile Include="KfzKostenAllg.cs" />
     <Compile Include="KfzKostenTank.cs" />
