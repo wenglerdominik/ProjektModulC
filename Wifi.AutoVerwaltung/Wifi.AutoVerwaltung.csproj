@@ -103,7 +103,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -292,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Resources\CarCollection.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

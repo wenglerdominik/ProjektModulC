@@ -12,6 +12,8 @@ using Wifi.Auto.Data;
 using System.IO;
 using System.Xml.Serialization;
 using System.Resources;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace Wifi.AutoVerwaltung
 {
@@ -357,12 +359,13 @@ namespace Wifi.AutoVerwaltung
 
         private void numericLeistungChanged_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Convert.ToString(numericUpDownLeistung.Value)) || numericUpDownLeistung.Value == 0) this.labelLeistungPS.Text = "PS: ";
+            if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) this.labelLeistungPS.Text = "PS: ";
             else labelLeistungPS.Text = "PS: " + (Convert.ToString(Convert.ToDouble(numericUpDownLeistung.Text) * 1.36));
         }
 
         private void löschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ListViewItem item = null;
 
             switch (this.tabControlAutoInfo.SelectedTab.Name)
             {
@@ -371,7 +374,7 @@ namespace Wifi.AutoVerwaltung
                     if (this.listViewAllgKosten.SelectedItems.Count == 1 && MessageBox.Show("Wollen Sie diese Kostenstelle wirklich löschen?",
                     "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        ListViewItem item = this.listViewAllgKosten.SelectedItems[0];
+                        item = this.listViewAllgKosten.SelectedItems[0];
                         KfzKostenAllg kfzKostenAllg = item.Tag as KfzKostenAllg;
                         this.KfzData.Fahrzeugkosten.Remove(kfzKostenAllg);
                         this.listViewAllgKosten.Items.Remove(this.listViewAllgKosten.SelectedItems[0]);
@@ -382,8 +385,8 @@ namespace Wifi.AutoVerwaltung
                     if (this.listViewTankKosten.SelectedItems.Count == 1 && MessageBox.Show("Wollen Sie diese Tankrechnung wirklich löschen?",
                     "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        ListViewItem item1 = this.listViewTankKosten.SelectedItems[0];
-                        KfzKostenTank kfzKostenTank = item1.Tag as KfzKostenTank;
+                        item = this.listViewTankKosten.SelectedItems[0];
+                        KfzKostenTank kfzKostenTank = item.Tag as KfzKostenTank;
                         this.KfzData.Fahrzeugkosten.Remove(kfzKostenTank);
                         this.listViewTankKosten.Items.Remove(this.listViewTankKosten.SelectedItems[0]);
                         calcDistancVerbrauch();
@@ -668,10 +671,16 @@ namespace Wifi.AutoVerwaltung
         private void loadCarCollection()
         {
             if (this.Cars == null) this.Cars = new Cars();
-            StreamReader reader = new StreamReader("CarCollection.xml", Encoding.UTF8);
+
+            XmlDocument xml = new XmlDocument();
+            xml.Load(@Properties.Resources.CarCollection);
+
+
+
+            // StreamReader reader = new StreamReader(@Properties.Resources.CarCollection, Encoding.UTF8);
             XmlSerializer serializer = new XmlSerializer(typeof(Cars));
-            Cars = (Cars)serializer.Deserialize(reader);
-            reader.Close();
+            //Cars = (Cars)serializer.Deserialize(reader);
+            //reader.Close();
 
             foreach (CarBrand item in Cars.CarCollection)
             {
@@ -709,9 +718,11 @@ namespace Wifi.AutoVerwaltung
 
         private void writeCarCollectionFile()
         {
-            StreamWriter writer = new StreamWriter("CarCollection.xml", false, Encoding.UTF8);
+            StreamWriter writer = new StreamWriter(Properties.Resources.CarCollection);
+           // StreamWriter writer = new StreamWriter("CarCollection.xml", false, Encoding.UTF8);
             XmlSerializer serializer = new XmlSerializer(typeof(Cars));
             serializer.Serialize(writer, Cars);
+            
             writer.Close();
         }
 

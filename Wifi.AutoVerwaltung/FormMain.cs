@@ -22,19 +22,11 @@ namespace Wifi.AutoVerwaltung
         public FormMain()
         {
             InitializeComponent();
-           // Splash();
+           Splash();
             this.listViewMain.Visible = false;
             this.panelKeinFahrzeug.Visible = true;
             CenterToScreen();
-            //menuStrip1.Renderer = new MyRenderer();
-            //this.menuItemOpenFile.BackColor = Color.FromArgb(48, 48, 48);
-            //this.menuItemOpenFile.ForeColor = Color.FromArgb(250, 250, 255);
-            //this.menuItemSpeichern.BackColor = Color.FromArgb(48, 48, 48);
-            //this.menuItemSpeichern.ForeColor = Color.FromArgb(250, 250, 255);
-            //this.menuItemNeu.BackColor = Color.FromArgb(48, 48, 48);
-            //this.menuItemNeu.ForeColor = Color.FromArgb(250, 250, 255);
-            //this.fahrzeugLöschenToolStripMenuItem.BackColor = Color.FromArgb(48, 48, 48);
-            //this.fahrzeugLöschenToolStripMenuItem.ForeColor = Color.FromArgb(250, 250, 255);
+            
 
 
         }

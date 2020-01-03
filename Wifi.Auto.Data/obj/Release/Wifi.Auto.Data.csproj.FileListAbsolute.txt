@@ -1,0 +1,5 @@
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\bin\Release\Wifi.Auto.Data.dll
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\bin\Release\Wifi.Auto.Data.pdb
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\obj\Release\Wifi.Auto.Data.csprojAssemblyReference.cache
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\obj\Release\Wifi.Auto.Data.dll
+C:\Kurs\ProjektModulC\Wifi.Auto.Data\obj\Release\Wifi.Auto.Data.pdb

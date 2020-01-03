@@ -161,10 +161,10 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.ContextMenuStrip = this.contextMenuStripFlowPanel;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 204);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 204);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(795, 135);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(816, 135);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // contextMenuStripFlowPanel
@@ -194,7 +194,7 @@
             this.numericUpDownLeistung.Name = "numericUpDownLeistung";
             this.numericUpDownLeistung.Size = new System.Drawing.Size(85, 20);
             this.numericUpDownLeistung.TabIndex = 3;
-            this.numericUpDownLeistung.ValueChanged += new System.EventHandler(this.numericLeistungChanged_TextChanged);
+            this.numericUpDownLeistung.TextChanged += new System.EventHandler(this.numericLeistungChanged_TextChanged);
             // 
             // label14
             // 
