@@ -22,7 +22,7 @@ namespace Wifi.AutoVerwaltung
         public FormMain()
         {
             InitializeComponent();
-           Splash();
+           //Splash();
             this.listViewMain.Visible = false;
             this.panelKeinFahrzeug.Visible = true;
             CenterToScreen();

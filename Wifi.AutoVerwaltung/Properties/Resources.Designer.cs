@@ -146,24 +146,26 @@ namespace Wifi.AutoVerwaltung.Properties {
         ///  &lt;CarCollection&gt;
         ///    &lt;CarBrand&gt;
         ///      &lt;Brand&gt;Alfa Romeo&lt;/Brand&gt;
-        ///      &lt;Models&gt;
-        ///        &lt;string&gt;Spider&lt;/string&gt;
-        ///      &lt;/Models&gt;
+        ///      &lt;Models /&gt;
         ///    &lt;/CarBrand&gt;
         ///    &lt;CarBrand&gt;
         ///      &lt;Brand&gt;Alpina&lt;/Brand&gt;
-        ///      &lt;Models&gt;
-        ///        &lt;string&gt;7405&lt;/string&gt;
-        ///      &lt;/Models&gt;
+        ///      &lt;Models /&gt;
         ///    &lt;/CarBrand&gt;
         ///    &lt;CarBrand&gt;
         ///      &lt;Brand&gt;Aston Martin&lt;/Brand&gt;
-        ///      &lt;Models&gt;
-        ///        &lt;string&gt;asdf&lt; [rest of string was truncated]&quot;;.
+        ///       &lt;Models /&gt;
+        ///    &lt;/CarBrand&gt;
+        ///    &lt;CarBrand&gt;
+        ///      &lt;Brand&gt;Audi&lt;/Brand&gt;
+        ///      &lt;Models /&gt;
+        ///    &lt;/CarBrand&gt;
+        ///    &lt;CarBrand&gt;
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string CarCollection {
+        public static string CarCollectionInit {
             get {
-                return ResourceManager.GetString("CarCollection", resourceCulture);
+                return ResourceManager.GetString("CarCollectionInit", resourceCulture);
             }
         }
         

@@ -16,3 +16,5 @@ C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Release\Wifi.AutoVerwaltung.csproj
 C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Release\Wifi.AutoVerwaltung.csproj.CopyComplete
 C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Release\Wifi.AutoVerwaltung.exe
 C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\obj\Release\Wifi.AutoVerwaltung.pdb
+C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\bin\Release\Wifi.AutoVerwaltung.exe.CodeAnalysisLog.xml
+C:\Kurs\ProjektModulC\Wifi.AutoVerwaltung\bin\Release\Wifi.AutoVerwaltung.exe.lastcodeanalysissucceeded

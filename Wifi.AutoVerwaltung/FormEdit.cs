@@ -14,6 +14,7 @@ using System.Xml.Serialization;
 using System.Resources;
 using System.Xml.Linq;
 using System.Xml;
+using System.Reflection;
 
 namespace Wifi.AutoVerwaltung
 {
@@ -670,22 +671,23 @@ namespace Wifi.AutoVerwaltung
 
         private void loadCarCollection()
         {
+            string test = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "UserCarCollection.xml";
+
             if (this.Cars == null) this.Cars = new Cars();
-
-            XmlDocument xml = new XmlDocument();
-            xml.Load(@Properties.Resources.CarCollection);
-
-
-
-            // StreamReader reader = new StreamReader(@Properties.Resources.CarCollection, Encoding.UTF8);
-            XmlSerializer serializer = new XmlSerializer(typeof(Cars));
-            //Cars = (Cars)serializer.Deserialize(reader);
-            //reader.Close();
-
-            foreach (CarBrand item in Cars.CarCollection)
             {
-                this.comboBoxBrand.Items.Add(item.Brand);
+                XmlReader reader = new XmlTextReader(new StringReader(Properties.Resources.CarCollectionInit));
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Cars));
+                Cars = (Cars)xmlSerializer.Deserialize(reader);
+                //StreamReader reader = new StreamReader(System.IO.Directory.GetCurrentDirectory(), Encoding.UTF8);
+                //XmlSerializer serializer = new XmlSerializer(typeof(Cars));
+                //Cars = (Cars)serializer.Deserialize(reader);
+                reader.Close();
 
+                foreach (CarBrand item in Cars.CarCollection)
+                {
+                    this.comboBoxBrand.Items.Add(item.Brand);
+
+                }
             }
 
         }
@@ -718,11 +720,11 @@ namespace Wifi.AutoVerwaltung
 
         private void writeCarCollectionFile()
         {
-            StreamWriter writer = new StreamWriter(Properties.Resources.CarCollection);
-           // StreamWriter writer = new StreamWriter("CarCollection.xml", false, Encoding.UTF8);
+            string path = Application.StartupPath;
+            StreamWriter writer = new StreamWriter(path+"\\CarCollectionUser.xml", false, Encoding.UTF8);
             XmlSerializer serializer = new XmlSerializer(typeof(Cars));
             serializer.Serialize(writer, Cars);
-            
+
             writer.Close();
         }
 

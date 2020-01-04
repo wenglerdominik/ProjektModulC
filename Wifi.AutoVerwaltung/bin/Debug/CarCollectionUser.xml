@@ -3,33 +3,19 @@
   <CarCollection>
     <CarBrand>
       <Brand>Alfa Romeo</Brand>
-      <Models>
-        <string>Spider</string>
-      </Models>
+      <Models />
     </CarBrand>
     <CarBrand>
       <Brand>Alpina</Brand>
-      <Models>
-        <string>7405</string>
-      </Models>
+      <Models />
     </CarBrand>
     <CarBrand>
       <Brand>Aston Martin</Brand>
-      <Models>
-        <string>asdf</string>
-      </Models>
+      <Models />
     </CarBrand>
     <CarBrand>
       <Brand>Audi</Brand>
-      <Models>
-        <string>A4</string>
-        <string>A3</string>
-        <string>A6</string>
-        <string>R8</string>
-        <string>TT</string>
-        <string>afd</string>
-        <string>R9</string>
-      </Models>
+      <Models />
     </CarBrand>
     <CarBrand>
       <Brand>Bentley</Brand>
@@ -37,9 +23,7 @@
     </CarBrand>
     <CarBrand>
       <Brand>BMW</Brand>
-      <Models>
-        <string>X5</string>
-      </Models>
+      <Models />
     </CarBrand>
     <CarBrand>
       <Brand>Bugatti</Brand>
@@ -213,15 +197,12 @@
     </CarBrand>
     <CarBrand>
       <Brand>VW</Brand>
-      <Models>
-        <string>Corrad</string>
-      </Models>
+      <Models />
     </CarBrand>
     <CarBrand>
-      <Brand>Wengler Mobil</Brand>
+      <Brand>wengler</Brand>
       <Models>
-        <string>23</string>
-        <string>445</string>
+        <string>telsa</string>
       </Models>
     </CarBrand>
   </CarCollection>
