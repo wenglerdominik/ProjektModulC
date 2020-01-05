@@ -17,7 +17,7 @@ namespace Wifi.AutoVerwaltung
         private SecuredAutoFile securedAutoFile = null;
         private string masterPassword = null;
         private KfzData kfzData = null;
-
+        private DateTime lastModification = DateTime.MinValue;
 
         public FormMain()
         {
@@ -45,6 +45,8 @@ namespace Wifi.AutoVerwaltung
                 {
                     this.securedAutoFile = new SecuredAutoFile();
                     this.securedAutoFile.CreationDate = DateTime.Now;
+                    this.toolStripOpenFile.Text = "Neue ungespeicherte Datei";
+                    this.toolStripOpenFile.Visible = true;
                 }
                 this.kfzData = formEdit.KfzData;
                 this.securedAutoFile.FahrzeugInfos.Add(this.kfzData);
@@ -52,6 +54,7 @@ namespace Wifi.AutoVerwaltung
                 panelKeinFahrzeug.Visible = false;
                 this.listViewMain.Items[this.listViewMain.Items.Count - 1].Selected = true;
                 this.listViewMain.Visible = true;
+                this.lastModification = DateTime.Now;
 
             }
             if (this.listViewMain.Items.Count == 0) panelKeinFahrzeug.Visible = true;
@@ -95,7 +98,7 @@ namespace Wifi.AutoVerwaltung
         private bool Login(string filename)
         {
             FormLogin formLogin = new FormLogin();
-
+            formLogin.Text = "Zu öffnende Datei: " + filename;
             if (formLogin.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -121,7 +124,7 @@ namespace Wifi.AutoVerwaltung
                         return true;
                     }
                     else
-                    {
+                    {                        
                         MessageBox.Show("Keine Berechtigung");
                         this.securedAutoFile = null;
                         return false;
@@ -157,6 +160,7 @@ namespace Wifi.AutoVerwaltung
                             this.masterPassword = login.Password;
                             this.toolStripOpenFile.Text = "Datei: " + dialog.FileName;
                             this.toolStripLoggedUser.Text = "Benutzer: " + login.Username;
+                            this.toolStripLoggedUser.Visible = true;
                         }
                     }
                 }
@@ -352,19 +356,23 @@ namespace Wifi.AutoVerwaltung
 
         private void schließenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            if (MessageBox.Show("Achtung, alle nicht gespeichereten Änderungen gehen verloren.\n" +
-                "Wollen Sie die Datei wirklich beenden?", "Datei schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (this.lastModification != this.securedAutoFile.LastUpdate)
             {
-                this.securedAutoFile = null;
-                this.listViewMain.Items.Clear();
-                this.listViewMain.Visible = false;
-                this.panelKeinFahrzeug.Visible = true;
-                this.flowLayoutPanelMain.Controls.Clear();
-                this.toolStripLoggedUser.Visible = false;
-                this.toolStripOpenFile.Visible = false;
+                if (MessageBox.Show("Achtung, alle nicht gespeichereten Änderungen gehen verloren.\n" +
+               "Wollen Sie die Datei wirklich beenden?", "Datei schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    this.securedAutoFile = null;
+                    this.listViewMain.Items.Clear();
+                    this.listViewMain.Visible = false;
+                    this.panelKeinFahrzeug.Visible = true;
+                    this.flowLayoutPanelMain.Controls.Clear();
+                    this.toolStripLoggedUser.Visible = false;
+                    this.toolStripOpenFile.Visible = false;
+                }
+                else return;
             }
-            else return;
+
+           
 
         }
     }

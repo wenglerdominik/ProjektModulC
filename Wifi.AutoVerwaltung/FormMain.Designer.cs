@@ -95,7 +95,7 @@
             this.programmBeendenToolStripMenuItem});
             this.dateiToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(49, 19);
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(54, 19);
             this.dateiToolStripMenuItem.Text = "Datei";
             this.dateiToolStripMenuItem.MouseEnter += new System.EventHandler(this.dateiToolStripMenuItem_MouseEnter);
             // 
@@ -113,7 +113,7 @@
             this.menuItemSpeichern.Image = ((System.Drawing.Image)(resources.GetObject("menuItemSpeichern.Image")));
             this.menuItemSpeichern.Name = "menuItemSpeichern";
             this.menuItemSpeichern.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.menuItemSpeichern.Size = new System.Drawing.Size(234, 26);
+            this.menuItemSpeichern.Size = new System.Drawing.Size(258, 26);
             this.menuItemSpeichern.Text = "Speichern";
             this.menuItemSpeichern.Click += new System.EventHandler(this.menuItemSpeichern_Click);
             // 
@@ -122,14 +122,15 @@
             this.speichernUnterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("speichernUnterToolStripMenuItem.Image")));
             this.speichernUnterToolStripMenuItem.Name = "speichernUnterToolStripMenuItem";
             this.speichernUnterToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.speichernUnterToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.speichernUnterToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.speichernUnterToolStripMenuItem.Text = "Speichern unter";
             this.speichernUnterToolStripMenuItem.Click += new System.EventHandler(this.speichernUnterToolStripMenuItem_Click);
             // 
             // FileCloseToolStripMenuItem
             // 
+            this.FileCloseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("FileCloseToolStripMenuItem.Image")));
             this.FileCloseToolStripMenuItem.Name = "FileCloseToolStripMenuItem";
-            this.FileCloseToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.FileCloseToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.FileCloseToolStripMenuItem.Text = "Schließen";
             this.FileCloseToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click);
             // 
@@ -138,7 +139,7 @@
             this.programmBeendenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("programmBeendenToolStripMenuItem.Image")));
             this.programmBeendenToolStripMenuItem.Name = "programmBeendenToolStripMenuItem";
             this.programmBeendenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.programmBeendenToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.programmBeendenToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
             this.programmBeendenToolStripMenuItem.Text = "Programm Beenden";
             this.programmBeendenToolStripMenuItem.Click += new System.EventHandler(this.programmBeendenToolStripMenuItem_Click);
             // 
@@ -149,7 +150,7 @@
             this.fahrzeugLöschenToolStripMenuItem});
             this.bearbeitenToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
-            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(70, 19);
+            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(81, 19);
             this.bearbeitenToolStripMenuItem.Text = "Fahrzeug";
             this.bearbeitenToolStripMenuItem.MouseEnter += new System.EventHandler(this.bearbeitenToolStripMenuItem_MouseEnter);
             // 
@@ -158,7 +159,7 @@
             this.menuItemNeu.Image = ((System.Drawing.Image)(resources.GetObject("menuItemNeu.Image")));
             this.menuItemNeu.Name = "menuItemNeu";
             this.menuItemNeu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuItemNeu.Size = new System.Drawing.Size(220, 26);
+            this.menuItemNeu.Size = new System.Drawing.Size(245, 26);
             this.menuItemNeu.Text = "Fahrzeug anlegen";
             this.menuItemNeu.Click += new System.EventHandler(this.menuItemNeu_Click);
             // 
@@ -167,7 +168,7 @@
             this.fahrzeugLöschenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fahrzeugLöschenToolStripMenuItem.Image")));
             this.fahrzeugLöschenToolStripMenuItem.Name = "fahrzeugLöschenToolStripMenuItem";
             this.fahrzeugLöschenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.fahrzeugLöschenToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.fahrzeugLöschenToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.fahrzeugLöschenToolStripMenuItem.Text = "Fahrzeug Löschen";
             this.fahrzeugLöschenToolStripMenuItem.Click += new System.EventHandler(this.fahrzeugLöschenToolStripMenuItem_Click);
             // 

@@ -78,6 +78,7 @@
             this.labelLeistungPS = new System.Windows.Forms.Label();
             this.pictureBoxBrand = new System.Windows.Forms.PictureBox();
             this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
+            this.toolTipCarModel = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuStripFlowPanel.SuspendLayout();
             this.contextMenuStripTabPage.SuspendLayout();
             this.tabPageTank.SuspendLayout();
@@ -130,7 +131,7 @@
             this.buttonOk.Location = new System.Drawing.Point(752, 532);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(86, 23);
-            this.buttonOk.TabIndex = 3;
+            this.buttonOk.TabIndex = 0;
             this.buttonOk.Text = "Speichern";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
@@ -143,7 +144,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(662, 532);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(85, 23);
-            this.buttonCancel.TabIndex = 4;
+            this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "Abbrechen";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -155,7 +156,7 @@
             this.tabPageTank.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageTank.Location = new System.Drawing.Point(4, 24);
             this.tabPageTank.Name = "tabPageTank";
-            this.tabPageTank.Size = new System.Drawing.Size(823, 486);
+            this.tabPageTank.Size = new System.Drawing.Size(823, 492);
             this.tabPageTank.TabIndex = 2;
             this.tabPageTank.Text = "Tankkosten";
             this.tabPageTank.UseVisualStyleBackColor = true;
@@ -178,7 +179,7 @@
             this.listViewTankKosten.HideSelection = false;
             this.listViewTankKosten.Location = new System.Drawing.Point(0, 30);
             this.listViewTankKosten.Name = "listViewTankKosten";
-            this.listViewTankKosten.Size = new System.Drawing.Size(823, 462);
+            this.listViewTankKosten.Size = new System.Drawing.Size(823, 468);
             this.listViewTankKosten.TabIndex = 1;
             this.listViewTankKosten.UseCompatibleStateImageBehavior = false;
             this.listViewTankKosten.View = System.Windows.Forms.View.Details;
@@ -244,7 +245,7 @@
             this.tabPageKosten.Location = new System.Drawing.Point(4, 24);
             this.tabPageKosten.Name = "tabPageKosten";
             this.tabPageKosten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageKosten.Size = new System.Drawing.Size(823, 486);
+            this.tabPageKosten.Size = new System.Drawing.Size(823, 492);
             this.tabPageKosten.TabIndex = 1;
             this.tabPageKosten.Text = "Fahrzeugkosten";
             // 
@@ -266,7 +267,7 @@
             this.listViewAllgKosten.HideSelection = false;
             this.listViewAllgKosten.Location = new System.Drawing.Point(0, 30);
             this.listViewAllgKosten.Name = "listViewAllgKosten";
-            this.listViewAllgKosten.Size = new System.Drawing.Size(823, 462);
+            this.listViewAllgKosten.Size = new System.Drawing.Size(823, 468);
             this.listViewAllgKosten.TabIndex = 8;
             this.listViewAllgKosten.UseCompatibleStateImageBehavior = false;
             this.listViewAllgKosten.View = System.Windows.Forms.View.Details;
@@ -334,7 +335,7 @@
             this.tabPageAllgemein.Location = new System.Drawing.Point(4, 24);
             this.tabPageAllgemein.Name = "tabPageAllgemein";
             this.tabPageAllgemein.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAllgemein.Size = new System.Drawing.Size(823, 486);
+            this.tabPageAllgemein.Size = new System.Drawing.Size(823, 492);
             this.tabPageAllgemein.TabIndex = 0;
             this.tabPageAllgemein.Text = "Allgemeine Daten";
             // 
@@ -349,7 +350,7 @@
             this.groupBoxPicture.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxPicture.Location = new System.Drawing.Point(12, 216);
             this.groupBoxPicture.Name = "groupBoxPicture";
-            this.groupBoxPicture.Size = new System.Drawing.Size(804, 265);
+            this.groupBoxPicture.Size = new System.Drawing.Size(804, 271);
             this.groupBoxPicture.TabIndex = 30;
             this.groupBoxPicture.TabStop = false;
             this.groupBoxPicture.Text = "Fahrzeugbilder";
@@ -395,7 +396,7 @@
             // comboBoxBrand
             // 
             this.comboBoxBrand.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxBrand.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.comboBoxBrand.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -404,19 +405,22 @@
             this.comboBoxBrand.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(184, 23);
-            this.comboBoxBrand.TabIndex = 26;
+            this.comboBoxBrand.Sorted = true;
+            this.comboBoxBrand.TabIndex = 0;
             this.comboBoxBrand.TextChanged += new System.EventHandler(this.comboBoxBrand_TextChanged);
             // 
             // comboBoxCarModel
             // 
             this.comboBoxCarModel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboBoxCarModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxCarModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxCarModel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxCarModel.FormattingEnabled = true;
             this.comboBoxCarModel.Location = new System.Drawing.Point(120, 42);
             this.comboBoxCarModel.Name = "comboBoxCarModel";
             this.comboBoxCarModel.Size = new System.Drawing.Size(183, 23);
-            this.comboBoxCarModel.TabIndex = 28;
+            this.comboBoxCarModel.Sorted = true;
+            this.comboBoxCarModel.TabIndex = 1;
+            this.toolTipCarModel.SetToolTip(this.comboBoxCarModel, "Modelle werden automatisch\r\nnach Benutzereingaben erweitert");
             // 
             // label2
             // 
@@ -543,15 +547,17 @@
             this.comboBoxFarbe.FormattingEnabled = true;
             this.comboBoxFarbe.Items.AddRange(new object[] {
             "Blau",
+            "Gelb",
             "Grau",
             "Grün",
-            "Gelb",
             "Rot",
             "Schwarz",
+            "Sonstige",
             "Weiß"});
             this.comboBoxFarbe.Location = new System.Drawing.Point(120, 120);
             this.comboBoxFarbe.Name = "comboBoxFarbe";
             this.comboBoxFarbe.Size = new System.Drawing.Size(184, 23);
+            this.comboBoxFarbe.Sorted = true;
             this.comboBoxFarbe.TabIndex = 4;
             // 
             // textBoxKennz
@@ -603,11 +609,15 @@
             this.tabControlAutoInfo.Controls.Add(this.tabPageKosten);
             this.tabControlAutoInfo.Controls.Add(this.tabPageTank);
             this.tabControlAutoInfo.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlAutoInfo.Location = new System.Drawing.Point(4, 12);
+            this.tabControlAutoInfo.Location = new System.Drawing.Point(4, 6);
             this.tabControlAutoInfo.Name = "tabControlAutoInfo";
             this.tabControlAutoInfo.SelectedIndex = 0;
-            this.tabControlAutoInfo.Size = new System.Drawing.Size(831, 514);
+            this.tabControlAutoInfo.Size = new System.Drawing.Size(831, 520);
             this.tabControlAutoInfo.TabIndex = 1;
+            // 
+            // toolTipCarModel
+            // 
+            this.toolTipCarModel.IsBalloon = true;
             // 
             // FormEdit
             // 
@@ -701,5 +711,6 @@
         private System.Windows.Forms.Label labelLeistungPS;
         private System.Windows.Forms.PictureBox pictureBoxBrand;
         private System.Windows.Forms.TabControl tabControlAutoInfo;
+        private System.Windows.Forms.ToolTip toolTipCarModel;
     }
 }

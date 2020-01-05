@@ -50,20 +50,20 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(810, 74);
+            this.buttonCancel.Location = new System.Drawing.Point(810, 62);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(87, 27);
-            this.buttonCancel.TabIndex = 32;
+            this.buttonCancel.TabIndex = 7;
             this.buttonCancel.Text = "Abbrechen";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(901, 74);
+            this.buttonOK.Location = new System.Drawing.Point(901, 62);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(87, 27);
-            this.buttonOK.TabIndex = 31;
+            this.buttonOK.TabIndex = 6;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -78,7 +78,7 @@
             0});
             this.numericKilometer.Name = "numericKilometer";
             this.numericKilometer.Size = new System.Drawing.Size(103, 23);
-            this.numericKilometer.TabIndex = 30;
+            this.numericKilometer.TabIndex = 3;
             // 
             // dateKostenDatum
             // 
@@ -86,7 +86,7 @@
             this.dateKostenDatum.Location = new System.Drawing.Point(244, 27);
             this.dateKostenDatum.Name = "dateKostenDatum";
             this.dateKostenDatum.Size = new System.Drawing.Size(87, 23);
-            this.dateKostenDatum.TabIndex = 28;
+            this.dateKostenDatum.TabIndex = 1;
             // 
             // numericBetrag
             // 
@@ -99,7 +99,7 @@
             0});
             this.numericBetrag.Name = "numericBetrag";
             this.numericBetrag.Size = new System.Drawing.Size(83, 23);
-            this.numericBetrag.TabIndex = 27;
+            this.numericBetrag.TabIndex = 2;
             // 
             // label4
             // 
@@ -159,7 +159,7 @@
             this.comboBoxZahlweise.Location = new System.Drawing.Point(552, 28);
             this.comboBoxZahlweise.Name = "comboBoxZahlweise";
             this.comboBoxZahlweise.Size = new System.Drawing.Size(117, 23);
-            this.comboBoxZahlweise.TabIndex = 35;
+            this.comboBoxZahlweise.TabIndex = 4;
             // 
             // label6
             // 
@@ -175,7 +175,7 @@
             this.textBoxBemerkung.Location = new System.Drawing.Point(681, 28);
             this.textBoxBemerkung.Name = "textBoxBemerkung";
             this.textBoxBemerkung.Size = new System.Drawing.Size(306, 23);
-            this.textBoxBemerkung.TabIndex = 37;
+            this.textBoxBemerkung.TabIndex = 5;
             // 
             // comboBoxKategorie
             // 
@@ -190,7 +190,7 @@
             this.comboBoxKategorie.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKategorie.Name = "comboBoxKategorie";
             this.comboBoxKategorie.Size = new System.Drawing.Size(217, 23);
-            this.comboBoxKategorie.TabIndex = 38;
+            this.comboBoxKategorie.TabIndex = 0;
             // 
             // FormKostenstelle
             // 
@@ -199,7 +199,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(999, 110);
+            this.ClientSize = new System.Drawing.Size(999, 98);
             this.Controls.Add(this.comboBoxKategorie);
             this.Controls.Add(this.textBoxBemerkung);
             this.Controls.Add(this.label6);

@@ -49,7 +49,7 @@
             this.buttonOK.Location = new System.Drawing.Point(369, 74);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(87, 27);
-            this.buttonOK.TabIndex = 21;
+            this.buttonOK.TabIndex = 4;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -64,7 +64,7 @@
             0});
             this.numericKilometer.Name = "numericKilometer";
             this.numericKilometer.Size = new System.Drawing.Size(103, 23);
-            this.numericKilometer.TabIndex = 20;
+            this.numericKilometer.TabIndex = 3;
             // 
             // numericMenge
             // 
@@ -76,7 +76,7 @@
             0});
             this.numericMenge.Name = "numericMenge";
             this.numericMenge.Size = new System.Drawing.Size(80, 23);
-            this.numericMenge.TabIndex = 19;
+            this.numericMenge.TabIndex = 2;
             // 
             // dateTankDatum
             // 
@@ -84,7 +84,7 @@
             this.dateTankDatum.Location = new System.Drawing.Point(111, 29);
             this.dateTankDatum.Name = "dateTankDatum";
             this.dateTankDatum.Size = new System.Drawing.Size(110, 23);
-            this.dateTankDatum.TabIndex = 18;
+            this.dateTankDatum.TabIndex = 1;
             // 
             // numericBetrag
             // 
@@ -97,7 +97,7 @@
             0});
             this.numericBetrag.Name = "numericBetrag";
             this.numericBetrag.Size = new System.Drawing.Size(83, 23);
-            this.numericBetrag.TabIndex = 17;
+            this.numericBetrag.TabIndex = 0;
             // 
             // label4
             // 
@@ -141,7 +141,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(278, 74);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(87, 27);
-            this.buttonCancel.TabIndex = 22;
+            this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Abbrechen";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
