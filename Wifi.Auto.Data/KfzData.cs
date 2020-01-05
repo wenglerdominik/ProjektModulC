@@ -29,6 +29,7 @@ namespace Wifi.Auto.Data
 		public List<string> ImagePath { get; set; } = null;
 
         public List<KfzData> Fahrzeugkosten { get; set; } = null;
+        public List<KfzData> KostDeleted { get; set; } = null;
 
 
 		#endregion

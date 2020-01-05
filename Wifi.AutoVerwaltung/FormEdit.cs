@@ -28,8 +28,10 @@ namespace Wifi.AutoVerwaltung
             CenterToScreen();
             if (this.flowLayoutPanel1.Controls.Count == 0) addUcPhoto();
             loadCarCollection();
+           
         }
 
+       
 
         public FormEdit(KfzData kfzData)
         {
@@ -55,7 +57,7 @@ namespace Wifi.AutoVerwaltung
                         byte[] bytes = Convert.FromBase64String(val);
                         MemoryStream mem = new MemoryStream(bytes);
                         Bitmap bmp2 = new Bitmap(mem);
-                        UserControlPhoto userControl = new UserControlPhoto(bmp2, true);
+                        UserControlPhoto userControl = new UserControlPhoto(bmp2, true, true);
                         userControl.imageString = item;
                         userControl.Name = item;
                         this.flowLayoutPanel1.Controls.Add(userControl);
@@ -87,7 +89,7 @@ namespace Wifi.AutoVerwaltung
             {
                 try
                 {
-                    foreach (Control control in this.tabPageAllgemein.Controls)
+                    foreach (Control control in this.groupBoxKfzData.Controls)
                     {
                         if (control is TextBox)
                         {
@@ -109,12 +111,14 @@ namespace Wifi.AutoVerwaltung
                         }
                         if (control is ComboBox)
                         {
-                            if (string.IsNullOrEmpty(comboBoxFarbe.Text)) comboBoxFarbe.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(comboBoxFarbe.Text)) comboBoxFarbe.BackColor = Color.IndianRed;
                             else comboBoxFarbe.BackColor = Color.White;
-                            if (string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.FromArgb(0, 187, 255);
                             else comboBoxBrand.BackColor = Color.White;
+                            if (string.IsNullOrEmpty(comboBoxCarModel.Text)) comboBoxCarModel.BackColor = Color.LightYellow;
+                            else comboBoxCarModel.BackColor = Color.White;
+                            
                         }
-
                     }
 
                     if (string.IsNullOrEmpty(this.comboBoxBrand.Text)) errorlog += "\nMarke";
@@ -131,6 +135,10 @@ namespace Wifi.AutoVerwaltung
                     this.KfzData.Leistung = this.numericUpDownLeistung.Text;
                     this.KfzData.Wartungsintervall = this.numericUpDownWartung.Text;
                     this.KfzData.Kennzeichen = this.textBoxKennz.Text;
+                    foreach (KfzData item in this.KfzData.KostDeleted)
+                    {
+                        this.KfzData.Fahrzeugkosten.Remove(item);
+                    }
                     if (this.KfzData.Fahrzeugkosten != null) calcCost();
                     #endregion
                     getImageData();
@@ -142,6 +150,7 @@ namespace Wifi.AutoVerwaltung
                 {
                     this.tabControlAutoInfo.SelectTab(0);
                     MessageBox.Show(errorlog, "Daten nicht vollständig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
                 }
             }
         }
@@ -236,8 +245,8 @@ namespace Wifi.AutoVerwaltung
             ListViewItem item = new ListViewItem();
             item.Tag = kfzKostenAllg;
             item.Text = kfzKostenAllg.KostenKategorie;
-            item.SubItems.Add(Convert.ToString(kfzKostenAllg.KostenDatum));
             item.SubItems.Add(Convert.ToString(kfzKostenAllg.KostenWert));
+            item.SubItems.Add(Convert.ToString(kfzKostenAllg.KostenDatum));
             item.SubItems.Add(kfzKostenAllg.KostenKilom);
             item.SubItems.Add(kfzKostenAllg.KostenZahlweise);
             item.SubItems.Add(kfzKostenAllg.KostenBemerkung);
@@ -367,6 +376,7 @@ namespace Wifi.AutoVerwaltung
         private void löschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ListViewItem item = null;
+            if (this.KfzData.KostDeleted == null) this.KfzData.KostDeleted = new List<KfzData>();
 
             switch (this.tabControlAutoInfo.SelectedTab.Name)
             {
@@ -377,7 +387,8 @@ namespace Wifi.AutoVerwaltung
                     {
                         item = this.listViewAllgKosten.SelectedItems[0];
                         KfzKostenAllg kfzKostenAllg = item.Tag as KfzKostenAllg;
-                        this.KfzData.Fahrzeugkosten.Remove(kfzKostenAllg);
+                        this.KfzData.KostDeleted.Add(kfzKostenAllg);
+                        //this.KfzData.Fahrzeugkosten.Remove(kfzKostenAllg);
                         this.listViewAllgKosten.Items.Remove(this.listViewAllgKosten.SelectedItems[0]);
                     }
                     break;
@@ -388,7 +399,8 @@ namespace Wifi.AutoVerwaltung
                     {
                         item = this.listViewTankKosten.SelectedItems[0];
                         KfzKostenTank kfzKostenTank = item.Tag as KfzKostenTank;
-                        this.KfzData.Fahrzeugkosten.Remove(kfzKostenTank);
+                        this.KfzData.KostDeleted.Add(kfzKostenTank);
+                        // this.KfzData.Fahrzeugkosten.Remove(kfzKostenTank);
                         this.listViewTankKosten.Items.Remove(this.listViewTankKosten.SelectedItems[0]);
                         calcDistancVerbrauch();
                     }
@@ -671,17 +683,32 @@ namespace Wifi.AutoVerwaltung
 
         private void loadCarCollection()
         {
-            string test = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "UserCarCollection.xml";
 
             if (this.Cars == null) this.Cars = new Cars();
             {
-                XmlReader reader = new XmlTextReader(new StringReader(Properties.Resources.CarCollectionInit));
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Cars));
-                Cars = (Cars)xmlSerializer.Deserialize(reader);
+
+                if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Wifi\\CarCollectionUser.xml"))
+                {
+                    StreamReader streamReader = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Wifi\\CarCollectionUser.xml", Encoding.UTF8);
+                    XmlSerializer xmlSerializer = new XmlSerializer(typeof(Cars));
+                    Cars = (Cars)xmlSerializer.Deserialize(streamReader);
+                    streamReader.Close();
+                }
+                else
+                {
+                    XmlReader reader = new XmlTextReader(new StringReader(Properties.Resources.CarCollectionInit));
+                    XmlSerializer xmlSerializer = new XmlSerializer(typeof(Cars));
+                    Cars = (Cars)xmlSerializer.Deserialize(reader);
+                    reader.Close();
+                }
+
+                //XmlReader reader = new XmlTextReader(new StringReader(Properties.Resources.CarCollectionInit));
+                //XmlSerializer xmlSerializer = new XmlSerializer(typeof(Cars));
+                //Cars = (Cars)xmlSerializer.Deserialize(reader);
                 //StreamReader reader = new StreamReader(System.IO.Directory.GetCurrentDirectory(), Encoding.UTF8);
                 //XmlSerializer serializer = new XmlSerializer(typeof(Cars));
                 //Cars = (Cars)serializer.Deserialize(reader);
-                reader.Close();
+                //reader.Close();
 
                 foreach (CarBrand item in Cars.CarCollection)
                 {
@@ -720,12 +747,20 @@ namespace Wifi.AutoVerwaltung
 
         private void writeCarCollectionFile()
         {
-            string path = Application.StartupPath;
-            StreamWriter writer = new StreamWriter(path+"\\CarCollectionUser.xml", false, Encoding.UTF8);
-            XmlSerializer serializer = new XmlSerializer(typeof(Cars));
-            serializer.Serialize(writer, Cars);
+            try
+            {
+                StreamWriter writer = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Wifi\\CarCollectionUser.xml", false, Encoding.UTF8);
+                XmlSerializer serializer = new XmlSerializer(typeof(Cars));
+                serializer.Serialize(writer, Cars);
 
-            writer.Close();
+                writer.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
 
     }

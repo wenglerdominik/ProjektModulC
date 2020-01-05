@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBenutzer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,46 +41,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.label1.Location = new System.Drawing.Point(224, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Benutzer";
             // 
             // textBoxBenutzer
             // 
-            this.textBoxBenutzer.Location = new System.Drawing.Point(246, 54);
-            this.textBoxBenutzer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxBenutzer.Location = new System.Drawing.Point(227, 25);
             this.textBoxBenutzer.Name = "textBoxBenutzer";
-            this.textBoxBenutzer.Size = new System.Drawing.Size(384, 31);
+            this.textBoxBenutzer.Size = new System.Drawing.Size(224, 23);
             this.textBoxBenutzer.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.label2.Location = new System.Drawing.Point(224, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 25);
+            this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Passwort";
             // 
             // textBoxPasswort
             // 
-            this.textBoxPasswort.Location = new System.Drawing.Point(246, 146);
-            this.textBoxPasswort.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxPasswort.Location = new System.Drawing.Point(227, 81);
             this.textBoxPasswort.Name = "textBoxPasswort";
             this.textBoxPasswort.PasswordChar = '*';
-            this.textBoxPasswort.Size = new System.Drawing.Size(384, 31);
+            this.textBoxPasswort.Size = new System.Drawing.Size(224, 23);
             this.textBoxPasswort.TabIndex = 3;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(322, 208);
-            this.buttonOk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonOk.Location = new System.Drawing.Point(365, 126);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(150, 44);
+            this.buttonOk.Size = new System.Drawing.Size(86, 27);
             this.buttonOk.TabIndex = 4;
             this.buttonOk.Text = "Ok";
             this.buttonOk.UseVisualStyleBackColor = true;
@@ -90,10 +88,9 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(484, 208);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonCancel.Location = new System.Drawing.Point(272, 126);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(150, 44);
+            this.buttonCancel.Size = new System.Drawing.Size(86, 27);
             this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Abbrechen";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -101,11 +98,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Image = global::Wifi.AutoVerwaltung.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 229);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -113,26 +109,28 @@
             // FormLogin
             // 
             this.AcceptButton = this.buttonOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(668, 283);
+            this.ClientSize = new System.Drawing.Size(467, 170);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.textBoxPasswort);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxBenutzer);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.ShowIcon = false;
-            this.Text = "Anmeldung";
+            this.Text = "Datei Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -39,5 +39,19 @@ namespace Wifi.AutoVerwaltung
 			this.DialogResult = DialogResult.Cancel;
 			this.Close();
 		}
-	}
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+                // we don't want a minimized window at startup
+                if (this.WindowState == FormWindowState.Minimized) this.WindowState = FormWindowState.Normal;
+
+                this.Location = Properties.Settings.Default.FormLoginLocation;
+                
+            }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.FormLoginLocation = this.Location;
+        }
+    }
 }

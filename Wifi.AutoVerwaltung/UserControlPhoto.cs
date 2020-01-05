@@ -26,11 +26,11 @@ namespace Wifi.AutoVerwaltung
 
 
         }
-        public UserControlPhoto(Image image, bool drop)
+        public UserControlPhoto(Image image, bool drop, bool showToolTip)
         {
             InitializeComponent();
             pictureBoxCar.AllowDrop = drop;
-
+            this.toolTip1.Active = showToolTip;
             pictureBoxCar.Image = image;
 
         }

@@ -17,29 +17,19 @@ namespace Wifi.AutoVerwaltung
         private SecuredAutoFile securedAutoFile = null;
         private string masterPassword = null;
         private KfzData kfzData = null;
+        private SecuredAutoFile openedFile = null;
 
 
         public FormMain()
         {
             InitializeComponent();
-           //Splash();
+            Splash();
             this.listViewMain.Visible = false;
             this.panelKeinFahrzeug.Visible = true;
             CenterToScreen();
             
-
-
         }
-        private class MyRenderer : ToolStripProfessionalRenderer
-        {
-            protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
-            {
-                Rectangle rc = new Rectangle(Point.Empty, e.Item.Size);
-                Color c = e.Item.Selected ? Color.FromArgb(140,140,140) : Color.FromArgb(48,48,48);
-                using (SolidBrush brush = new SolidBrush(c))
-                    e.Graphics.FillRectangle(brush, rc);
-            }
-        }
+
         public void Splash()
         {
             Application.Run(new Splash());
@@ -68,8 +58,9 @@ namespace Wifi.AutoVerwaltung
                 panelKeinFahrzeug.Visible = false;
                 this.listViewMain.Items[this.listViewMain.Items.Count - 1].Selected = true;
                 this.listViewMain.Visible = true;
+
             }
-            if(this.listViewMain.Items.Count==0) panelKeinFahrzeug.Visible = true;
+            if (this.listViewMain.Items.Count == 0) panelKeinFahrzeug.Visible = true;
 
         }
 
@@ -101,6 +92,7 @@ namespace Wifi.AutoVerwaltung
                         "Falsches Dateiformat", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
                 while (!Login(fileDialog.FileName)) ;
 
             }
@@ -116,10 +108,12 @@ namespace Wifi.AutoVerwaltung
                 try
                 {
                     this.securedAutoFile = SecuredAutoFile.Read(filename, formLogin.Password);
+                    this.openedFile = SecuredAutoFile.Read(filename, formLogin.Password);
                     if (this.securedAutoFile.Owner == formLogin.Username)
                     {
-                        this.toolStripOpenFile.Text = "Datei: " + filename;
-                        this.toolStripLoggedUser.Text = "Benutzer: " + formLogin.Username;
+
+                        this.toolStripOpenFile.Text = "Geöffnete Datei: " + filename;
+                        this.toolStripLoggedUser.Text = "Angemeldeter Benutzer: " + formLogin.Username;
                         this.listViewMain.Items.Clear();
                         this.masterPassword = formLogin.Password;
                         foreach (KfzData kfzData in this.securedAutoFile.FahrzeugInfos)
@@ -131,6 +125,7 @@ namespace Wifi.AutoVerwaltung
                         this.listViewMain.Visible = true;
                         this.toolStripLoggedUser.Visible = true;
                         this.toolStripOpenFile.Visible = true;
+
                         return true;
                     }
                     else
@@ -203,14 +198,6 @@ namespace Wifi.AutoVerwaltung
             }
         }
 
-      
-        private void buttonNeuesFahrzeug_Click(object sender, EventArgs e)
-        {
-            panelShowButton.Height = buttonNeuesFahrzeug.Height;
-            panelShowButton.Top = buttonNeuesFahrzeug.Top;
-            newCar();
-
-        }
 
         private void fahrzeugLöschenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -221,13 +208,14 @@ namespace Wifi.AutoVerwaltung
                 KfzData kfzData = item.Tag as KfzData;
                 this.securedAutoFile.FahrzeugInfos.Remove(kfzData);
                 this.listViewMain.Items.Remove(this.listViewMain.SelectedItems[0]);
-               
+
 
             }
             if (this.listViewMain.Items.Count == 0)
             {
                 this.listViewMain.Visible = false;
                 this.panelKeinFahrzeug.Visible = true;
+                this.flowLayoutPanelMain.Controls.Clear();
             }
 
 
@@ -267,8 +255,9 @@ namespace Wifi.AutoVerwaltung
                     byte[] bytes = Convert.FromBase64String(val);
                     MemoryStream mem = new MemoryStream(bytes);
                     Bitmap bmp2 = new Bitmap(mem);
-                    UserControlPhoto userControl = new UserControlPhoto(bmp2, false);
+                    UserControlPhoto userControl = new UserControlPhoto(bmp2, false, false);
                     this.flowLayoutPanelMain.Controls.Add(userControl);
+                    
                 }
             }
             catch (Exception ex)
@@ -279,12 +268,6 @@ namespace Wifi.AutoVerwaltung
                 //kfzData.ImagePath = null;
             }
 
-
-        }
-
-        private void buttonCloseApp_Click(object sender, EventArgs e)
-        {
-            this.Close();
 
         }
 
@@ -346,6 +329,45 @@ namespace Wifi.AutoVerwaltung
         {
             this.masterPassword = null;
             menuItemSpeichern_Click(this, EventArgs.Empty);
+        }
+
+        private void programmBeendenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+     
+        private void bearbeitenToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            if (this.listViewMain.SelectedItems.Count == 0) this.fahrzeugLöschenToolStripMenuItem.Enabled = false;
+            else this.fahrzeugLöschenToolStripMenuItem.Enabled = true;
+        }
+
+        private void dateiToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+
+            if (this.securedAutoFile == null)
+            {
+                this.menuItemSpeichern.Enabled = false;
+                this.speichernUnterToolStripMenuItem.Enabled = false;
+                this.FileCloseToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                this.menuItemSpeichern.Enabled = true;
+                this.speichernUnterToolStripMenuItem.Enabled = true;
+                this.FileCloseToolStripMenuItem.Enabled = true;
+
+            }
+        }
+
+        private void schließenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.securedAutoFile = null;
+            this.listViewMain.Items.Clear();
+            this.listViewMain.Visible = false;
+            this.panelKeinFahrzeug.Visible = true;
+            this.flowLayoutPanelMain.Controls.Clear();
         }
     }
 }

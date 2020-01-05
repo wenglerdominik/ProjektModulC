@@ -42,7 +42,7 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="FormTankSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">760, 240</Value>
+      <Value Profile="(Default)">483, 150</Value>
     </Setting>
     <Setting Name="FormTankState" Type="System.Windows.Forms.FormWindowState" Scope="User">
       <Value Profile="(Default)">Normal</Value>
@@ -51,7 +51,7 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="FormKostenSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">1600, 240</Value>
+      <Value Profile="(Default)">1015, 150</Value>
     </Setting>
     <Setting Name="FormKostenState" Type="System.Windows.Forms.FormWindowState" Scope="User">
       <Value Profile="(Default)">Normal</Value>
@@ -91,6 +91,9 @@
     </Setting>
     <Setting Name="ListViewTankColumnVerbrauch" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="FormLoginLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

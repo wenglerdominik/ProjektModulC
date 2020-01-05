@@ -181,7 +181,7 @@ namespace Wifi.AutoVerwaltung.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("760, 240")]
+        [global::System.Configuration.DefaultSettingValueAttribute("483, 150")]
         public global::System.Drawing.Size FormTankSize {
             get {
                 return ((global::System.Drawing.Size)(this["FormTankSize"]));
@@ -217,7 +217,7 @@ namespace Wifi.AutoVerwaltung.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1600, 240")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1015, 150")]
         public global::System.Drawing.Size FormKostenSize {
             get {
                 return ((global::System.Drawing.Size)(this["FormKostenSize"]));
@@ -380,6 +380,18 @@ namespace Wifi.AutoVerwaltung.Properties {
             }
             set {
                 this["ListViewTankColumnVerbrauch"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point FormLoginLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["FormLoginLocation"]));
+            }
+            set {
+                this["FormLoginLocation"] = value;
             }
         }
     }

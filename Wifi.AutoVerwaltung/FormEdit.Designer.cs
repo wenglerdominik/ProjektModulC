@@ -32,30 +32,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdit));
             this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
             this.tabPageAllgemein = new System.Windows.Forms.TabPage();
-            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
-            this.pictureBoxBrand = new System.Windows.Forms.PictureBox();
+            this.groupBoxPicture = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStripFlowPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bildLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxKfzData = new System.Windows.Forms.GroupBox();
+            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
+            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.numericUpDownLeistung = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownWartung = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.comboBoxFarbe = new System.Windows.Forms.ComboBox();
+            this.textBoxKennz = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelLeistungPS = new System.Windows.Forms.Label();
-            this.textBoxKennz = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBoxBrand = new System.Windows.Forms.PictureBox();
             this.tabPageKosten = new System.Windows.Forms.TabPage();
             this.listViewAllgKosten = new System.Windows.Forms.ListView();
             this.columnKategorie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnDatumAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnKostenAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDatumAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnKilometerAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnZahlweise = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnBemerkung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,13 +78,14 @@
             this.neueTankrechnungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
             this.tabControlAutoInfo.SuspendLayout();
             this.tabPageAllgemein.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).BeginInit();
+            this.groupBoxPicture.SuspendLayout();
             this.contextMenuStripFlowPanel.SuspendLayout();
+            this.groupBoxKfzData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeistung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWartung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).BeginInit();
             this.tabPageKosten.SuspendLayout();
             this.contextMenuStripTabPage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -97,74 +101,52 @@
             this.tabControlAutoInfo.Controls.Add(this.tabPageAllgemein);
             this.tabControlAutoInfo.Controls.Add(this.tabPageKosten);
             this.tabControlAutoInfo.Controls.Add(this.tabPageTank);
-            this.tabControlAutoInfo.Location = new System.Drawing.Point(12, 11);
+            this.tabControlAutoInfo.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlAutoInfo.Location = new System.Drawing.Point(4, 12);
             this.tabControlAutoInfo.Name = "tabControlAutoInfo";
             this.tabControlAutoInfo.SelectedIndex = 0;
-            this.tabControlAutoInfo.Size = new System.Drawing.Size(823, 371);
+            this.tabControlAutoInfo.Size = new System.Drawing.Size(831, 514);
             this.tabControlAutoInfo.TabIndex = 1;
             // 
             // tabPageAllgemein
             // 
             this.tabPageAllgemein.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.tabPageAllgemein.Controls.Add(this.comboBoxCarModel);
-            this.tabPageAllgemein.Controls.Add(this.comboBoxBrand);
+            this.tabPageAllgemein.Controls.Add(this.groupBoxPicture);
+            this.tabPageAllgemein.Controls.Add(this.groupBoxKfzData);
             this.tabPageAllgemein.Controls.Add(this.pictureBoxBrand);
-            this.tabPageAllgemein.Controls.Add(this.flowLayoutPanel1);
-            this.tabPageAllgemein.Controls.Add(this.numericUpDownLeistung);
-            this.tabPageAllgemein.Controls.Add(this.label14);
-            this.tabPageAllgemein.Controls.Add(this.numericUpDownWartung);
-            this.tabPageAllgemein.Controls.Add(this.comboBoxFarbe);
-            this.tabPageAllgemein.Controls.Add(this.dateTimePicker1);
-            this.tabPageAllgemein.Controls.Add(this.labelLeistungPS);
-            this.tabPageAllgemein.Controls.Add(this.textBoxKennz);
-            this.tabPageAllgemein.Controls.Add(this.label8);
-            this.tabPageAllgemein.Controls.Add(this.label7);
-            this.tabPageAllgemein.Controls.Add(this.label6);
-            this.tabPageAllgemein.Controls.Add(this.label5);
-            this.tabPageAllgemein.Controls.Add(this.label4);
-            this.tabPageAllgemein.Controls.Add(this.label3);
-            this.tabPageAllgemein.Controls.Add(this.label2);
-            this.tabPageAllgemein.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAllgemein.Location = new System.Drawing.Point(4, 24);
             this.tabPageAllgemein.Name = "tabPageAllgemein";
             this.tabPageAllgemein.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAllgemein.Size = new System.Drawing.Size(815, 345);
+            this.tabPageAllgemein.Size = new System.Drawing.Size(823, 486);
             this.tabPageAllgemein.TabIndex = 0;
             this.tabPageAllgemein.Text = "Allgemeine Daten";
             // 
-            // comboBoxBrand
+            // groupBoxPicture
             // 
-            this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Location = new System.Drawing.Point(113, 25);
-            this.comboBoxBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxBrand.Name = "comboBoxBrand";
-            this.comboBoxBrand.Size = new System.Drawing.Size(184, 21);
-            this.comboBoxBrand.TabIndex = 26;
-            this.comboBoxBrand.TextChanged += new System.EventHandler(this.comboBoxBrand_TextChanged);
-            // 
-            // pictureBoxBrand
-            // 
-            this.pictureBoxBrand.Location = new System.Drawing.Point(341, 25);
-            this.pictureBoxBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxBrand.Name = "pictureBoxBrand";
-            this.pictureBoxBrand.Size = new System.Drawing.Size(138, 112);
-            this.pictureBoxBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxBrand.TabIndex = 25;
-            this.pictureBoxBrand.TabStop = false;
+            this.groupBoxPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxPicture.AutoSize = true;
+            this.groupBoxPicture.Controls.Add(this.flowLayoutPanel1);
+            this.groupBoxPicture.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBoxPicture.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxPicture.Location = new System.Drawing.Point(12, 214);
+            this.groupBoxPicture.Name = "groupBoxPicture";
+            this.groupBoxPicture.Size = new System.Drawing.Size(804, 267);
+            this.groupBoxPicture.TabIndex = 30;
+            this.groupBoxPicture.TabStop = false;
+            this.groupBoxPicture.Text = "Fahrzeugbilder";
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.ContextMenuStrip = this.contextMenuStripFlowPanel;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 204);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 19);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(816, 135);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(798, 0);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // contextMenuStripFlowPanel
@@ -182,9 +164,109 @@
             this.bildLöschenToolStripMenuItem.Text = "Bild löschen";
             this.bildLöschenToolStripMenuItem.Click += new System.EventHandler(this.bildLöschenToolStripMenuItem_Click);
             // 
+            // groupBoxKfzData
+            // 
+            this.groupBoxKfzData.Controls.Add(this.comboBoxBrand);
+            this.groupBoxKfzData.Controls.Add(this.comboBoxCarModel);
+            this.groupBoxKfzData.Controls.Add(this.label2);
+            this.groupBoxKfzData.Controls.Add(this.label3);
+            this.groupBoxKfzData.Controls.Add(this.label4);
+            this.groupBoxKfzData.Controls.Add(this.label5);
+            this.groupBoxKfzData.Controls.Add(this.numericUpDownLeistung);
+            this.groupBoxKfzData.Controls.Add(this.label6);
+            this.groupBoxKfzData.Controls.Add(this.label14);
+            this.groupBoxKfzData.Controls.Add(this.label7);
+            this.groupBoxKfzData.Controls.Add(this.numericUpDownWartung);
+            this.groupBoxKfzData.Controls.Add(this.label8);
+            this.groupBoxKfzData.Controls.Add(this.comboBoxFarbe);
+            this.groupBoxKfzData.Controls.Add(this.textBoxKennz);
+            this.groupBoxKfzData.Controls.Add(this.dateTimePicker1);
+            this.groupBoxKfzData.Controls.Add(this.labelLeistungPS);
+            this.groupBoxKfzData.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxKfzData.Location = new System.Drawing.Point(12, 6);
+            this.groupBoxKfzData.Name = "groupBoxKfzData";
+            this.groupBoxKfzData.Size = new System.Drawing.Size(316, 204);
+            this.groupBoxKfzData.TabIndex = 29;
+            this.groupBoxKfzData.TabStop = false;
+            this.groupBoxKfzData.Text = "Fahrzeugdaten";
+            // 
+            // comboBoxBrand
+            // 
+            this.comboBoxBrand.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxBrand.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBrand.FormattingEnabled = true;
+            this.comboBoxBrand.Location = new System.Drawing.Point(120, 16);
+            this.comboBoxBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxBrand.Name = "comboBoxBrand";
+            this.comboBoxBrand.Size = new System.Drawing.Size(184, 23);
+            this.comboBoxBrand.TabIndex = 26;
+            this.comboBoxBrand.TextChanged += new System.EventHandler(this.comboBoxBrand_TextChanged);
+            // 
+            // comboBoxCarModel
+            // 
+            this.comboBoxCarModel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboBoxCarModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboBoxCarModel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxCarModel.FormattingEnabled = true;
+            this.comboBoxCarModel.Location = new System.Drawing.Point(120, 42);
+            this.comboBoxCarModel.Name = "comboBoxCarModel";
+            this.comboBoxCarModel.Size = new System.Drawing.Size(183, 23);
+            this.comboBoxCarModel.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Marke";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(63, 46);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Modell";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(33, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Kennzeichen";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 72);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 15);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Erstzulassung";
+            // 
             // numericUpDownLeistung
             // 
-            this.numericUpDownLeistung.Location = new System.Drawing.Point(113, 96);
+            this.numericUpDownLeistung.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.numericUpDownLeistung.Location = new System.Drawing.Point(120, 94);
             this.numericUpDownLeistung.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownLeistung.Maximum = new decimal(new int[] {
             500,
@@ -192,28 +274,67 @@
             0,
             0});
             this.numericUpDownLeistung.Name = "numericUpDownLeistung";
-            this.numericUpDownLeistung.Size = new System.Drawing.Size(85, 20);
+            this.numericUpDownLeistung.Size = new System.Drawing.Size(85, 23);
             this.numericUpDownLeistung.TabIndex = 3;
             this.numericUpDownLeistung.TextChanged += new System.EventHandler(this.numericLeistungChanged_TextChanged);
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(28, 98);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 15);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Leistung (kW)";
+            // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(210, 148);
+            this.label14.Location = new System.Drawing.Point(217, 150);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 13);
+            this.label14.Size = new System.Drawing.Size(62, 15);
             this.label14.TabIndex = 18;
             this.label14.Text = "x1000 km";
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(66, 124);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 15);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Farbe";
+            // 
             // numericUpDownWartung
             // 
-            this.numericUpDownWartung.Location = new System.Drawing.Point(113, 145);
+            this.numericUpDownWartung.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.numericUpDownWartung.Location = new System.Drawing.Point(120, 146);
             this.numericUpDownWartung.Name = "numericUpDownWartung";
-            this.numericUpDownWartung.Size = new System.Drawing.Size(85, 20);
+            this.numericUpDownWartung.Size = new System.Drawing.Size(85, 23);
             this.numericUpDownWartung.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 150);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 15);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Wartungsintervall";
             // 
             // comboBoxFarbe
             // 
+            this.comboBoxFarbe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBoxFarbe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxFarbe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxFarbe.FormattingEnabled = true;
@@ -225,117 +346,61 @@
             "Rot",
             "Schwarz",
             "Weiß"});
-            this.comboBoxFarbe.Location = new System.Drawing.Point(113, 120);
+            this.comboBoxFarbe.Location = new System.Drawing.Point(120, 120);
             this.comboBoxFarbe.Name = "comboBoxFarbe";
-            this.comboBoxFarbe.Size = new System.Drawing.Size(184, 21);
+            this.comboBoxFarbe.Size = new System.Drawing.Size(184, 23);
             this.comboBoxFarbe.TabIndex = 4;
+            // 
+            // textBoxKennz
+            // 
+            this.textBoxKennz.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxKennz.Location = new System.Drawing.Point(120, 172);
+            this.textBoxKennz.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxKennz.Name = "textBoxKennz";
+            this.textBoxKennz.Size = new System.Drawing.Size(184, 23);
+            this.textBoxKennz.TabIndex = 6;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 74);
+            this.dateTimePicker1.Location = new System.Drawing.Point(120, 68);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(87, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(87, 23);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // labelLeistungPS
             // 
+            this.labelLeistungPS.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelLeistungPS.AutoSize = true;
-            this.labelLeistungPS.Location = new System.Drawing.Point(207, 100);
+            this.labelLeistungPS.Location = new System.Drawing.Point(214, 98);
             this.labelLeistungPS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLeistungPS.Name = "labelLeistungPS";
-            this.labelLeistungPS.Size = new System.Drawing.Size(21, 13);
+            this.labelLeistungPS.Size = new System.Drawing.Size(23, 15);
             this.labelLeistungPS.TabIndex = 14;
             this.labelLeistungPS.Text = "PS";
             // 
-            // textBoxKennz
+            // pictureBoxBrand
             // 
-            this.textBoxKennz.Location = new System.Drawing.Point(113, 170);
-            this.textBoxKennz.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxKennz.Name = "textBoxKennz";
-            this.textBoxKennz.Size = new System.Drawing.Size(184, 20);
-            this.textBoxKennz.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 147);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Wartungsintervall";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(59, 122);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Farbe";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 100);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Leistung (kW)";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 76);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Erstzulassung";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 172);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Kennzeichen";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 53);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Modell";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Marke";
+            this.pictureBoxBrand.Location = new System.Drawing.Point(338, 12);
+            this.pictureBoxBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxBrand.Name = "pictureBoxBrand";
+            this.pictureBoxBrand.Size = new System.Drawing.Size(138, 112);
+            this.pictureBoxBrand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxBrand.TabIndex = 25;
+            this.pictureBoxBrand.TabStop = false;
             // 
             // tabPageKosten
             // 
             this.tabPageKosten.BackColor = System.Drawing.Color.Transparent;
             this.tabPageKosten.Controls.Add(this.listViewAllgKosten);
             this.tabPageKosten.Controls.Add(this.menuStrip1);
-            this.tabPageKosten.Location = new System.Drawing.Point(4, 22);
+            this.tabPageKosten.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageKosten.Location = new System.Drawing.Point(4, 24);
             this.tabPageKosten.Name = "tabPageKosten";
             this.tabPageKosten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageKosten.Size = new System.Drawing.Size(815, 345);
+            this.tabPageKosten.Size = new System.Drawing.Size(823, 486);
             this.tabPageKosten.TabIndex = 1;
             this.tabPageKosten.Text = "Fahrzeugkosten";
             // 
@@ -347,8 +412,8 @@
             this.listViewAllgKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.listViewAllgKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnKategorie,
-            this.columnDatumAllg,
             this.columnKostenAllg,
+            this.columnDatumAllg,
             this.columnKilometerAllg,
             this.columnZahlweise,
             this.columnBemerkung});
@@ -357,7 +422,7 @@
             this.listViewAllgKosten.HideSelection = false;
             this.listViewAllgKosten.Location = new System.Drawing.Point(0, 30);
             this.listViewAllgKosten.Name = "listViewAllgKosten";
-            this.listViewAllgKosten.Size = new System.Drawing.Size(815, 319);
+            this.listViewAllgKosten.Size = new System.Drawing.Size(823, 462);
             this.listViewAllgKosten.TabIndex = 8;
             this.listViewAllgKosten.UseCompatibleStateImageBehavior = false;
             this.listViewAllgKosten.View = System.Windows.Forms.View.Details;
@@ -368,15 +433,15 @@
             this.columnKategorie.Text = "Art (z.B. Leasingrate)";
             this.columnKategorie.Width = 120;
             // 
-            // columnDatumAllg
-            // 
-            this.columnDatumAllg.Text = "Datum";
-            this.columnDatumAllg.Width = 100;
-            // 
             // columnKostenAllg
             // 
             this.columnKostenAllg.Text = "Betrag €";
             this.columnKostenAllg.Width = 100;
+            // 
+            // columnDatumAllg
+            // 
+            this.columnDatumAllg.Text = "Datum";
+            this.columnDatumAllg.Width = 100;
             // 
             // columnKilometerAllg
             // 
@@ -410,22 +475,24 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuStripNeueRechnung});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(809, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(817, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuStripNeueRechnung
             // 
+            this.menuStripNeueRechnung.Checked = true;
+            this.menuStripNeueRechnung.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.menuStripNeueRechnung.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStripNeueRechnung.Image = ((System.Drawing.Image)(resources.GetObject("menuStripNeueRechnung.Image")));
             this.menuStripNeueRechnung.Name = "menuStripNeueRechnung";
-            this.menuStripNeueRechnung.Size = new System.Drawing.Size(124, 24);
+            this.menuStripNeueRechnung.Size = new System.Drawing.Size(142, 24);
             this.menuStripNeueRechnung.Text = "Neue Rechnung";
             this.menuStripNeueRechnung.Click += new System.EventHandler(this.neueKostenstelleToolStripMenuItem_Click);
             // 
@@ -433,9 +500,10 @@
             // 
             this.tabPageTank.Controls.Add(this.listViewTankKosten);
             this.tabPageTank.Controls.Add(this.menuStrip2);
-            this.tabPageTank.Location = new System.Drawing.Point(4, 22);
+            this.tabPageTank.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageTank.Location = new System.Drawing.Point(4, 24);
             this.tabPageTank.Name = "tabPageTank";
-            this.tabPageTank.Size = new System.Drawing.Size(815, 345);
+            this.tabPageTank.Size = new System.Drawing.Size(823, 492);
             this.tabPageTank.TabIndex = 2;
             this.tabPageTank.Text = "Tankkosten";
             this.tabPageTank.UseVisualStyleBackColor = true;
@@ -458,7 +526,7 @@
             this.listViewTankKosten.HideSelection = false;
             this.listViewTankKosten.Location = new System.Drawing.Point(0, 30);
             this.listViewTankKosten.Name = "listViewTankKosten";
-            this.listViewTankKosten.Size = new System.Drawing.Size(815, 319);
+            this.listViewTankKosten.Size = new System.Drawing.Size(823, 468);
             this.listViewTankKosten.TabIndex = 1;
             this.listViewTankKosten.UseCompatibleStateImageBehavior = false;
             this.listViewTankKosten.View = System.Windows.Forms.View.Details;
@@ -466,7 +534,7 @@
             // 
             // columnBetrag
             // 
-            this.columnBetrag.Text = "Betrag";
+            this.columnBetrag.Text = "Betrag €";
             this.columnBetrag.Width = 100;
             // 
             // columnDatum
@@ -502,26 +570,28 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(815, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(823, 28);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // neueTankrechnungToolStripMenuItem
             // 
+            this.neueTankrechnungToolStripMenuItem.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neueTankrechnungToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neueTankrechnungToolStripMenuItem.Image")));
             this.neueTankrechnungToolStripMenuItem.Name = "neueTankrechnungToolStripMenuItem";
-            this.neueTankrechnungToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.neueTankrechnungToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.neueTankrechnungToolStripMenuItem.Text = "Neue Tankrechnung";
             this.neueTankrechnungToolStripMenuItem.Click += new System.EventHandler(this.neueTankrechnungToolStripMenuItem_Click);
             // 
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Location = new System.Drawing.Point(763, 392);
+            this.buttonOk.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOk.Location = new System.Drawing.Point(752, 532);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.Size = new System.Drawing.Size(86, 23);
             this.buttonOk.TabIndex = 3;
-            this.buttonOk.Text = "OK";
+            this.buttonOk.Text = "Speichern";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
@@ -529,48 +599,45 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(681, 392);
+            this.buttonCancel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(662, 532);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(85, 23);
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Abbrechen";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // comboBoxCarModel
-            // 
-            this.comboBoxCarModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxCarModel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxCarModel.FormattingEnabled = true;
-            this.comboBoxCarModel.Location = new System.Drawing.Point(113, 50);
-            this.comboBoxCarModel.Name = "comboBoxCarModel";
-            this.comboBoxCarModel.Size = new System.Drawing.Size(183, 21);
-            this.comboBoxCarModel.TabIndex = 28;
             // 
             // FormEdit
             // 
             this.AcceptButton = this.buttonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(845, 423);
+            this.ClientSize = new System.Drawing.Size(845, 561);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.tabControlAutoInfo);
-            this.MinimumSize = new System.Drawing.Size(758, 384);
+            this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(758, 600);
             this.Name = "FormEdit";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Erfassen und Ändern";
+            this.Text = "Fahrzeudaten erfassen/bearbeiten";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEdit_FormClosing);
             this.Load += new System.EventHandler(this.FormEdit_Load);
             this.tabControlAutoInfo.ResumeLayout(false);
             this.tabPageAllgemein.ResumeLayout(false);
             this.tabPageAllgemein.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).EndInit();
+            this.groupBoxPicture.ResumeLayout(false);
+            this.groupBoxPicture.PerformLayout();
             this.contextMenuStripFlowPanel.ResumeLayout(false);
+            this.groupBoxKfzData.ResumeLayout(false);
+            this.groupBoxKfzData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeistung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWartung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).EndInit();
             this.tabPageKosten.ResumeLayout(false);
             this.tabPageKosten.PerformLayout();
             this.contextMenuStripTabPage.ResumeLayout(false);
@@ -631,5 +698,7 @@
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.PictureBox pictureBoxBrand;
         private System.Windows.Forms.ComboBox comboBoxCarModel;
+        private System.Windows.Forms.GroupBox groupBoxKfzData;
+        private System.Windows.Forms.GroupBox groupBoxPicture;
     }
 }
