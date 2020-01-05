@@ -95,27 +95,27 @@ namespace Wifi.AutoVerwaltung
                         {
                             if (string.IsNullOrEmpty(control.Text) && control.Name != "textBoxKennz")
                             {
-                                control.BackColor = Color.LightYellow;
+                                control.BackColor = Color.LightCoral;
                             }
                             else control.BackColor = Color.White;
                         }
                         if (control is NumericUpDown)
                         {
-                            if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) numericUpDownLeistung.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(numericUpDownLeistung.Text) || numericUpDownLeistung.Value == 0) numericUpDownLeistung.BackColor = Color.LightCoral;
                             else numericUpDownLeistung.BackColor = Color.White;
                         }
                         if (control is MaskedTextBox)
                         {
-                            if (string.IsNullOrEmpty(control.Text)) control.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(control.Text)) control.BackColor = Color.LightCoral;
                             else control.BackColor = Color.White;
                         }
                         if (control is ComboBox)
                         {
-                            if (string.IsNullOrEmpty(comboBoxFarbe.Text)) comboBoxFarbe.BackColor = Color.IndianRed;
+                            if (string.IsNullOrEmpty(comboBoxFarbe.Text)) comboBoxFarbe.BackColor = Color.LightCoral;
                             else comboBoxFarbe.BackColor = Color.White;
-                            if (string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.FromArgb(0, 187, 255);
+                            if (string.IsNullOrEmpty(comboBoxBrand.Text)) comboBoxBrand.BackColor = Color.LightCoral;
                             else comboBoxBrand.BackColor = Color.White;
-                            if (string.IsNullOrEmpty(comboBoxCarModel.Text)) comboBoxCarModel.BackColor = Color.LightYellow;
+                            if (string.IsNullOrEmpty(comboBoxCarModel.Text)) comboBoxCarModel.BackColor = Color.LightCoral;
                             else comboBoxCarModel.BackColor = Color.White;
                             
                         }
@@ -135,7 +135,7 @@ namespace Wifi.AutoVerwaltung
                     this.KfzData.Leistung = this.numericUpDownLeistung.Text;
                     this.KfzData.Wartungsintervall = this.numericUpDownWartung.Text;
                     this.KfzData.Kennzeichen = this.textBoxKennz.Text;
-                    foreach (KfzData item in this.KfzData.KostDeleted)
+                    if(this.KfzData.KostDeleted!=null) foreach (KfzData item in this.KfzData.KostDeleted)
                     {
                         this.KfzData.Fahrzeugkosten.Remove(item);
                     }
@@ -509,7 +509,7 @@ namespace Wifi.AutoVerwaltung
         {
             this.comboBoxCarModel.Text = null;
             this.comboBoxCarModel.Items.Clear();
-            switch (this.comboBoxBrand.SelectedItem)
+            switch (this.comboBoxBrand.Text)
             {
                 case "Alfa Romeo":
                     this.pictureBoxBrand.Image = Properties.Resources.Alfa_Romeo_Logo_brandtreeIndexSmall_353e502_935510;

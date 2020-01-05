@@ -43,7 +43,7 @@
             this.pictureBoxCar.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCar.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxCar.Name = "pictureBoxCar";
-            this.pictureBoxCar.Size = new System.Drawing.Size(200, 180);
+            this.pictureBoxCar.Size = new System.Drawing.Size(202, 182);
             this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCar.TabIndex = 22;
             this.pictureBoxCar.TabStop = false;
@@ -64,11 +64,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pictureBoxCar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControlPhoto";
-            this.Size = new System.Drawing.Size(200, 180);
+            this.Size = new System.Drawing.Size(202, 182);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).EndInit();
             this.ResumeLayout(false);
 

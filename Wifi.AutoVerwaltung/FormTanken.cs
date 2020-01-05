@@ -44,7 +44,7 @@ namespace Wifi.AutoVerwaltung
             if (string.IsNullOrEmpty(this.numericMenge.Text) || this.numericMenge.Value == 0)
             {
                 errorlog += "getankte Liter\n";
-                this.numericMenge.BackColor = Color.LightYellow;
+                this.numericMenge.BackColor = Color.LightCoral;
 
             }
             else
@@ -56,7 +56,7 @@ namespace Wifi.AutoVerwaltung
             if (string.IsNullOrEmpty(this.numericBetrag.Text) || this.numericBetrag.Value == 0)
             {
                 errorlog += "Tankbetrag\n";
-                this.numericBetrag.BackColor = Color.LightYellow;
+                this.numericBetrag.BackColor = Color.LightCoral;
             }
             else
             {
@@ -68,7 +68,7 @@ namespace Wifi.AutoVerwaltung
             if (string.IsNullOrEmpty(this.numericKilometer.Text) || this.numericKilometer.Value == 0)
             {
                 errorlog += "Kilometerstand\n";
-                this.numericKilometer.BackColor = Color.LightYellow;
+                this.numericKilometer.BackColor = Color.LightCoral;
             }
             else
             {

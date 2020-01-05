@@ -57,7 +57,7 @@ namespace Wifi.AutoVerwaltung
                 if (this.comboBoxKategorie.Text == "Service" && (string.IsNullOrEmpty(this.numericKilometer.Text) || this.numericKilometer.Value == 0))
                 {
                     errorlog += "Kilometerstand\n";
-                    this.numericKilometer.BackColor = Color.LightYellow;
+                    this.numericKilometer.BackColor = Color.LightCoral;
 
                 }
                 else
@@ -68,7 +68,7 @@ namespace Wifi.AutoVerwaltung
                 if (string.IsNullOrEmpty(this.comboBoxKategorie.Text))
                 {
                     errorlog += "Kategorie\n";
-                    this.comboBoxKategorie.BackColor = Color.LightYellow;
+                    this.comboBoxKategorie.BackColor = Color.LightCoral;
                 }
                 else
                 {
@@ -79,7 +79,7 @@ namespace Wifi.AutoVerwaltung
                 if (string.IsNullOrEmpty(this.numericBetrag.Text) || this.numericBetrag.Value == 0)
                 {
                     errorlog += "Betrag\n";
-                    this.numericBetrag.BackColor = Color.LightYellow;
+                    this.numericBetrag.BackColor = Color.LightCoral;
                 }
                 else
                 {
@@ -90,7 +90,7 @@ namespace Wifi.AutoVerwaltung
                 if (string.IsNullOrEmpty(this.comboBoxZahlweise.Text))
                 {
                     errorlog += "Zahlungsweise\n";
-                    this.comboBoxZahlweise.BackColor = Color.LightYellow;
+                    this.comboBoxZahlweise.BackColor = Color.LightCoral;
                 }
                 else
                 {

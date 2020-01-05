@@ -17,7 +17,6 @@ namespace Wifi.AutoVerwaltung
         private SecuredAutoFile securedAutoFile = null;
         private string masterPassword = null;
         private KfzData kfzData = null;
-        private SecuredAutoFile openedFile = null;
 
 
         public FormMain()
@@ -27,7 +26,7 @@ namespace Wifi.AutoVerwaltung
             this.listViewMain.Visible = false;
             this.panelKeinFahrzeug.Visible = true;
             CenterToScreen();
-            
+
         }
 
         public void Splash()
@@ -37,11 +36,6 @@ namespace Wifi.AutoVerwaltung
 
 
         private void menuItemNeu_Click(object sender, EventArgs e)
-        {
-            newCar();
-        }
-
-        private void newCar()
         {
             FormEdit formEdit = new FormEdit();
 
@@ -61,7 +55,6 @@ namespace Wifi.AutoVerwaltung
 
             }
             if (this.listViewMain.Items.Count == 0) panelKeinFahrzeug.Visible = true;
-
         }
 
         private void fillListView(KfzData kfzData)
@@ -108,7 +101,6 @@ namespace Wifi.AutoVerwaltung
                 try
                 {
                     this.securedAutoFile = SecuredAutoFile.Read(filename, formLogin.Password);
-                    this.openedFile = SecuredAutoFile.Read(filename, formLogin.Password);
                     if (this.securedAutoFile.Owner == formLogin.Username)
                     {
 
@@ -257,15 +249,12 @@ namespace Wifi.AutoVerwaltung
                     Bitmap bmp2 = new Bitmap(mem);
                     UserControlPhoto userControl = new UserControlPhoto(bmp2, false, false);
                     this.flowLayoutPanelMain.Controls.Add(userControl);
-                    
+
                 }
             }
             catch (Exception ex)
             {
-
-                //MessageBox.Show("Bild konnte nicht geöffnet werden. \nPfad prüfen und Bild neu hinzufügen\n" + kfzData.ImagePath);
-                //this.pictureBoxMain.Image = null;
-                //kfzData.ImagePath = null;
+                MessageBox.Show(ex.Message);
             }
 
 
@@ -336,7 +325,7 @@ namespace Wifi.AutoVerwaltung
             this.Close();
         }
 
-     
+
         private void bearbeitenToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
             if (this.listViewMain.SelectedItems.Count == 0) this.fahrzeugLöschenToolStripMenuItem.Enabled = false;
@@ -363,11 +352,20 @@ namespace Wifi.AutoVerwaltung
 
         private void schließenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.securedAutoFile = null;
-            this.listViewMain.Items.Clear();
-            this.listViewMain.Visible = false;
-            this.panelKeinFahrzeug.Visible = true;
-            this.flowLayoutPanelMain.Controls.Clear();
+
+            if (MessageBox.Show("Achtung, alle nicht gespeichereten Änderungen gehen verloren.\n" +
+                "Wollen Sie die Datei wirklich beenden?", "Datei schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.securedAutoFile = null;
+                this.listViewMain.Items.Clear();
+                this.listViewMain.Visible = false;
+                this.panelKeinFahrzeug.Visible = true;
+                this.flowLayoutPanelMain.Controls.Clear();
+                this.toolStripLoggedUser.Visible = false;
+                this.toolStripOpenFile.Visible = false;
+            }
+            else return;
+
         }
     }
 }

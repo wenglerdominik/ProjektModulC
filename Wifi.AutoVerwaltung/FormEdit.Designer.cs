@@ -30,12 +30,35 @@
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEdit));
-            this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
+            this.contextMenuStripFlowPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bildLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStripTabPage = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.tabPageTank = new System.Windows.Forms.TabPage();
+            this.listViewTankKosten = new System.Windows.Forms.ListView();
+            this.columnBetrag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDatum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnMenge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnKilometer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnStreckeGefahren = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnVerbrauch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.neueTankrechnungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPageKosten = new System.Windows.Forms.TabPage();
+            this.listViewAllgKosten = new System.Windows.Forms.ListView();
+            this.columnKategorie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnKostenAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnDatumAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnKilometerAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnZahlweise = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnBemerkung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripNeueRechnung = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageAllgemein = new System.Windows.Forms.TabPage();
             this.groupBoxPicture = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.contextMenuStripFlowPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bildLöschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxKfzData = new System.Windows.Forms.GroupBox();
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
@@ -54,59 +77,253 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelLeistungPS = new System.Windows.Forms.Label();
             this.pictureBoxBrand = new System.Windows.Forms.PictureBox();
-            this.tabPageKosten = new System.Windows.Forms.TabPage();
-            this.listViewAllgKosten = new System.Windows.Forms.ListView();
-            this.columnKategorie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnKostenAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnDatumAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnKilometerAllg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnZahlweise = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnBemerkung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStripTabPage = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuStripNeueRechnung = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPageTank = new System.Windows.Forms.TabPage();
-            this.listViewTankKosten = new System.Windows.Forms.ListView();
-            this.columnBetrag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnDatum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnMenge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnKilometer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnStreckeGefahren = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnVerbrauch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.neueTankrechnungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonOk = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.tabControlAutoInfo.SuspendLayout();
+            this.tabControlAutoInfo = new System.Windows.Forms.TabControl();
+            this.contextMenuStripFlowPanel.SuspendLayout();
+            this.contextMenuStripTabPage.SuspendLayout();
+            this.tabPageTank.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.tabPageKosten.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.tabPageAllgemein.SuspendLayout();
             this.groupBoxPicture.SuspendLayout();
-            this.contextMenuStripFlowPanel.SuspendLayout();
             this.groupBoxKfzData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeistung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWartung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).BeginInit();
-            this.tabPageKosten.SuspendLayout();
-            this.contextMenuStripTabPage.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.tabPageTank.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
+            this.tabControlAutoInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlAutoInfo
+            // contextMenuStripFlowPanel
             // 
-            this.tabControlAutoInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.contextMenuStripFlowPanel.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.contextMenuStripFlowPanel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bildLöschenToolStripMenuItem});
+            this.contextMenuStripFlowPanel.Name = "contextMenuStripFlowPanel";
+            this.contextMenuStripFlowPanel.Size = new System.Drawing.Size(139, 26);
+            // 
+            // bildLöschenToolStripMenuItem
+            // 
+            this.bildLöschenToolStripMenuItem.Name = "bildLöschenToolStripMenuItem";
+            this.bildLöschenToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.bildLöschenToolStripMenuItem.Text = "Bild löschen";
+            this.bildLöschenToolStripMenuItem.Click += new System.EventHandler(this.bildLöschenToolStripMenuItem_Click);
+            // 
+            // contextMenuStripTabPage
+            // 
+            this.contextMenuStripTabPage.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStripTabPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.löschenToolStripMenuItem});
+            this.contextMenuStripTabPage.Name = "contextMenuStrip1";
+            this.contextMenuStripTabPage.Size = new System.Drawing.Size(119, 26);
+            // 
+            // löschenToolStripMenuItem
+            // 
+            this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.löschenToolStripMenuItem.Text = "Löschen";
+            this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
+            // 
+            // buttonOk
+            // 
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOk.Location = new System.Drawing.Point(752, 532);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(86, 23);
+            this.buttonOk.TabIndex = 3;
+            this.buttonOk.Text = "Speichern";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(662, 532);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(85, 23);
+            this.buttonCancel.TabIndex = 4;
+            this.buttonCancel.Text = "Abbrechen";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // tabPageTank
+            // 
+            this.tabPageTank.Controls.Add(this.listViewTankKosten);
+            this.tabPageTank.Controls.Add(this.menuStrip2);
+            this.tabPageTank.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageTank.Location = new System.Drawing.Point(4, 24);
+            this.tabPageTank.Name = "tabPageTank";
+            this.tabPageTank.Size = new System.Drawing.Size(823, 486);
+            this.tabPageTank.TabIndex = 2;
+            this.tabPageTank.Text = "Tankkosten";
+            this.tabPageTank.UseVisualStyleBackColor = true;
+            // 
+            // listViewTankKosten
+            // 
+            this.listViewTankKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlAutoInfo.Controls.Add(this.tabPageAllgemein);
-            this.tabControlAutoInfo.Controls.Add(this.tabPageKosten);
-            this.tabControlAutoInfo.Controls.Add(this.tabPageTank);
-            this.tabControlAutoInfo.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlAutoInfo.Location = new System.Drawing.Point(4, 12);
-            this.tabControlAutoInfo.Name = "tabControlAutoInfo";
-            this.tabControlAutoInfo.SelectedIndex = 0;
-            this.tabControlAutoInfo.Size = new System.Drawing.Size(831, 514);
-            this.tabControlAutoInfo.TabIndex = 1;
+            this.listViewTankKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.listViewTankKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnBetrag,
+            this.columnDatum,
+            this.columnMenge,
+            this.columnKilometer,
+            this.columnStreckeGefahren,
+            this.columnVerbrauch});
+            this.listViewTankKosten.ContextMenuStrip = this.contextMenuStripTabPage;
+            this.listViewTankKosten.FullRowSelect = true;
+            this.listViewTankKosten.HideSelection = false;
+            this.listViewTankKosten.Location = new System.Drawing.Point(0, 30);
+            this.listViewTankKosten.Name = "listViewTankKosten";
+            this.listViewTankKosten.Size = new System.Drawing.Size(823, 462);
+            this.listViewTankKosten.TabIndex = 1;
+            this.listViewTankKosten.UseCompatibleStateImageBehavior = false;
+            this.listViewTankKosten.View = System.Windows.Forms.View.Details;
+            this.listViewTankKosten.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTankKosten_MouseDoubleClick);
+            // 
+            // columnBetrag
+            // 
+            this.columnBetrag.Text = "Betrag €";
+            this.columnBetrag.Width = 100;
+            // 
+            // columnDatum
+            // 
+            this.columnDatum.Text = "Datum";
+            this.columnDatum.Width = 100;
+            // 
+            // columnMenge
+            // 
+            this.columnMenge.Text = "Menge [Liter]";
+            this.columnMenge.Width = 100;
+            // 
+            // columnKilometer
+            // 
+            this.columnKilometer.Text = "Kilometerstand";
+            this.columnKilometer.Width = 100;
+            // 
+            // columnStreckeGefahren
+            // 
+            this.columnStreckeGefahren.Text = "Gefahrene km seit Tankung";
+            this.columnStreckeGefahren.Width = 150;
+            // 
+            // columnVerbrauch
+            // 
+            this.columnVerbrauch.Text = "Verbrauch [l/100km]";
+            this.columnVerbrauch.Width = 120;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.neueTankrechnungToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(823, 28);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // neueTankrechnungToolStripMenuItem
+            // 
+            this.neueTankrechnungToolStripMenuItem.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.neueTankrechnungToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neueTankrechnungToolStripMenuItem.Image")));
+            this.neueTankrechnungToolStripMenuItem.Name = "neueTankrechnungToolStripMenuItem";
+            this.neueTankrechnungToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.neueTankrechnungToolStripMenuItem.Text = "Neue Tankrechnung";
+            this.neueTankrechnungToolStripMenuItem.Click += new System.EventHandler(this.neueTankrechnungToolStripMenuItem_Click);
+            // 
+            // tabPageKosten
+            // 
+            this.tabPageKosten.BackColor = System.Drawing.Color.Transparent;
+            this.tabPageKosten.Controls.Add(this.listViewAllgKosten);
+            this.tabPageKosten.Controls.Add(this.menuStrip1);
+            this.tabPageKosten.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageKosten.Location = new System.Drawing.Point(4, 24);
+            this.tabPageKosten.Name = "tabPageKosten";
+            this.tabPageKosten.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageKosten.Size = new System.Drawing.Size(823, 486);
+            this.tabPageKosten.TabIndex = 1;
+            this.tabPageKosten.Text = "Fahrzeugkosten";
+            // 
+            // listViewAllgKosten
+            // 
+            this.listViewAllgKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewAllgKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.listViewAllgKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnKategorie,
+            this.columnKostenAllg,
+            this.columnDatumAllg,
+            this.columnKilometerAllg,
+            this.columnZahlweise,
+            this.columnBemerkung});
+            this.listViewAllgKosten.ContextMenuStrip = this.contextMenuStripTabPage;
+            this.listViewAllgKosten.FullRowSelect = true;
+            this.listViewAllgKosten.HideSelection = false;
+            this.listViewAllgKosten.Location = new System.Drawing.Point(0, 30);
+            this.listViewAllgKosten.Name = "listViewAllgKosten";
+            this.listViewAllgKosten.Size = new System.Drawing.Size(823, 462);
+            this.listViewAllgKosten.TabIndex = 8;
+            this.listViewAllgKosten.UseCompatibleStateImageBehavior = false;
+            this.listViewAllgKosten.View = System.Windows.Forms.View.Details;
+            this.listViewAllgKosten.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewAllgKosten_MouseDoubleClick);
+            // 
+            // columnKategorie
+            // 
+            this.columnKategorie.Text = "Art (z.B. Leasingrate)";
+            this.columnKategorie.Width = 120;
+            // 
+            // columnKostenAllg
+            // 
+            this.columnKostenAllg.Text = "Betrag €";
+            this.columnKostenAllg.Width = 100;
+            // 
+            // columnDatumAllg
+            // 
+            this.columnDatumAllg.Text = "Datum";
+            this.columnDatumAllg.Width = 100;
+            // 
+            // columnKilometerAllg
+            // 
+            this.columnKilometerAllg.Text = "Kilometerstand";
+            this.columnKilometerAllg.Width = 100;
+            // 
+            // columnZahlweise
+            // 
+            this.columnZahlweise.Text = "Zahlungsweise";
+            this.columnZahlweise.Width = 100;
+            // 
+            // columnBemerkung
+            // 
+            this.columnBemerkung.Text = "Bemerkung";
+            this.columnBemerkung.Width = 150;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripNeueRechnung});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(817, 28);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuStripNeueRechnung
+            // 
+            this.menuStripNeueRechnung.Checked = true;
+            this.menuStripNeueRechnung.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.menuStripNeueRechnung.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripNeueRechnung.Image = ((System.Drawing.Image)(resources.GetObject("menuStripNeueRechnung.Image")));
+            this.menuStripNeueRechnung.Name = "menuStripNeueRechnung";
+            this.menuStripNeueRechnung.Size = new System.Drawing.Size(142, 24);
+            this.menuStripNeueRechnung.Text = "Neue Rechnung";
+            this.menuStripNeueRechnung.Click += new System.EventHandler(this.neueKostenstelleToolStripMenuItem_Click);
             // 
             // tabPageAllgemein
             // 
@@ -130,9 +347,9 @@
             this.groupBoxPicture.Controls.Add(this.flowLayoutPanel1);
             this.groupBoxPicture.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBoxPicture.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxPicture.Location = new System.Drawing.Point(12, 214);
+            this.groupBoxPicture.Location = new System.Drawing.Point(12, 216);
             this.groupBoxPicture.Name = "groupBoxPicture";
-            this.groupBoxPicture.Size = new System.Drawing.Size(804, 267);
+            this.groupBoxPicture.Size = new System.Drawing.Size(804, 265);
             this.groupBoxPicture.TabIndex = 30;
             this.groupBoxPicture.TabStop = false;
             this.groupBoxPicture.Text = "Fahrzeugbilder";
@@ -148,21 +365,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(798, 0);
             this.flowLayoutPanel1.TabIndex = 23;
-            // 
-            // contextMenuStripFlowPanel
-            // 
-            this.contextMenuStripFlowPanel.ImageScalingSize = new System.Drawing.Size(28, 28);
-            this.contextMenuStripFlowPanel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bildLöschenToolStripMenuItem});
-            this.contextMenuStripFlowPanel.Name = "contextMenuStripFlowPanel";
-            this.contextMenuStripFlowPanel.Size = new System.Drawing.Size(139, 26);
-            // 
-            // bildLöschenToolStripMenuItem
-            // 
-            this.bildLöschenToolStripMenuItem.Name = "bildLöschenToolStripMenuItem";
-            this.bildLöschenToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.bildLöschenToolStripMenuItem.Text = "Bild löschen";
-            this.bildLöschenToolStripMenuItem.Click += new System.EventHandler(this.bildLöschenToolStripMenuItem_Click);
             // 
             // groupBoxKfzData
             // 
@@ -195,6 +397,7 @@
             this.comboBoxBrand.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboBoxBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBoxBrand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxBrand.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.comboBoxBrand.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBrand.FormattingEnabled = true;
             this.comboBoxBrand.Location = new System.Drawing.Point(120, 16);
@@ -383,7 +586,7 @@
             // 
             // pictureBoxBrand
             // 
-            this.pictureBoxBrand.Location = new System.Drawing.Point(338, 12);
+            this.pictureBoxBrand.Location = new System.Drawing.Point(338, 16);
             this.pictureBoxBrand.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxBrand.Name = "pictureBoxBrand";
             this.pictureBoxBrand.Size = new System.Drawing.Size(138, 112);
@@ -391,222 +594,20 @@
             this.pictureBoxBrand.TabIndex = 25;
             this.pictureBoxBrand.TabStop = false;
             // 
-            // tabPageKosten
+            // tabControlAutoInfo
             // 
-            this.tabPageKosten.BackColor = System.Drawing.Color.Transparent;
-            this.tabPageKosten.Controls.Add(this.listViewAllgKosten);
-            this.tabPageKosten.Controls.Add(this.menuStrip1);
-            this.tabPageKosten.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageKosten.Location = new System.Drawing.Point(4, 24);
-            this.tabPageKosten.Name = "tabPageKosten";
-            this.tabPageKosten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageKosten.Size = new System.Drawing.Size(823, 486);
-            this.tabPageKosten.TabIndex = 1;
-            this.tabPageKosten.Text = "Fahrzeugkosten";
-            // 
-            // listViewAllgKosten
-            // 
-            this.listViewAllgKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControlAutoInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewAllgKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.listViewAllgKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnKategorie,
-            this.columnKostenAllg,
-            this.columnDatumAllg,
-            this.columnKilometerAllg,
-            this.columnZahlweise,
-            this.columnBemerkung});
-            this.listViewAllgKosten.ContextMenuStrip = this.contextMenuStripTabPage;
-            this.listViewAllgKosten.FullRowSelect = true;
-            this.listViewAllgKosten.HideSelection = false;
-            this.listViewAllgKosten.Location = new System.Drawing.Point(0, 30);
-            this.listViewAllgKosten.Name = "listViewAllgKosten";
-            this.listViewAllgKosten.Size = new System.Drawing.Size(823, 462);
-            this.listViewAllgKosten.TabIndex = 8;
-            this.listViewAllgKosten.UseCompatibleStateImageBehavior = false;
-            this.listViewAllgKosten.View = System.Windows.Forms.View.Details;
-            this.listViewAllgKosten.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewAllgKosten_MouseDoubleClick);
-            // 
-            // columnKategorie
-            // 
-            this.columnKategorie.Text = "Art (z.B. Leasingrate)";
-            this.columnKategorie.Width = 120;
-            // 
-            // columnKostenAllg
-            // 
-            this.columnKostenAllg.Text = "Betrag €";
-            this.columnKostenAllg.Width = 100;
-            // 
-            // columnDatumAllg
-            // 
-            this.columnDatumAllg.Text = "Datum";
-            this.columnDatumAllg.Width = 100;
-            // 
-            // columnKilometerAllg
-            // 
-            this.columnKilometerAllg.Text = "Kilometerstand";
-            this.columnKilometerAllg.Width = 100;
-            // 
-            // columnZahlweise
-            // 
-            this.columnZahlweise.Text = "Zahlungsweise";
-            this.columnZahlweise.Width = 100;
-            // 
-            // columnBemerkung
-            // 
-            this.columnBemerkung.Text = "Bemerkung";
-            this.columnBemerkung.Width = 150;
-            // 
-            // contextMenuStripTabPage
-            // 
-            this.contextMenuStripTabPage.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.contextMenuStripTabPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.löschenToolStripMenuItem});
-            this.contextMenuStripTabPage.Name = "contextMenuStrip1";
-            this.contextMenuStripTabPage.Size = new System.Drawing.Size(119, 26);
-            // 
-            // löschenToolStripMenuItem
-            // 
-            this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.löschenToolStripMenuItem.Text = "Löschen";
-            this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuStripNeueRechnung});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(817, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuStripNeueRechnung
-            // 
-            this.menuStripNeueRechnung.Checked = true;
-            this.menuStripNeueRechnung.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.menuStripNeueRechnung.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStripNeueRechnung.Image = ((System.Drawing.Image)(resources.GetObject("menuStripNeueRechnung.Image")));
-            this.menuStripNeueRechnung.Name = "menuStripNeueRechnung";
-            this.menuStripNeueRechnung.Size = new System.Drawing.Size(142, 24);
-            this.menuStripNeueRechnung.Text = "Neue Rechnung";
-            this.menuStripNeueRechnung.Click += new System.EventHandler(this.neueKostenstelleToolStripMenuItem_Click);
-            // 
-            // tabPageTank
-            // 
-            this.tabPageTank.Controls.Add(this.listViewTankKosten);
-            this.tabPageTank.Controls.Add(this.menuStrip2);
-            this.tabPageTank.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageTank.Location = new System.Drawing.Point(4, 24);
-            this.tabPageTank.Name = "tabPageTank";
-            this.tabPageTank.Size = new System.Drawing.Size(823, 492);
-            this.tabPageTank.TabIndex = 2;
-            this.tabPageTank.Text = "Tankkosten";
-            this.tabPageTank.UseVisualStyleBackColor = true;
-            // 
-            // listViewTankKosten
-            // 
-            this.listViewTankKosten.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewTankKosten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.listViewTankKosten.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnBetrag,
-            this.columnDatum,
-            this.columnMenge,
-            this.columnKilometer,
-            this.columnStreckeGefahren,
-            this.columnVerbrauch});
-            this.listViewTankKosten.ContextMenuStrip = this.contextMenuStripTabPage;
-            this.listViewTankKosten.FullRowSelect = true;
-            this.listViewTankKosten.HideSelection = false;
-            this.listViewTankKosten.Location = new System.Drawing.Point(0, 30);
-            this.listViewTankKosten.Name = "listViewTankKosten";
-            this.listViewTankKosten.Size = new System.Drawing.Size(823, 468);
-            this.listViewTankKosten.TabIndex = 1;
-            this.listViewTankKosten.UseCompatibleStateImageBehavior = false;
-            this.listViewTankKosten.View = System.Windows.Forms.View.Details;
-            this.listViewTankKosten.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewTankKosten_MouseDoubleClick);
-            // 
-            // columnBetrag
-            // 
-            this.columnBetrag.Text = "Betrag €";
-            this.columnBetrag.Width = 100;
-            // 
-            // columnDatum
-            // 
-            this.columnDatum.Text = "Datum";
-            this.columnDatum.Width = 100;
-            // 
-            // columnMenge
-            // 
-            this.columnMenge.Text = "Menge [Liter]";
-            this.columnMenge.Width = 100;
-            // 
-            // columnKilometer
-            // 
-            this.columnKilometer.Text = "Kilometerstand";
-            this.columnKilometer.Width = 100;
-            // 
-            // columnStreckeGefahren
-            // 
-            this.columnStreckeGefahren.Text = "Gefahrene km seit Tankung";
-            this.columnStreckeGefahren.Width = 150;
-            // 
-            // columnVerbrauch
-            // 
-            this.columnVerbrauch.Text = "Verbrauch [l/100km]";
-            this.columnVerbrauch.Width = 120;
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.neueTankrechnungToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(823, 28);
-            this.menuStrip2.TabIndex = 0;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // neueTankrechnungToolStripMenuItem
-            // 
-            this.neueTankrechnungToolStripMenuItem.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.neueTankrechnungToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neueTankrechnungToolStripMenuItem.Image")));
-            this.neueTankrechnungToolStripMenuItem.Name = "neueTankrechnungToolStripMenuItem";
-            this.neueTankrechnungToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
-            this.neueTankrechnungToolStripMenuItem.Text = "Neue Tankrechnung";
-            this.neueTankrechnungToolStripMenuItem.Click += new System.EventHandler(this.neueTankrechnungToolStripMenuItem_Click);
-            // 
-            // buttonOk
-            // 
-            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.Location = new System.Drawing.Point(752, 532);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(86, 23);
-            this.buttonOk.TabIndex = 3;
-            this.buttonOk.Text = "Speichern";
-            this.buttonOk.UseVisualStyleBackColor = true;
-            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(662, 532);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(85, 23);
-            this.buttonCancel.TabIndex = 4;
-            this.buttonCancel.Text = "Abbrechen";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.tabControlAutoInfo.Controls.Add(this.tabPageAllgemein);
+            this.tabControlAutoInfo.Controls.Add(this.tabPageKosten);
+            this.tabControlAutoInfo.Controls.Add(this.tabPageTank);
+            this.tabControlAutoInfo.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlAutoInfo.Location = new System.Drawing.Point(4, 12);
+            this.tabControlAutoInfo.Name = "tabControlAutoInfo";
+            this.tabControlAutoInfo.SelectedIndex = 0;
+            this.tabControlAutoInfo.Size = new System.Drawing.Size(831, 514);
+            this.tabControlAutoInfo.TabIndex = 1;
             // 
             // FormEdit
             // 
@@ -627,78 +628,78 @@
             this.Text = "Fahrzeudaten erfassen/bearbeiten";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEdit_FormClosing);
             this.Load += new System.EventHandler(this.FormEdit_Load);
-            this.tabControlAutoInfo.ResumeLayout(false);
+            this.contextMenuStripFlowPanel.ResumeLayout(false);
+            this.contextMenuStripTabPage.ResumeLayout(false);
+            this.tabPageTank.ResumeLayout(false);
+            this.tabPageTank.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.tabPageKosten.ResumeLayout(false);
+            this.tabPageKosten.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.tabPageAllgemein.ResumeLayout(false);
             this.tabPageAllgemein.PerformLayout();
             this.groupBoxPicture.ResumeLayout(false);
             this.groupBoxPicture.PerformLayout();
-            this.contextMenuStripFlowPanel.ResumeLayout(false);
             this.groupBoxKfzData.ResumeLayout(false);
             this.groupBoxKfzData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLeistung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWartung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBrand)).EndInit();
-            this.tabPageKosten.ResumeLayout(false);
-            this.tabPageKosten.PerformLayout();
-            this.contextMenuStripTabPage.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.tabPageTank.ResumeLayout(false);
-            this.tabPageTank.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.tabControlAutoInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
 
 		#endregion
-		private System.Windows.Forms.TabControl tabControlAutoInfo;
-		private System.Windows.Forms.TabPage tabPageAllgemein;
-		private System.Windows.Forms.TabPage tabPageKosten;
 		private System.Windows.Forms.Button buttonOk;
 		private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.TextBox textBoxKennz;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelLeistungPS;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuStripNeueRechnung;
-        private System.Windows.Forms.ComboBox comboBoxFarbe;
-        private System.Windows.Forms.NumericUpDown numericUpDownWartung;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripTabPage;
+        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripFlowPanel;
+        private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPageTank;
         private System.Windows.Forms.ListView listViewTankKosten;
         private System.Windows.Forms.ColumnHeader columnBetrag;
         private System.Windows.Forms.ColumnHeader columnDatum;
         private System.Windows.Forms.ColumnHeader columnMenge;
         private System.Windows.Forms.ColumnHeader columnKilometer;
+        private System.Windows.Forms.ColumnHeader columnStreckeGefahren;
+        private System.Windows.Forms.ColumnHeader columnVerbrauch;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem neueTankrechnungToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPageKosten;
         private System.Windows.Forms.ListView listViewAllgKosten;
         private System.Windows.Forms.ColumnHeader columnKategorie;
-        private System.Windows.Forms.ColumnHeader columnDatumAllg;
         private System.Windows.Forms.ColumnHeader columnKostenAllg;
+        private System.Windows.Forms.ColumnHeader columnDatumAllg;
         private System.Windows.Forms.ColumnHeader columnKilometerAllg;
         private System.Windows.Forms.ColumnHeader columnZahlweise;
         private System.Windows.Forms.ColumnHeader columnBemerkung;
-        private System.Windows.Forms.ColumnHeader columnStreckeGefahren;
-        private System.Windows.Forms.ColumnHeader columnVerbrauch;
-        private System.Windows.Forms.NumericUpDown numericUpDownLeistung;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripTabPage;
-        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripFlowPanel;
-        private System.Windows.Forms.ToolStripMenuItem bildLöschenToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBoxBrand;
-        private System.Windows.Forms.PictureBox pictureBoxBrand;
-        private System.Windows.Forms.ComboBox comboBoxCarModel;
-        private System.Windows.Forms.GroupBox groupBoxKfzData;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuStripNeueRechnung;
+        private System.Windows.Forms.TabPage tabPageAllgemein;
         private System.Windows.Forms.GroupBox groupBoxPicture;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBoxKfzData;
+        private System.Windows.Forms.ComboBox comboBoxBrand;
+        private System.Windows.Forms.ComboBox comboBoxCarModel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numericUpDownLeistung;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDownWartung;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxFarbe;
+        private System.Windows.Forms.TextBox textBoxKennz;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label labelLeistungPS;
+        private System.Windows.Forms.PictureBox pictureBoxBrand;
+        private System.Windows.Forms.TabControl tabControlAutoInfo;
     }
 }
