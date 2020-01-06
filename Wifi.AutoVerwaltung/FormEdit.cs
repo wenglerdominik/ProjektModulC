@@ -22,8 +22,9 @@ namespace Wifi.AutoVerwaltung
     {
         public KfzData KfzData { get; set; } = new KfzData();
         private Cars Cars;
-        bool ignoreErrorStart = false;
+        bool ignoreErrorStart, errorWasShown = false;
         bool showError = false;
+
         public FormEdit()
         {
             InitializeComponent();
@@ -319,12 +320,13 @@ namespace Wifi.AutoVerwaltung
                         kilom = kilomlast - Convert.ToInt32(this.listViewTankKosten.Items[index - 1].SubItems[3].Text);
                         if (kilom < 0)
                         {
-                            if (!ignoreErrorStart)
+                            if (!ignoreErrorStart && !errorWasShown)
                             {
                                 MessageBox.Show("Kilometerstand der Tankrechnung ist nicht richtig. Bitte prüfen und beheben", "Fehler bei Tankrechnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                                errorWasShown = true;
                             }
                             showError = true;
+                            
                             this.listViewTankKosten.Items[index].SubItems[4].Text = "--";
                             this.listViewTankKosten.Items[index].SubItems[5].Text = "--";
                             this.listViewTankKosten.Items[index].BackColor = Color.LightCoral;

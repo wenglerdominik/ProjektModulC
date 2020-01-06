@@ -164,7 +164,7 @@ namespace Wifi.AutoVerwaltung
                         }
                     }
                 }
-                else SaveFile(toolStripOpenFile.Text.Remove(0, 6), string.Empty, this.masterPassword);
+                else SaveFile(toolStripOpenFile.Text.Remove(0, 16), string.Empty, this.masterPassword);
 
             }
         }
@@ -348,7 +348,7 @@ namespace Wifi.AutoVerwaltung
             else
             {
                 this.menuItemSpeichern.Enabled = true;
-                this.speichernUnterToolStripMenuItem.Enabled = true;
+                if(this.masterPassword!=null) this.speichernUnterToolStripMenuItem.Enabled = true;
                 this.FileCloseToolStripMenuItem.Enabled = true;
 
             }

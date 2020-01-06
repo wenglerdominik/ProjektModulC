@@ -16,7 +16,17 @@ namespace Wifi.AutoVerwaltung
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+
+            try
+            {
+                Application.Run(new FormMain());
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Es ist ein unbehandelter Fehler aufgetreten.\nBitte Wenden Sie sich an den Hersteller","Fehler" , MessageBoxButtons.OK,  MessageBoxIcon.Error);
+                return;
+            } 
         }
     }
 }
