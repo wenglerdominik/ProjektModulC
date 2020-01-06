@@ -148,6 +148,8 @@
             // 
             // comboBoxZahlweise
             // 
+            this.comboBoxZahlweise.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxZahlweise.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxZahlweise.FormattingEnabled = true;
             this.comboBoxZahlweise.Items.AddRange(new object[] {
             "Täglich",
@@ -179,6 +181,8 @@
             // 
             // comboBoxKategorie
             // 
+            this.comboBoxKategorie.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxKategorie.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxKategorie.FormattingEnabled = true;
             this.comboBoxKategorie.Items.AddRange(new object[] {
             "Versicherung",

@@ -113,9 +113,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Betrag";
+            this.label1.Text = "Betrag €";
             // 
             // label3
             // 

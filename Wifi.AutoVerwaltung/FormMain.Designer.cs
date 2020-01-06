@@ -257,7 +257,7 @@
             // 
             // columnGesamtkosten
             // 
-            this.columnGesamtkosten.Text = "Fahrzeugkosten [€]";
+            this.columnGesamtkosten.Text = "Gesamtkosten [€]";
             this.columnGesamtkosten.Width = 187;
             // 
             // contextMenuStrip1
@@ -266,12 +266,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.löschenToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(119, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(143, 26);
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.löschenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
             // 

@@ -359,7 +359,7 @@ namespace Wifi.AutoVerwaltung
             if (this.lastModification != this.securedAutoFile.LastUpdate)
             {
                 if (MessageBox.Show("Achtung, alle nicht gespeichereten Änderungen gehen verloren.\n" +
-               "Wollen Sie die Datei wirklich beenden?", "Datei schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+               "Wollen Sie die Datei wirklich schließen?", "Datei schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     this.securedAutoFile = null;
                     this.listViewMain.Items.Clear();

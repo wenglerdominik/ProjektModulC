@@ -115,12 +115,13 @@
             this.contextMenuStripTabPage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.löschenToolStripMenuItem});
             this.contextMenuStripTabPage.Name = "contextMenuStrip1";
-            this.contextMenuStripTabPage.Size = new System.Drawing.Size(119, 26);
+            this.contextMenuStripTabPage.Size = new System.Drawing.Size(143, 26);
             // 
             // löschenToolStripMenuItem
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.löschenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
             // 
@@ -232,6 +233,8 @@
             this.neueTankrechnungToolStripMenuItem.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.neueTankrechnungToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neueTankrechnungToolStripMenuItem.Image")));
             this.neueTankrechnungToolStripMenuItem.Name = "neueTankrechnungToolStripMenuItem";
+            this.neueTankrechnungToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+T";
+            this.neueTankrechnungToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.neueTankrechnungToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.neueTankrechnungToolStripMenuItem.Text = "Neue Tankrechnung";
             this.neueTankrechnungToolStripMenuItem.Click += new System.EventHandler(this.neueTankrechnungToolStripMenuItem_Click);
@@ -322,6 +325,8 @@
             this.menuStripNeueRechnung.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStripNeueRechnung.Image = ((System.Drawing.Image)(resources.GetObject("menuStripNeueRechnung.Image")));
             this.menuStripNeueRechnung.Name = "menuStripNeueRechnung";
+            this.menuStripNeueRechnung.ShortcutKeyDisplayString = "Ctrl+R";
+            this.menuStripNeueRechnung.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.menuStripNeueRechnung.Size = new System.Drawing.Size(142, 24);
             this.menuStripNeueRechnung.Text = "Neue Rechnung";
             this.menuStripNeueRechnung.Click += new System.EventHandler(this.neueKostenstelleToolStripMenuItem_Click);
@@ -638,6 +643,7 @@
             this.Text = "Fahrzeudaten erfassen/bearbeiten";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEdit_FormClosing);
             this.Load += new System.EventHandler(this.FormEdit_Load);
+            this.Shown += new System.EventHandler(this.FormEdit_Shown);
             this.contextMenuStripFlowPanel.ResumeLayout(false);
             this.contextMenuStripTabPage.ResumeLayout(false);
             this.tabPageTank.ResumeLayout(false);

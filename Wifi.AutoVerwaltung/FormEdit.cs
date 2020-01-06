@@ -22,6 +22,8 @@ namespace Wifi.AutoVerwaltung
     {
         public KfzData KfzData { get; set; } = new KfzData();
         private Cars Cars;
+        bool ignoreErrorStart = false;
+        bool showError = false;
         public FormEdit()
         {
             InitializeComponent();
@@ -75,11 +77,15 @@ namespace Wifi.AutoVerwaltung
 
 
             if (this.KfzData.Fahrzeugkosten != null)
+            {
                 foreach (KfzData itemKfzData in this.KfzData.Fahrzeugkosten)
                 {
+                    ignoreErrorStart = true;
                     if (itemKfzData is KfzKostenAllg) addListViewItemKostenAllg((KfzKostenAllg)itemKfzData);
                     if (itemKfzData is KfzKostenTank) addListViewItemKostenTank((KfzKostenTank)itemKfzData);
                 }
+            }
+            
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -219,7 +225,7 @@ namespace Wifi.AutoVerwaltung
         public void neueKostenstelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormKostenstelle formKosten = new FormKostenstelle();
-
+            this.tabControlAutoInfo.SelectedTab = tabPageKosten;
             if (formKosten.ShowDialog() == DialogResult.OK)
             {
                 if (this.KfzData.Fahrzeugkosten == null) this.KfzData.Fahrzeugkosten = new List<KfzData>();
@@ -231,7 +237,8 @@ namespace Wifi.AutoVerwaltung
         private void neueTankrechnungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTanken formTanken = new FormTanken();
-
+            this.tabControlAutoInfo.SelectedTab = tabPageTank;
+            ignoreErrorStart = false;
             if (formTanken.ShowDialog() == DialogResult.OK)
             {
                 if (KfzData.Fahrzeugkosten == null) KfzData.Fahrzeugkosten = new List<KfzData>();
@@ -313,10 +320,16 @@ namespace Wifi.AutoVerwaltung
                         kilom = kilomlast - Convert.ToInt32(this.listViewTankKosten.Items[index - 1].SubItems[3].Text);
                         if (kilom < 0)
                         {
-                            MessageBox.Show("Kilometerstand nicht richtig, bitte prüfen");
+                            if (!ignoreErrorStart)
+                            {
+                                MessageBox.Show("Kilometerstand der Tankrechnung ist nicht richtig. Bitte prüfen und beheben", "Fehler bei Tankrechnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            }
+                            showError = true;
                             this.listViewTankKosten.Items[index].SubItems[4].Text = "--";
                             this.listViewTankKosten.Items[index].SubItems[5].Text = "--";
-                            this.listViewTankKosten.Items[index].BackColor = Color.LightYellow;
+                            this.listViewTankKosten.Items[index].BackColor = Color.LightCoral;
+                            
                         }
                         else
                         {
@@ -336,6 +349,7 @@ namespace Wifi.AutoVerwaltung
             ListViewItem item = this.listViewTankKosten.GetItemAt(e.X, e.Y);
             KfzKostenTank kfzKostenTank = item.Tag as KfzKostenTank;
             FormTanken form = new FormTanken(kfzKostenTank);
+            ignoreErrorStart = false;
             if (form.ShowDialog() == DialogResult.OK)
             {
                 item.Tag = form.KfzKostenTank;
@@ -763,5 +777,13 @@ namespace Wifi.AutoVerwaltung
 
         }
 
+        private void FormEdit_Shown(object sender, EventArgs e)
+        {
+            if (showError)
+            {
+                this.tabControlAutoInfo.SelectedTab = tabPageTank;
+                MessageBox.Show("Kilometerstand bei einer Tankrechnung ist nicht richtig. Bitte prüfen und beheben", "Fehler bei Tankrechnung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
