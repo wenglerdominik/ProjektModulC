@@ -85,7 +85,6 @@ namespace Wifi.AutoVerwaltung
                     if (itemKfzData is KfzKostenTank) addListViewItemKostenTank((KfzKostenTank)itemKfzData);
                 }
             }
-            
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
