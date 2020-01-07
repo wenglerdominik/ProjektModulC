@@ -72,7 +72,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.menuStrip1.Font = new System.Drawing.Font("Roboto Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
@@ -81,7 +81,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1449, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1449, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,7 +95,7 @@
             this.programmBeendenToolStripMenuItem});
             this.dateiToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(54, 19);
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
             this.dateiToolStripMenuItem.MouseEnter += new System.EventHandler(this.dateiToolStripMenuItem_MouseEnter);
             // 
@@ -104,7 +104,7 @@
             this.menuItemOpenFile.Image = ((System.Drawing.Image)(resources.GetObject("menuItemOpenFile.Image")));
             this.menuItemOpenFile.Name = "menuItemOpenFile";
             this.menuItemOpenFile.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuItemOpenFile.Size = new System.Drawing.Size(258, 26);
+            this.menuItemOpenFile.Size = new System.Drawing.Size(268, 26);
             this.menuItemOpenFile.Text = "Öffnen";
             this.menuItemOpenFile.Click += new System.EventHandler(this.menuItemOpenFile_Click);
             // 
@@ -113,7 +113,7 @@
             this.menuItemSpeichern.Image = ((System.Drawing.Image)(resources.GetObject("menuItemSpeichern.Image")));
             this.menuItemSpeichern.Name = "menuItemSpeichern";
             this.menuItemSpeichern.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.menuItemSpeichern.Size = new System.Drawing.Size(258, 26);
+            this.menuItemSpeichern.Size = new System.Drawing.Size(268, 26);
             this.menuItemSpeichern.Text = "Speichern";
             this.menuItemSpeichern.Click += new System.EventHandler(this.menuItemSpeichern_Click);
             // 
@@ -122,7 +122,7 @@
             this.speichernUnterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("speichernUnterToolStripMenuItem.Image")));
             this.speichernUnterToolStripMenuItem.Name = "speichernUnterToolStripMenuItem";
             this.speichernUnterToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
-            this.speichernUnterToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.speichernUnterToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.speichernUnterToolStripMenuItem.Text = "Speichern unter";
             this.speichernUnterToolStripMenuItem.Click += new System.EventHandler(this.speichernUnterToolStripMenuItem_Click);
             // 
@@ -130,7 +130,7 @@
             // 
             this.FileCloseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("FileCloseToolStripMenuItem.Image")));
             this.FileCloseToolStripMenuItem.Name = "FileCloseToolStripMenuItem";
-            this.FileCloseToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.FileCloseToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.FileCloseToolStripMenuItem.Text = "Schließen";
             this.FileCloseToolStripMenuItem.Click += new System.EventHandler(this.schließenToolStripMenuItem_Click);
             // 
@@ -139,7 +139,7 @@
             this.programmBeendenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("programmBeendenToolStripMenuItem.Image")));
             this.programmBeendenToolStripMenuItem.Name = "programmBeendenToolStripMenuItem";
             this.programmBeendenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.programmBeendenToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.programmBeendenToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.programmBeendenToolStripMenuItem.Text = "Programm Beenden";
             this.programmBeendenToolStripMenuItem.Click += new System.EventHandler(this.programmBeendenToolStripMenuItem_Click);
             // 
@@ -150,7 +150,7 @@
             this.fahrzeugLöschenToolStripMenuItem});
             this.bearbeitenToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
-            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(81, 19);
+            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.bearbeitenToolStripMenuItem.Text = "Fahrzeug";
             this.bearbeitenToolStripMenuItem.MouseEnter += new System.EventHandler(this.bearbeitenToolStripMenuItem_MouseEnter);
             // 
@@ -159,7 +159,7 @@
             this.menuItemNeu.Image = ((System.Drawing.Image)(resources.GetObject("menuItemNeu.Image")));
             this.menuItemNeu.Name = "menuItemNeu";
             this.menuItemNeu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuItemNeu.Size = new System.Drawing.Size(245, 26);
+            this.menuItemNeu.Size = new System.Drawing.Size(254, 26);
             this.menuItemNeu.Text = "Fahrzeug anlegen";
             this.menuItemNeu.Click += new System.EventHandler(this.menuItemNeu_Click);
             // 
@@ -168,7 +168,7 @@
             this.fahrzeugLöschenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fahrzeugLöschenToolStripMenuItem.Image")));
             this.fahrzeugLöschenToolStripMenuItem.Name = "fahrzeugLöschenToolStripMenuItem";
             this.fahrzeugLöschenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.fahrzeugLöschenToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.fahrzeugLöschenToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.fahrzeugLöschenToolStripMenuItem.Text = "Fahrzeug Löschen";
             this.fahrzeugLöschenToolStripMenuItem.Click += new System.EventHandler(this.fahrzeugLöschenToolStripMenuItem_Click);
             // 
@@ -189,21 +189,21 @@
             // toolStripLoggedUser
             // 
             this.toolStripLoggedUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
-            this.toolStripLoggedUser.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLoggedUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLoggedUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.toolStripLoggedUser.Margin = new System.Windows.Forms.Padding(0, 3, 15, 2);
             this.toolStripLoggedUser.Name = "toolStripLoggedUser";
-            this.toolStripLoggedUser.Size = new System.Drawing.Size(57, 17);
+            this.toolStripLoggedUser.Size = new System.Drawing.Size(59, 17);
             this.toolStripLoggedUser.Text = "Benutzer:";
             this.toolStripLoggedUser.Visible = false;
             // 
             // toolStripOpenFile
             // 
             this.toolStripOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(134)))));
-            this.toolStripOpenFile.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripOpenFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripOpenFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.toolStripOpenFile.Name = "toolStripOpenFile";
-            this.toolStripOpenFile.Size = new System.Drawing.Size(38, 17);
+            this.toolStripOpenFile.Size = new System.Drawing.Size(39, 17);
             this.toolStripOpenFile.Text = "Datei:";
             this.toolStripOpenFile.Visible = false;
             // 
@@ -220,7 +220,7 @@
             this.columnErstzulassung,
             this.columnGesamtkosten});
             this.listViewMain.ContextMenuStrip = this.contextMenuStrip1;
-            this.listViewMain.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMain.FullRowSelect = true;
             this.listViewMain.HideSelection = false;
             this.listViewMain.Location = new System.Drawing.Point(0, 0);
@@ -228,7 +228,7 @@
             this.listViewMain.MultiSelect = false;
             this.listViewMain.Name = "listViewMain";
             this.listViewMain.ShowItemToolTips = true;
-            this.listViewMain.Size = new System.Drawing.Size(973, 615);
+            this.listViewMain.Size = new System.Drawing.Size(973, 614);
             this.listViewMain.TabIndex = 4;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
@@ -272,7 +272,7 @@
             // 
             this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
             this.löschenToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.löschenToolStripMenuItem.Text = "Löschen";
             this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
             // 
@@ -286,7 +286,7 @@
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(971, 614);
+            this.panelMain.Size = new System.Drawing.Size(971, 613);
             this.panelMain.TabIndex = 12;
             // 
             // panelKeinFahrzeug
@@ -304,7 +304,7 @@
             // pictureBoxStartUp
             // 
             this.pictureBoxStartUp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStartUp.Image")));
-            this.pictureBoxStartUp.Location = new System.Drawing.Point(168, 86);
+            this.pictureBoxStartUp.Location = new System.Drawing.Point(62, 84);
             this.pictureBoxStartUp.Name = "pictureBoxStartUp";
             this.pictureBoxStartUp.Size = new System.Drawing.Size(516, 256);
             this.pictureBoxStartUp.TabIndex = 1;
@@ -313,12 +313,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(118, 12);
+            this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(613, 87);
+            this.label1.Size = new System.Drawing.Size(665, 87);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kein Fahrzeug vorhanden.\r\nNeues Fahrzeug anlegen oder vorhandene Datei öffnen.\r\n\r" +
     "\n";
@@ -327,7 +327,7 @@
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 26);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -339,7 +339,7 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanelMain);
-            this.splitContainer1.Size = new System.Drawing.Size(1449, 616);
+            this.splitContainer1.Size = new System.Drawing.Size(1449, 615);
             this.splitContainer1.SplitterDistance = 974;
             this.splitContainer1.TabIndex = 15;
             // 
@@ -352,7 +352,7 @@
             this.flowLayoutPanelMain.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
             this.flowLayoutPanelMain.Padding = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(469, 614);
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(469, 613);
             this.flowLayoutPanelMain.TabIndex = 10;
             // 
             // FormMain
@@ -367,7 +367,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1339, 680);
             this.Name = "FormMain";
-            this.Text = "PrintTECH 3D --> Autoverwaltung.";
+            this.Text = "PrintTECH 3D --> CarManagement";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_Closing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);

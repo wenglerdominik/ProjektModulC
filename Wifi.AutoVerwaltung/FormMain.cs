@@ -17,7 +17,6 @@ namespace Wifi.AutoVerwaltung
         private SecuredAutoFile securedAutoFile = null;
         private string masterPassword = null;
         private KfzData kfzData = null;
-        private DateTime lastModification = DateTime.MinValue;
 
         public FormMain()
         {
@@ -54,7 +53,6 @@ namespace Wifi.AutoVerwaltung
                 panelKeinFahrzeug.Visible = false;
                 this.listViewMain.Items[this.listViewMain.Items.Count - 1].Selected = true;
                 this.listViewMain.Visible = true;
-                this.lastModification = DateTime.Now;
 
             }
             if (this.listViewMain.Items.Count == 0) panelKeinFahrzeug.Visible = true;
@@ -124,22 +122,26 @@ namespace Wifi.AutoVerwaltung
                         return true;
                     }
                     else
-                    {                        
-                        MessageBox.Show("Keine Berechtigung");
-                        this.securedAutoFile = null;
+                    {
+                        LoginFailed();
                         return false;
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Datei kann nicht geöffnet werden.\nBenutzer oder Kennwort falsch", "Fehler beim Öffnen"
-                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.securedAutoFile = null;
+                    LoginFailed();
                     return false;
                 }
 
             }
             return true;
+        }
+
+        private void LoginFailed()
+        {
+            MessageBox.Show("Datei kann nicht geöffnet werden.\nBenutzer oder Kennwort falsch", "Fehler beim Öffnen"
+                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.securedAutoFile = null;
         }
 
         private void menuItemSpeichern_Click(object sender, EventArgs e)
@@ -172,7 +174,6 @@ namespace Wifi.AutoVerwaltung
         private void SaveFile(string filename, string Username, string Password)
         {
             this.securedAutoFile.LastUpdate = DateTime.Now;
-
             if (!string.IsNullOrEmpty(Username)) this.securedAutoFile.Owner = Username;
             this.securedAutoFile.Save(filename, Password);
         }
@@ -326,7 +327,10 @@ namespace Wifi.AutoVerwaltung
 
         private void programmBeendenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Achtung, alle nicht gespeicherten Änderungen gehen verloren.\n" +
+               "Wollen Sie das Programm wirklich beenden?", "Programm beenden", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+            else return;
         }
 
 
@@ -356,9 +360,7 @@ namespace Wifi.AutoVerwaltung
 
         private void schließenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.lastModification != this.securedAutoFile.LastUpdate)
-            {
-                if (MessageBox.Show("Achtung, alle nicht gespeichereten Änderungen gehen verloren.\n" +
+                if (MessageBox.Show("Achtung, alle nicht gespeicherten Änderungen gehen verloren.\n" +
                "Wollen Sie die Datei wirklich schließen?", "Datei schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     this.securedAutoFile = null;
@@ -370,10 +372,6 @@ namespace Wifi.AutoVerwaltung
                     this.toolStripOpenFile.Visible = false;
                 }
                 else return;
-            }
-
-           
-
         }
     }
 }
